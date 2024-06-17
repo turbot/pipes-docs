@@ -1,0 +1,155 @@
+
+  [
+    {
+      "type": "category",
+      "link": "/",
+      "id": "index",
+      "items": []
+    },
+
+      {
+        "type": "category",
+        "id": "using",
+        "link": "using",
+        "items": [
+          "dashboards",
+          "queries",
+          {
+            "type": "category",
+            "id": "connect",
+            "link": "connect",
+            "items": [
+              "connect/apachesuperset",
+              "connect/azuredatastudio",
+              "connect/cli",
+              "connect/datagrip",
+              "connect/dbeaver",
+              "connect/dbt",
+              "connect/deepnote",
+              "connect/duckdb",
+              "connect/gitpod",
+              "connect/golang",
+              "connect/grafana",
+              "connect/heidisql",
+              "connect/javascript",
+              "connect/jupyter",
+              "connect/looker",
+              "connect/metabase",
+              "connect/navicat",
+              "connect/pgadmin",
+              "connect/pgcli",
+              "connect/powerbi",
+              "connect/psql",
+              "connect/python",
+              "connect/r",
+              "connect/razorsql",
+              "connect/rstudio",
+              "connect/sigma",
+              "connect/tableau",
+              "connect/tableplus",
+              "connect/vscode"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "id": "workspaces",
+        "link": "workspaces",
+        "items": [
+          {
+            "type": "category",
+            "id": "schemas",
+            "link": "schemas",
+            "items": [
+              "connections",
+              "aggregators",
+              "datatank"
+            ]
+          },
+          "mods",
+          "pipelines",
+          "activity"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "integrations",
+        "link": "integrations",
+        "items": [
+          "integrations/github"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "developer-account",
+        "link": "developer-account",
+        "items": [
+          "da-workspaces",
+          "da-connections",
+          "da-settings"
+        ]
+      },
+      {
+        "type": "category",
+        "id": "organizations",
+        "link": "organizations",
+        "items": [
+          "org-workspaces",
+          "org-connections",
+          "people",
+          "org-settings"
+        ]
+      },
+      {
+        "type": "category",
+        "id": "tenants",
+        "link": "tenants",
+        "items": [
+          "tenants/developer-account",
+          "tenants/organizations",
+          "tenants/people",
+          "tenants/settings",
+          "tenants/authentication"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "plans",
+        "link": "plans",
+        "items": [
+          "plans/developer",
+          "plans/team",
+          "plans/enterprise"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "usage-billing",
+        "link": "usage-billing",
+        "items": [
+          "usage",
+          "usage-thresholds",
+          "billing"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "cloud-reference",
+        "link": "reference",
+        "items": [
+          "develop/query-api",
+          "reference/api",
+          "reference/gosdk",
+          "reference/plugin",
+          "reference/query-filter",
+          "reference/terraform"
+        ]
+      }
+    ]
+    
