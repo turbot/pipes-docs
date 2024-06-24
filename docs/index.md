@@ -7,7 +7,7 @@ slug: /
 
 # Getting Started with Turbot Pipes
 
-Turbot Pipes is the only intelligence, automation & security platform built specifically for DevOps.  Sign-up now and be running your first benchmark in just minutes!
+Testing Turbot Pipes is the only intelligence, automation & security platform built specifically for DevOps.  Sign-up now and be running your first benchmark in just minutes!
 
 ## Sign up
 
