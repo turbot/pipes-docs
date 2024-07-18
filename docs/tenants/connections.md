@@ -7,17 +7,17 @@ sidebar_label: Connections
 
 A **[Connection](/pipes/docs/connections)** represents a set of tables for a **single data source**.  To query data, you'll need at least one connection to provide credentials and other configuration information.
 
-Connections that are created at the organization level can be shared with any workspace in the organization.  You must be assigned the organization **Owner** or **Operator???** role to create, modify and delete organization connections.
+Connections that are created at the tenant level can be shared with any organization or workspace in the tenant.  You must be assigned the tenant **Owner** or **Operator???** role to create, modify and delete tenant connections.
 
 
 ## Managing Connections
 
-You can manage your organization's connections from the **Connections** tab.  Navigate to your organization, then to the  **Connections** tab.  The connections page will list all the connections and folders that the organization has permission to use, including tenant-level connections and folders as well as the one created for this organization.
+You can manage your tenant's connections from the **Connections** tab.  Navigate to your tenant, then to the  **Connections** tab.  The connections page will list all the connections for this tenant.
 
 
 ## Adding Connections
 
-Connections can be created or deleted from the **Connections** tab for your organization.
+Connections can be created or deleted from the **Connections** tab for your tenant.
 
 ???  To add a connection, click **New Connection**, then choose one of the plugins from the list.  Enter the required settings for the plugin.  Use the **Test Connection** button to verify your credentials, then click **Create**.
 
@@ -32,7 +32,8 @@ After the connection is created, you may associate it with a workspace.   Click 
 
 ## Deleting Connections
 
-To permanently delete a connection, navigate to the  **Connections** tab for your organization.  From the list, click the connection that you wish to delete.  From the properties page for the connection, go to the **Settings** tab and click **Delete Connection**.  You will be prompted to confirm deletion; enter the connection name and click **Delete**.
+To permanently delete a connection, navigate to the  **Connections** tab for your tenant.  From the list, click the connection that you wish to delete.  From the properties page for the connection, go to the **Settings** tab and click **Delete Connection**.  You will be prompted to confirm deletion; enter the connection name and click **Delete**.
+
 
 
 

@@ -78,6 +78,9 @@
         "id": "integrations",
         "link": "integrations",
         "items": [
+          "integrations/aws",
+          "integrations/azure",
+          "integrations/gcp",
           "integrations/github"
         ]
       },
@@ -110,6 +113,7 @@
         "items": [
           "tenants/developer-account",
           "tenants/organizations",
+          "tenants/connections",
           "tenants/people",
           "tenants/settings",
           "tenants/authentication"
