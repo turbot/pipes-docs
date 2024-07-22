@@ -57,7 +57,7 @@ For contributions that will take a significant amount of time, [open a new issue
 
 ## Finding contributions to work on
 
-If you'd like to contribute, but don't have a project in mind, look at the [open issues](https://github.com/turbot/pipes-docs/issues/news) in this repository for some ideas.
+If you'd like to contribute, but don't have a project in mind, look at the [open issues](https://github.com/turbot/pipes-docs/issues) in this repository for some ideas.
 
 ## Open Source & Contributing
 
