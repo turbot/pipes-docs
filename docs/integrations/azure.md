@@ -42,6 +42,15 @@ Enter the **Azure Credentials**. At a minimum, the credential must have `Global 
 
 ?? how do you set this up in Azure????
 
+
+[Create an App Registration(https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#register-an-application)] in AAD (aka EntraID)
+[Create a Client Secret](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials)
+
+Provide it with relevant Permissions (Manage -> API Permissions / App Roles)
+
+
+
+
 Enter the **Tenant ID**, **Client ID**, and **Client Secret**.
 
 

@@ -38,7 +38,7 @@ Provide a **Handle** for the integration.  This handle should be meaningful and 
 
 Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
 
-Add your **Credentials**, in the form of a JSON key pair for an existing GCP service account.  As a minimum, grant your service account the **Viewer** role in the projects and folders that you wish to manage.
+Add your **Credentials**, in the form of a JSON key pair for an existing [GCP service account](https://console.cloud.google.com/apis/credentials/serviceaccountkey).  As a minimum, grant your service account the **Viewer** role in the projects and folders that you wish to manage.
 
 Finally, select the [Permissions](#permissions) to assign to the root folder created from this GCP integration.  
 - **All Organizations and Workspaces**
