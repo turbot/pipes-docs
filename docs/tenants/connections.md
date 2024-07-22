@@ -3,52 +3,53 @@ title: Connections
 sidebar_label: Connections
 ---
 
-# Connections
+
 
 A **[Connection](/pipes/docs/connections)** represents a set of tables for a **single data source**.  To query data, you'll need at least one connection to provide credentials and other configuration information.
 
-Connections that are created at the tenant level can be shared with any organization or workspace in the tenant.  You must be assigned the tenant **Owner** or **Operator???** role to create, modify and delete tenant connections.
+You can organize connections into **Connection Folders**. This makes it easier to share groups of connections across workspaces in your tenant.
+
+Connections and folders that are created at the tenant level can be shared with any workspace or organization in the tenant.  You must be assigned the tenant **Owner** or **Operator???** role to create, modify and delete tenant connections and folders.
+
+You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage permissions to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
 
 
 ## Managing Connections
 
-You can manage your tenant's connections from the **Connections** tab.  Navigate to your tenant, then to the  **Connections** tab.  The connections page will list all the connections for this tenant.
+You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant, then to the  **Connections** tab.  The connections page will show all the tenant-level connections and folders in the tenant, arranged hierarchically, and you can click on folders to navigate the folder tree.
+
+This view will include all the connections and folders in the tenant, including connections and folders that are created by integrations.  Note that the resources created by an integration are dynamically managed by the integration and cannot be manually modified.
 
 
 ## Adding Connections
 
-Connections can be created or deleted from the **Connections** tab for your tenant.
+You can create connections from the **Connections** tab for your tenant.  The connections page displays the folder connection tree hierarchically.  To add a connection or folder, first navigate to the folder in which to create the new folder or connection.
 
-???  To add a connection, click **New Connection**, then choose one of the plugins from the list.  Enter the required settings for the plugin.  Use the **Test Connection** button to verify your credentials, then click **Create**.
+To create a new folder, go to the folder in which you would like to create the new folder, then click the **New Connection** button and select **New Folder**.   Give your folder a **Name** and click **Create**.  Next, you are prompted to set permissions on the folder.  When you grant permissions on a folder, you also grant permissions for all of its descendent folders and connections.  This simplifies managing groups of connections across your tenant.  Choose workspaces that can use this folder and all of its connections:
+- All organizations and organization workspaces
+- Specific organizations and/or organization workspaces
+- No workspaces
 
-Set permissions....
-???
+Click **Save**.
 
-???
-  is this still in the wizard??
-After the connection is created, you may associate it with a workspace.   Click **Add to Workspace** if you wish to add it to a workspace now, or **Skip** if you don't want to add it to a workspace at this time. Note that the wizard only prompts to add it to a single workspace, but you can attach your connection to additional workspaces at any time.
+To create a connection, navigate to the folder in which you would like to create the connection, then click the **New Connection** button and select **New Connection**.  Select the **Plugin**, enter a **Handle**, and enter any plugin-specific settings.  Click **Test Connection** to verify your credentials, then **Create** to create the connection.  Next, you are prompted to set permissions on the connection.  You may set permissions on individual connections but remember that they also inherit the permissions of their parent folder; setting **No Workspaces** on the connection does not remove permissions if they have been granted on a parent folder, it merely does not grant permission on the individual connection.  Choose workspaces that can use this connection:
+- All organizations and organization workspaces
+- Specific organizations and/or organization workspaces
+- No workspaces
 
-???
+Click **Save**.
+ 
+
+Tenant-level connections are confined to the tenant in which they are defined, and they cannot be shared with other tenants.  
+ 
+You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage permissions to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
+
+
 
 ## Deleting Connections
 
-To permanently delete a connection, navigate to the  **Connections** tab for your tenant.  From the list, click the connection that you wish to delete.  From the properties page for the connection, go to the **Settings** tab and click **Delete Connection**.  You will be prompted to confirm deletion; enter the connection name and click **Delete**.
+To permanently delete a connection, navigate to the  **Connections** tab for your tenant. Browse the connection tree, and click the gear icon for the connection that you wish to delete.  On the **Settings/Advanced** tab, click  **Delete Connection**.  You will be prompted to confirm deletion. Enter the connection handle then click **Delete Connection**.
 
+To delete a folder, click the gear icon for the folder that you wish to delete.  On the **Settings** tab, click **Delete Folder**.  You will be prompted to confirm deletion. Enter the folder title, then click **Delete Folder**.
 
-
-
-<!-- 
-
-do i need this here??
-
-
-## Adding Connection Schemas to Workspaces
-
-Once a connection is created, you must add it to any workspaces that you wish to use the connection.
-
-You can add and remove connections from the **Settings** tab for your workspace.  Navigate to your workspace, go to the **Settings** tab, then click **Connections** from the menu on the left to see a list the connections that are currently attached to the workspace.  Click the **Add Connection** button to add a connection to your workspace.  To remove the connection from a workspace, click the options menu ('three dots' button) to the right of the connection, select **Remove** from the menu.
-
-
-Alternatively, you can attach connections to your workspace from the **Connections** tab for your organization.  Navigate to your organization, and click **Connections**.  You will see a list of connections.  Click on a connection in the list to view it.  The **Workspaces** tab will list the workspaces that are currently using the connection.  You can attach the connection to another workspace with the **Add to Workspace** button.  To remove the connection from a workspace, click the options menu ('three dots' button) to the right of the workspace, select **Remove** from the menu.
-
--->
+You cannot delete folders or connections that were created by an [integration](/pipes/docs/integrations/) - they are automatically managed by the integration.  
