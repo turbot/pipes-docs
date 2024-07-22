@@ -11,8 +11,6 @@ The AWS Integration allows you to automatically import a connection folder hiera
 The AWS integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as accounts and OUs are created, deleted, or changed in your AWS Organization.
 
 
-
-
 ## Creating the AWS Integration
 
 You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/organizations)), and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.
@@ -28,7 +26,6 @@ First, navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
-
 ![](/images/docs/integrations_blank.png)
 
 Next, click the **New Integration** button. You will be asked to select an integration to create.
@@ -40,7 +37,7 @@ Select **AWS** and click **Next**.
 Provide a **Handle** for the integration.  This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).
 
 
-Configure the **Discovery Settings**, including the credentials that Pipes should use to discover the organization's resources.  These credentials need access to read the organizations data in the AWS Organizations master account.  You may either authenticate using a cross-account role (recommended) or an access key pair.
+Configure the **Discovery Settings**, including the credentials that Pipes should use *to discover the organization's resources*.  These credentials need permission to read the organization data in the AWS Organizations master account.  You may either authenticate using a cross-account role (recommended) or an access key pair.
 
 - To use a cross-account role, select **Cross-Account Role** from the **Access Mode** dropdown.  You will need to create a role in the account that has the correct trust policy and permissions.  You can do this manually, or Pipes can generate a Terraform or CloudFormation template for you to download and run.  Depending on your preference, follow the **Automatic Setup** or **Manual Setup** instructions, then enter the **Role ARN** and **External ID**.  Click the **Test Discovery** button to verify that the credentials are configured correctly, then click **Next**.
 
@@ -67,16 +64,11 @@ Finally, select the [Permissions](#permissions) to assign to the root folder cre
 - **Specific Organizations and Workspaces**
 - **No Workspaces**
 
-The permissions on this screen apply to the root folder, thus *all connections and folders* discovered by this integration.  If you want to assign permissions more granular, on a per-subfolder or per-connection basis, select **No Workspaces** at this time, and then manage the permissions on the connections and folders once they have been discovered.
+The permissions on this screen apply to the root folder and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Workspaces** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
 Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when they are added to the AWS organization.
 
-[screenshot...]
-
 After you have made your selections, click **Create Integration**.  Pipes will begin discovering your accounts and OUs and creating folders and connections.
-
-
----------
 
 ## Modifying the AWS Integration
 
@@ -112,15 +104,13 @@ Navigate to the **Integrations** page for the appropriate resource:
 
 Go to the **Advanced** page and click the **Delete Integration** button. You will be asked to enter the handle to confirm deletion.  If you wish to *permanently delete the integration and all of its resources*, click **Delete**.
 
-----------
-
 
 ## Permissions
 You can create an integration for a tenant or an organization, and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.  When creating the integration, you can set **Permissions** for the connections and folders that it creates:
   - Tenant-level connections and folders can be shared with any identity or workspace within the tenant.
   - Org-level connections and folders can be shared with any workspace within the org, but not with other orgs.
 
-When you grant permissions on a folder, all the connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its connections.  Note that permissions are additive and can only be granted, not denied. If you grant permissions to an identity or workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
+When you grant permissions on a folder, all the connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its connections.  Permissions are additive and can only be granted, not denied. If you grant permissions to an identity or workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
 
 You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the connection or folder.  From the **Settings** tab, select **Permissions**.  Select the desired permissions and click **Save**.
 

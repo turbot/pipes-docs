@@ -9,7 +9,7 @@ A **[Connection](/pipes/docs/connections)** represents a set of tables for a **s
 
 You can organize connections into **Connection Folders**. This makes it easier to share groups of connections across workspaces in your tenant.
 
-Connections and folders that are created at the tenant level can be shared with any workspace or organization in the tenant.  You must be assigned the tenant **Owner** or **Operator???** role to create, modify and delete tenant connections and folders.
+Connections and folders that are created at the tenant level can be shared with any workspace or organization in the tenant.  You must be assigned the tenant **Owner** role to create, modify and delete tenant connections and folders.
 
 You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage permissions to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
 
@@ -40,7 +40,7 @@ To create a connection, navigate to the folder in which you would like to create
 Click **Save**.
  
 
-Tenant-level connections are confined to the tenant in which they are defined, and they cannot be shared with other tenants.  
+Tenant-level connections are confined to the tenant in which they are defined, and they cannot be shared with other tenants.
  
 You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage permissions to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
 
@@ -52,4 +52,4 @@ To permanently delete a connection, navigate to the  **Connections** tab for you
 
 To delete a folder, click the gear icon for the folder that you wish to delete.  On the **Settings** tab, click **Delete Folder**.  You will be prompted to confirm deletion. Enter the folder title, then click **Delete Folder**.
 
-You cannot delete folders or connections that were created by an [integration](/pipes/docs/integrations/) - they are automatically managed by the integration.  
+You cannot delete folders or connections that were created by an [integration](/pipes/docs/integrations/) - they are automatically managed by the integration.

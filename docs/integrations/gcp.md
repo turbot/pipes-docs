@@ -24,8 +24,6 @@ First, navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
-
-
 ![](/images/docs/integrations_blank.png)
 
 Next, click the **New Integration** button. You will be asked to select an integration to create.
@@ -49,12 +47,8 @@ The root connection folder will contain all connections and sub-folders for this
 
 Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when they are added to the GCP organization.
 
-[screenshot...]
-
 After you have made your selections, click **Create Integration**.  Pipes will begin discovering your projects and folders and creating folders and connections.
 
-
----------
 
 ## Modifying the GCP Integration
 

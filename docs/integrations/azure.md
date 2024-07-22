@@ -38,21 +38,11 @@ Provide a **Handle** for the integration.  This handle should be meaningful and 
 
 Specify the **environment** - **Public Cloud**,  **US Gov Cloud**, or **China Cloud**.
 
-Enter the **Azure Credentials**. At a minimum, the credential must have `Global Reader` access.
-
-?? how do you set this up in Azure????
-
-
-[Create an App Registration(https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#register-an-application)] in AAD (aka EntraID)
-[Create a Client Secret](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials)
-
-Provide it with relevant Permissions (Manage -> API Permissions / App Roles)
-
-
+Enter the **Azure Credentials**.  The Pipes Azure integration requires a ***Tenant ID**, **Client ID**, and **Client Secret** with read access to the organization and subscriptions.  You must [create an Entra App Registration](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#register-an-application),
+[create Client Secret credentials](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials), and configure the relevant permissions.  
 
 
 Enter the **Tenant ID**, **Client ID**, and **Client Secret**.
-
 
 Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
 
@@ -68,12 +58,8 @@ The permissions on this screen apply to the root folder, thus *all connections a
 
 Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when they are added to the Azure organization.
 
-[screenshot...]
-
 After you have made your selections, click **Create Integration**.  Pipes will begin discovering your subscriptions and management groups and creating folders and connections.
 
-
----------
 
 ## Modifying the Azure Integration
 
@@ -109,7 +95,6 @@ Navigate to the **Integrations** page for the appropriate resource:
 
 Go to the **Advanced** page and click the **Delete Integration** button. You will be asked to enter the handle to confirm deletion.  If you wish to *permanently delete the integration and all of its resources*, click **Delete**.
 
-----------
 
 
 ## Permissions
