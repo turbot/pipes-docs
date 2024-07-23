@@ -25,12 +25,15 @@ First, navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
-
+<!--
 ![](/images/docs/integrations_blank.png)
+-->
 
 Next, click the **New Integration** button. You will be asked to select an integration to create.
 
+<!--
 ![](/images/docs/integrations_new_AWS.png)
+-->
 
 Select **AWS** and click **Next**.
 
@@ -47,11 +50,11 @@ Next, configure the **Connection settings**.
 
 Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
 
-Next, set up the trust relationship for the discovered accounts.  In order for Pipes to access the discovered accounts, a cross-account role must be created in each discovered account.  You can set these roles up manually, or Pipes can generate a CloudFormation StackSet to help automate the process. Depending on your preference, follow the **Automatic Setup** or **Manual Setup** instructions, then enter the **Role ARN** and **External ID**, and choose the **Regions** that you would like configured in the child connections.
+Next, set up the trust relationship for the discovered accounts.  In order for Pipes to access the discovered accounts, a cross-account role must be created in each discovered account.  You can set these roles up manually, or Pipes can generate a CloudFormation StackSet to help automate the process. Depending on your preference, follow the **Automatic Setup** or **Manual Setup** instructions, then enter the **Role Name** and **External ID**.  Pipes will dynamically generate the **Role ARN** for each discovered account based on its ID and the provided **Role Name**.  Choose the **Regions** that you would like configured in the child connections.  
 
 If desired, you can set advanced options for the child connections.  These options will be inherited by all connections imported by the integration.  You can also set or change these options on a per-connection basis after the connections have been imported:
 - **Default region**: This region will be used for calls to global APIs. Defaults to us-east-1 for commercial accounts, the closest region to Turbot Pipes, and us-gov-west-1 for GovCloud accounts.
-- **Max retry attempts**: The maximum number of attempts (including the initial call)Turbot Pipes will make for failing API calls. Defaults to 9 and must be greater than or equal to 1.
+- **Max retry attempts**: The maximum number of attempts (including the initial call) that Turbot Pipes will make for failing API calls. Defaults to 9 and must be greater than or equal to 1.
 - **Min error retry delay**: The minimum retry delay in milliseconds after which retries will be performed. Defaults to 25ms and must be greater than or equal to 1ms.
 - **Ignore error codes**: List of AWS error codes to ignore for all queries. By default, common not found error codes are ignored and will still be ignored even if this option is not set.
 

@@ -38,7 +38,7 @@ Provide a **Handle** for the integration.  This handle should be meaningful and 
 
 Specify the **environment** - **Public Cloud**,  **US Gov Cloud**, or **China Cloud**.
 
-Enter the **Azure Credentials**.  The Pipes Azure integration requires a ***Tenant ID**, **Client ID**, and **Client Secret** with read access to the organization and subscriptions.  You must [create an Entra App Registration](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#register-an-application),
+Enter the **Azure Credentials**.  The Pipes Azure integration requires a **Tenant ID**, **Client ID**, and **Client Secret** with read access to the organization and subscriptions.  You must [create an Entra App Registration](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#register-an-application),
 [create Client Secret credentials](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app?tabs=client-secret#add-credentials), and configure the relevant permissions.  
 
 
