@@ -5,7 +5,6 @@ sidebar_label: AWS
 
 # AWS Integration
 
-
 The AWS Integration allows you to automatically import a connection folder hierarchy that mirrors your AWS Organization folder structure, with a connection folder for each AWS OU and a [connection](/pipes/docs/connections) for each account in your AWS organization.
 
 The AWS integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as accounts and OUs are created, deleted, or changed in your AWS Organization.
@@ -61,15 +60,9 @@ If desired, you can set advanced options for the child connections.  These optio
 Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
 
 
-Finally, select the [Permissions](#permissions) to assign to the root folder created from this AWS integration.  Note that you do not have to set the permissions now and you can change them later.
+Finally, select the [Permissions](/pipes/docs/tenants/connections#permissions).  The permissions on this screen apply to the top-level folders and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Workspaces** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
-- **All Organizations and Workspaces**
-- **Specific Organizations and Workspaces**
-- **No Workspaces**
-
-The permissions on this screen apply to the root folder and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Workspaces** at this time, and then manage the permissions on the connections and folders once they have been discovered.
-
-Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when they are added to the AWS organization.
+Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when OUs or accounts are added to the AWS organization.
 
 After you have made your selections, click **Create Integration**.  Pipes will begin discovering your accounts and OUs and creating folders and connections.
 
@@ -106,15 +99,3 @@ Navigate to the **Integrations** page for the appropriate resource:
 
 
 Go to the **Advanced** page and click the **Delete Integration** button. You will be asked to enter the handle to confirm deletion.  If you wish to *permanently delete the integration and all of its resources*, click **Delete**.
-
-
-## Permissions
-You can create an integration for a tenant or an organization, and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.  When creating the integration, you can set **Permissions** for the connections and folders that it creates:
-  - Tenant-level connections and folders can be shared with any identity or workspace within the tenant.
-  - Org-level connections and folders can be shared with any workspace within the org, but not with other orgs.
-
-When you grant permissions on a folder, all the connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its connections.  Permissions are additive and can only be granted, not denied. If you grant permissions to an identity or workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
-
-You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the connection or folder.  From the **Settings** tab, select **Permissions**.  Select the desired permissions and click **Save**.
-
-Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).

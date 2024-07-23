@@ -38,17 +38,11 @@ Optionally, provide a **Handle Prefix** to be pre-pended to the names of connect
 
 Add your **Credentials**, in the form of a JSON key pair for an existing [GCP service account](https://console.cloud.google.com/apis/credentials/serviceaccountkey).  As a minimum, grant your service account the **Viewer** role in the projects and folders that you wish to manage.
 
-Finally, select the [Permissions](#permissions) to assign to the root folder created from this GCP integration.  
-- **All Organizations and Workspaces**
-- **Specific Organizations and Workspaces**
-- **No Workspaces**
+Finally, select the [Permissions](/pipes/docs/tenants/connections#permissions).  The permissions on this screen apply to the top-level folders and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Workspaces** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
-The root connection folder will contain all connections and sub-folders for this integration, and sharing the root folder will share the full tree, including all of its connections.  If you wish to assign permissions more granularly (on individual connections or folders), select **None** and then assign the permissions on those connections and folders after they have been created.
+Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when folders and projects are added to the GCP organization.
 
-Note also that **All** will not only add permissions for the existing identities and workspaces but will also allow access for any new connections and folders that are created when they are added to the GCP organization.
-
-After you have made your selections, click **Create Integration**.  Pipes will begin discovering your projects and folders and creating folders and connections.
-
+After you have made your selections, click **Create Integration**.  Pipes will begin discovering your subscriptions and management groups and creating folders and connections.
 
 ## Modifying the GCP Integration
 
@@ -82,16 +76,3 @@ Navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 Go to the **Advanced** page and click the **Delete Integration** button. You will be asked to enter the handle to confirm deletion.  If you wish to *permanently delete the integration and all of its resources*, click **Delete**.
-
-----------
-
-## Permissions
-You can create an integration for a tenant or an organization, and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.  When creating the integration, you can set **Permissions** for the connections and folders that it creates:
-  - Tenant-level connections and folders can be shared with any identity or workspace within the tenant.
-  - Org-level connections and folders can be shared with any workspace within the org, but not with other orgs.
-
-When you grant permissions on a folder, all the connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its connections.  Note that permissions are additive and can only be granted, not denied. If you grant permissions to an identity or workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
-
-You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the connection or folder.  From the **Settings** tab, select **Permissions**.  Select the desired permissions and click **Save**.
-
-Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).
