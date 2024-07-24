@@ -3,6 +3,7 @@ title: Connections
 sidebar_label: Connections
 ---
 
+# Connections
 
 A **[Connection](/pipes/docs/connections)** represents a set of tables for a **single data source**.  To query data, you'll need at least one connection to provide credentials and other configuration information.
 
@@ -15,7 +16,17 @@ You can create connections and folders manually, but they may also be created by
 
 ## Managing Connections
 
-You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  The **Connections** tab will show all the tenant-level connections and folders in the tenant, arranged hierarchically, and you can click on folders to navigate the folder tree.
+You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  
+
+The **Connections** tab will show all the tenant-level connections and folders.
+
+![](/images/docs/pipes/tenant-connections-list.png)
+
+
+The connections tree is arranged hierarchically, and you can click on folders to navigate the folder tree.  
+
+![](/images/docs/pipes/tenant-connections-list-subfolder.png)
+
 
 This view will include all the connections and folders in the tenant, including connections and folders that are created by integrations.  Note that the resources created by an integration are dynamically managed by the integration and cannot be manually modified.
 
@@ -51,20 +62,19 @@ You can make connections available to workspaces by setting permissions, either 
 
 You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the gear icon for the connection or folder you would like to permission.  From the **Settings** tab, select **Permissions**. 
 
+
+![](/images/docs/pipes/tenant-connections-perms-toplevel.png)
+
+
 Select the desired permission: 
-- All organizations and organization workspaces
-- Specific organizations and/or organization workspaces
-- No workspaces
+- **All organizations and their workspaces**: Allow access to all existing organizations and their workspaces, as well as any new organizations or workspaces that are created subsequently.
+- **Specific organizations and their workspaces**:  Allow specific organizations and/or workspaces.  You will be prompted to select the organizations and workspaces from a list.
+- **No permissions**: Do not set any permissions on this connection or folder.
 
-Click **Save**.
+If the folder or connection is a descendant of a folder that has already been shared, you cannot revoke those permissions on the child folder or connection, but you may grant additional access:
 
+![](/images/docs/pipes/tenant-connections-perms-inherited.png)
 
-***THis will change...***
-You may set permissions on individual connections but remember that they also inherit the permissions of their parent folder; setting **No Workspaces** on the connection does not remove permissions if they have been granted on a parent folder, it merely does not grant permission on the individual connection.  Choose workspaces that can use this connection:
-- All organizations and organization workspaces
-- Specific organizations and/or organization workspaces
-- No workspaces
-***End***
-
+Click **Save** to commit the changes.
 
 Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).

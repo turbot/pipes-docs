@@ -16,7 +16,15 @@ You can create connections and folders manually, but they may also be created by
 
 ## Managing Connections
 
-You can manage your organization's connections and folders from the **Connections** tab.  Navigate to your organization, then to the  **Connections** tab.  The connections tree is arranged hierarchically, and you can click on folders to navigate the folder tree.  
+You can manage your organization's connections and folders from the **Connections** tab.  Navigate to your organization, then to the  **Connections** tab.  
+
+![](/images/docs/pipes/org-connections-list.png)
+
+
+The connections tree is arranged hierarchically, and you can click on folders to navigate the folder tree.  
+
+![](/images/docs/pipes/org-connections-list-subfolder.png)
+
 
 This view will include all the connections that the organization has permission to use, including tenant-level connections and folders, as well as the ones created directly in the organization.  Connections and folders that are created by integrations will also appear but note that these are dynamically managed by the integration and cannot be manually modified.
 
@@ -49,26 +57,24 @@ Tenant-level connections and folders must be deleted from the **Connections** ta
 
 Connections defined at the organization level can be shared with any workspace in the organization.  Organization-level connections are confined to the organization in which they are defined, and they cannot be shared with other organizations ([Tenant-level connections](/pipes/docs/tenants/connections) provide this capability).
 
-You can make connections available to workspaces by setting permissions, either on individual connections or folders.  When you grant permissions on a folder, all the folders and connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its sub-folders and connections.  Note that permissions are additive and can only be granted, not denied. If you grant permissions to an identity or workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
+You can make connections available to workspaces by setting permissions, either on individual connections or folders.  When you grant permissions on a folder, all the folders and connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its sub-folders and connections.  Note that permissions are additive and can only be granted, not denied. If you grant permissions to a workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
 
-You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the gear icon for the connection or folder you would like to permission.  From the **Settings** tab, select **Permissions**. 
+You can set permissions for folders and connections from their settings page. Navigate to the desired tenant or org and browse the **Connections** to find the resource you wish to manage.  Click the gear icon for the connection or folder you would like to permission.  From the **Settings** tab, select **Permissions**.
 
 
-***THis will change...***
+![](/images/docs/pipes/org-connections-perms-toplevel.png)
+
 
 Select the desired permission: 
-- All workspaces
-- Specific workspaces
-- No workspaces
+- **All workspaces**: Allow access to all existing workspaces in the organization, as well as any new workspaces that are created subsequently.
+- **Specific workspaces**:  Allow specific workspaces. You will be prompted to select the workspaces from a list.
+- **No permissions**: Do not set any permissions on this connection or folder.
 
-Click **Save**.
+If the folder or connection is a descendant of a folder that has already been shared, you cannot revoke those permissions on the child folder or connection, but you may grant additional access:
+
+![](/images/docs/pipes/org-connections-perms-inherited.png)
 
 
-You may set permissions on individual connections but remember that they also inherit the permissions of their parent folder; setting **No Workspaces** on the connection does not remove permissions if they have been granted on a parent folder, it merely does not grant permission on the individual connection.  Choose workspaces that can use this connection:
-- All organizations and organization workspaces
-- Specific organizations and/or organization workspaces
-- No workspaces
-***End***
-
+Click **Save** to commit the changes.
 
 Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).
