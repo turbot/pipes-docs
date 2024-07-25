@@ -18,7 +18,12 @@ Connections and connection folders may be created at any level of the hierarchy:
 
 ## Managing Workspace Connections
 
-You can manage your workspace's connections from the **Advanced** tab.  Navigate to your workspace, go to the **Advanced** tab, then click **Connections** from the menu on the left to see a list of the connections that are currently available to the workspace.   The connections page will show the connections and folders in the tenant, arranged hierarchically, and you can click on folders to navigate the folder tree.   
+You can manage your workspace's connections from the **Advanced** tab.  Navigate to your workspace, go to the **Advanced** tab, then click **Connections** from the menu on the left to see a list of the connections that are currently available to the workspace.   
+
+![](/images/docs/pipes/pipes_workspace_connections.png)
+
+
+The connections page will show the connections and folders in the tenant, arranged hierarchically, and you can click on folders to navigate the folder tree.   
 
 This view will include all the connections that the workspace has permission to use, including tenant-level and organization-level connections and folders, as well as the ones created directly in the workspace. Note that you can add and remove the schemas for the tenant-level and organization-level connections and folders, but you cannot manage their settings here;  The connection properties and folder contents can only be managed on the object where they are defined.  Connections and folders that are created by integrations are dynamically managed by the integration and cannot be manually modified.
 
@@ -55,6 +60,9 @@ You may only detach connections or folders at the level from which they were att
 
 ## Deleting Connections & Folders
 You can delete workspace-level connections and folders from the **Advanced/Connections** page for your workspace.  
+
+![](/images/docs/pipes/pipes_workspace_connection_advanced.png)
+
 
 To delete a connection, click the gear icon for the connection that you wish to delete.  On the **settings** tab, click  **Delete Connection**.  You will be prompted to confirm deletion. Enter the connection handle then click **Delete Connection**.
 
