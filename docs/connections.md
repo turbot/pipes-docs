@@ -23,7 +23,7 @@ You can manage your workspace's connections from the **Advanced** tab.  Navigate
 This view will include all the connections that the workspace has permission to use, including tenant-level and organization-level connections and folders, as well as the ones created directly in the workspace. Note that you can add and remove the schemas for the tenant-level and organization-level connections and folders, but you cannot manage their settings here;  The connection properties and folder contents can only be managed on the object where they are defined.  Connections and folders that are created by integrations are dynamically managed by the integration and cannot be manually modified.
 
 
-## Creating Connections * Folders
+## Creating Connections & Folders
 
 You can create workspace-level connections and folders from the **Advanced/Connections** page for your workspace.   The top-level connections and folders are listed by default, and you can click on folders to navigate the folder tree.
 
