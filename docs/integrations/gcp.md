@@ -74,7 +74,7 @@ To modify the integration, navigate to the **Integrations** page for the appropr
 
 In the list of integrations, click the gear icon next to the integration that you want to modify.
 
-You can change the **Credentials**, **Handle Prefix**  or **Advanced Settings** from the **Config** tab. 
+You can change the **Credentials**, **Handle Prefix** or **Advanced Settings** from the **Config** tab. 
 
 ![](/images/docs/pipes/org-integrations-gcp-settings-config.png)
 
@@ -96,8 +96,8 @@ You can delete an integration from its **Advanced** page.
 *If you delete an integration, all of its associated folders and connections will be deleted and removed from all workspaces.  This action is not reversible!*
 
 Navigate to the **Integrations** page for the appropriate resource:
-- To configure an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
-- To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
+- To delete an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To delete an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 Go to the **Advanced** page and click the **Delete Integration** button. 
 

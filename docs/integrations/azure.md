@@ -7,7 +7,7 @@ sidebar_label: Azure
 
 The Azure Integration allows you to automatically import a connection folder hierarchy that mirrors your Azure Organization folder structure, with a connection folder for each Azure management group and a [connection](/pipes/docs/connections) for each subscription in your Azure organization.
 
-The Azure integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as subscriptions and management groups are created, deleted, or changed in your Azure Organization.
+The Azure integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as subscriptions and management groups are created, deleted, or changed in your Azure organization.
 
 
 ## Creating the Azure Integration
@@ -103,8 +103,8 @@ You can delete an integration from its **Advanced** page.
 *If you delete an integration, all of its associated folders and connections will be deleted and removed from all workspaces.  This action is not reversible!*
 
 Navigate to the **Integrations** page for the appropriate resource:
-- To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
-- To configure an Azure integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
+- To delete an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To delete an Azure integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 Go to the **Advanced** page and click the **Delete Integration** button. 
 
