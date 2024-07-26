@@ -58,11 +58,32 @@ workspace at this time.
 
 ## Deleting Workspaces
 
-You can delete a workspace from its **Settings** tab. From the **Workspaces**
+You can delete a workspace from its **Advanced** tab. From the **Workspaces**
 tab for your developer account or organization, click on the workspace you wish to
-delete. On the workspace page, go to the **Settings** tab, select **Advanced**
+delete. On the workspace page, go to the **Advanced** tab, select **Workspace**
 from the menu on the left, and click **Delete workspace**. You will be prompted
 to confirm deletion; enter the workspace name and click **Delete**.
+
+
+## Steampipe Database Search Path
+
+Your workspace includes a Steampipe database, and this database may include many [schemas](/pipes/docs/schemas).  When querying the database, any unqualified table names are resolved using the schema [search path](https://steampipe.io/docs/guides/search-path).  Mods are written using unqualified names, which allows you to target specific [datatanks](/pipes/docs/datatank), [connections](/docs/connections), and [aggregators](/pipes/docs/aggregators).  Pipes is opinionated on the search path, because *usually* you want to use a table from the datatank if it exists, otherwise an aggregator if one exists, otherwise a connection.
+
+By default, Pipes builds the search path as follows:
+1. The `public` schema
+2. Datatank schemas, alphabetically
+2. Aggregator schemas, alphabetically
+2. Connection schemas, alphabetically
+
+Usually, this is the desired order, however you can set a default [search path prefix](https://steampipe.io/docs/guides/search-path#search-path-prefix) if you want to customize the search path
+
+You can set the prefix from the **Advanced** / **Workspace** page for your workspace.
+
+
+![](/images/docs/pipes/pipes_workspace_search_path.png)
+
+The active default search path is displayed.  To add or change the prefix, click **edit**, select the schemas from the list, in the order you would like them to appear, then click **Save**.
+
 
 ## Workspace Maintenance
 
@@ -80,7 +101,7 @@ After a workspace has been created, it is in the `enabled` state - the workspace
 <img src="/images/docs/pipes/pipes_workspace_sleeping_banner.png" width="400pt"/>
 <br />
 
-You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your workspace from the **Settings** / **Advanced** page for your workspace.
+You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your workspace from the **Advanced** / **Workspace** page for your workspace.
 
 <img src="/images/docs/pipes/pipes_workspace_settings_advanced.png" width="400pt"/>
 <br />
