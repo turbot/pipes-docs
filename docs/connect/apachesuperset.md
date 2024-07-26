@@ -13,12 +13,10 @@ Steampipe provides a single interface to all your cloud, code, logs and more.
 Because it's built on Postgres, Steampipe provides an endpoint that any
 Postgres-compatible client -- including Apache Superset -- can connect to.
 
-The [Connect](/pipes/docs/integrations/) tab for your workspace provides
-the details you need to connect Apache Superset to Turbot Pipes.
+You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-<div style={{"marginBottom":"2em","borderWidth":"thin", "borderStyle":"solid", "borderColor":"lightgray", "padding":"20px", "width":"90%"}}>
-<img src="/images/docs/pipes/turbot-pipes-connect-details.jpg" />
-</div>
+![](/images/docs/pipes/query-info-connect.png)
+
 
 ## Connect to Steampipe CLI from Apache Superset
 

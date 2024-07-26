@@ -11,16 +11,25 @@ Turbot Pipes offers various methods to connect and query your data. Run SQL quer
 
 Your Pipes workspace database is accessible from anywhere, thanks to its public IP address. Connect using the [Steampipe CLI](/pipes/docs/connect/cli) or other standard tools and utilities that support Postgres.
 
-The **Connect** in your workspace provides the Postgres connection string. Important: this string includes your password, which is masked for security in the web console. Use the **Copy** to copy it so you can paste it into your tool's configuration screen.
+You can get the Postgres connection string and other database information from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-<div style={{"marginTop":"1em", "marginBottom":"1em", "width":"90%"}}>
-<img src="/images/docs/pipes/int_connecting.png"/>
-</div>
+![](/images/docs/pipes/query-info-connect.png)
 
-Individual users can access the database with their credentials. This information is available under the **Connect** tab after logging into Turbot Pipes, enabling secure, personalized access.
+The **Database** tab will provide general database connection details - the **Connection String**, **Host**, **Port**, **Database**, **Username** and **Password**.  Click on any field to copy it to your clipboard.  Note that the password is masked on the screen, but clicking it will add the un-redacted text to your clipboard so that you can paste it into your tool's configuration screen.  Individual users can access the database with their credentials, and the information in this view is specific to the logged in user, enabling secure, personalized access.
+
+You can also get specific [Steampipe](https://steampipe.io/) commands from the **Steampipe CLI** tab:
+
+![](/images/docs/pipes/query-info-connect-steampipe.png)
+
+Or retrieve the [psql](/pipes/docs/connect/psql) and [pgcli](/pipes/docs/connect/pgcli) commands from the **Terminal** tab.
+
+![](/images/docs/pipes/query-info-connect-terminal.png)
+
+
+
 
 ## Examples of Postgres-Compatable Clients
-Our community leverages a diverse range of PostgreSQL clients to connect to Turbot Pipes. This flexibility accommodates different workflows, whether you prefer traditional SQL IDEs for database management, BI tools for data analysis and visualization, or programming languages and SDKs for custom integrations.
+Our community leverages a diverse range of PostgreSQL clients to connect to Turbot Pipes. This flexibility accommodates different workflows, whether you prefer traditional SQL IDEs for database management, BI tools for data analysis and visualization, or [programming languages and SDKs](https://turbot.com/pipes/blog/2024/01/turbot-pipes-as-software-component) for custom integrations.
 
 ### SQL IDEs
 
@@ -66,4 +75,3 @@ Our community leverages a diverse range of PostgreSQL clients to connect to Turb
 | [Python](https://turbot.com/pipes/docs/connect/python) | Python is a popular programming language known for its simplicity and versatility. |
 | [R](https://turbot.com/pipes/docs/connect/r) | R is a programming language and environment for statistical computing and graphics. |
 
-More information about using https://turbot.com/pipes/blog/2024/01/turbot-pipes-as-software-component

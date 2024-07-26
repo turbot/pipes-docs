@@ -9,11 +9,9 @@ sidebar_label: Sigma
 
 Steampipe provides a single interface to all your cloud, code, logs and more. Because it's built on Postgres, Steampipe provides an endpoint that any Postgres-compatible client — including Sigma — can connect to.
 
-The [Connect](/pipes/docs/integrations/) tab for your workspace provides the details you need to connect Sigma to Turbot Pipes.
+You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-<div style={{"marginTop":"1em", "marginBottom":"1em", "width":"90%"}}>
-<img src="/images/docs/pipes/turbot-pipes-connect-details.jpg" />
-</div>
+![](/images/docs/pipes/query-info-connect.png)
 
 Once the connection to Turbot Pipes is established, you can access the tables provided by the Steampipe plugins, run queries, and build reports.
 

@@ -13,10 +13,9 @@ Steampipe provides a single interface to all your cloud, code, logs and more.
 Because it's built on Postgres, Steampipe provides an endpoint that any
 Postgres-compatible client -- including Grafana -- can connect to.
 
-The [Connect](/pipes/docs/integrations/) tab for your workspace provides
-the details you need to connect Grafana to Turbot Pipes.
+You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-<img src="/images/docs/pipes/turbot-pipes-connect-details.jpg" style={{ boxShadow: 'none' }} />
+![](/images/docs/pipes/query-info-connect.png)
 
 ## Connect to Steampipe CLI from Grafana
 
