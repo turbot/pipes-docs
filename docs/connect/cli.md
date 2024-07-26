@@ -15,10 +15,7 @@ to authenticate:
 export PIPES_TOKEN=tpt_c6f5tmpe4mv9appio5rg_3jz0a8fakekeyf8ng72qr646
 ```
 
-The **Connect** tab for your workspace provides examples that you can copy,
-paste and run to run an interactive query, run an interactive dashboard, or run
-a benchmark against your cloud workspace!
+You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information.  You can get specific steampipe commands from the **Steampipe CLI** tab:
 
-<div style={{"marginTop":"1em", "marginBottom":"1em", "width":"90%"}}>
-<img src="/images/docs/pipes/int_cli.png"/>
-</div>
+![](/images/docs/pipes/query-info-connect-steampipe.png)
+

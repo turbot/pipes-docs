@@ -8,12 +8,9 @@ sidebar_label: JavaScript
 The Turbot Pipes workspace is a Postgres database, with the use of the `pg`
 client you can connect and query your workspace database with JavaScript.
 
-The [Connect](/pipes/docs/integrations/) tab for your workspace provides
-the details you need to connect Turbot Pipes with JavaScript.
+You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-<div style={{"marginTop":"1em", "marginBottom":"1em", "width":"90%"}}>
-<img src="/images/docs/pipes/turbot-pipes-connect-details.jpg" />
-</div>
+![](/images/docs/pipes/query-info-connect.png)
 
 You'll need the Postgres client for JavaScript, which you can install using
 `npm i pg` or `yarn add pg`. Then you specify the connection string, create a
