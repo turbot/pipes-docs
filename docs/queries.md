@@ -7,8 +7,7 @@ sidebar_label: Queries
 
 Once you've added a connection you will be able to run
 [SQL queries](https://steampipe.io/docs/sql/steampipe-sql) to explore your data, either interactively in
-the console, or via any PostgreSQL-compatible client - see our
-[integrations pages](/pipes/docs/integrations/) for some examples.
+the console, or [via any PostgreSQL-compatible client](/pipes/docs/connect).
 
 ## Exploring Schemas
 
