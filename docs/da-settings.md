@@ -1,46 +1,58 @@
 ---
-title: Settings
-sidebar_label: Settings
+title: Advanced
+sidebar_label: Advanced
 ---
 
-# Developer Account Settings
+# Developer Account Advanced
 
-You can manage your user profile and credentials from the **Settings** page for
-your developer account. Click your avatar in the top right and select **Settings**
+You can manage your user profile, credentials, billing, usage, and notification preferences from the **Advanced** page for
+your developer account. Click your avatar in the top right and select **Your Preferences**
 from the menu, or click the double arrow button from the navigation at the top
 of the page, select your developer account from the dropdown, and then select
-**Settings** from the menu on the left.
+**Advanced** from the menu on the left.
 
-## Profile
+## User Profile
 
-On the **Settings** page for your developer account, click **Profile** from the left
+On the **Advanced** page for your developer account, click **User Profile** from the left
 hand menu to manage your profile data. You can modify your **Display Name** or
-**Avatar URL**.
+**Avatar**.
 
-You can also rotate your **Database Password**. Every Steampipe user has a
-single password they can use to log in to the workspaces to which they have
-access. (This is the password that appears in the connection string.) You can
-rotate your password at any time by clicking **Rotate Password** on the profile
-page. This may take a couple of minutes to propagate to all of your workspaces.
-Note that existing connections will not be terminated when you rotate your
-password.
+You can also change your user **Handle** at any time. Note, however, that your workspace
+DNS names all contain your user handle; changing it will result in changing the
+DNS name for ALL of your personal workspaces.
 
-## Notifications
 
-On the **Settings** page for your user, click **Notifications** from the left
-hand menu to manage your Turbot Pipes notification preferences. Choose what type
-of emails you wish to receive from Turbot Pipes:
+### Permanently Deleting Your Turbot Pipes Account
 
-| Type                  | Description                                                                                                   |
-| --------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Community Updates** | Get notified of community information and events you may be interested in.                                    |
-| **Product Updates**   | Get notified of product updates as they are released.                                                         |
-| **Tips & Tricks**     | Get useful tips & tricks on using Turbot Pipes.                                                               |
-| **System**            | Important system notifications related to your Turbot Pipes account. System notifications cannot be disabled. |
+If you wish, you can permanently remove your developer account and all of its
+contents from the Steampipe platform. (We hate to see you go!) This action is
+not reversible, so please continue with caution.
 
-## Tokens
+On the **Advanced** page for your user, click **User Profil** from the left hand
+menu, and then click **Delete developer account**. You will be prompted to
+confirm deletion; enter your user handle and click **Delete**.
 
-On the **Settings** page for your user, click **Tokens** from the left hand menu
+## Usage
+
+Pipes provides [Usage](/pipes/docs/usage) information to help you view and understand your workspace storage and compute usage.
+
+To view  usage for your developer account, go to the **Advanced** page for your user and click **Usage** from the left hand menu.
+
+
+## Billing
+
+The [Billing](/pipes/docs/billing) page provides visibility into the current state of billing for your identity.
+
+Your developer account includes a [certain amount of free storage and compute](/pipes/pricing), with the option to upgrade to a paid plan to unlock additional usage.
+
+To manage billing, go to the **Advanced** page for your developer account and click **Billing** from the left hand menu.
+
+
+## Credentials & Access
+
+### Tokens
+
+On the **Advanced** page for your user, click **Credentials & Access** from the left hand menu
 to manage your Turbot Pipes tokens. You can use these tokens to access the
 [Turbot Pipes API](/pipes/docs/develop/query-api), or to connect to Turbot Pipes
 workspaces from the Steampipe CLI. You can have up to 2 tokens at a time.
@@ -54,21 +66,17 @@ You can deactivate or delete a token from the list by clicking the options menu
 button ('three dots' button) and selecting **Deactivate** or **Delete** from the menu.
 
 
-## Audit Log
+### Database Password
 
-On the **Settings** page for your developer account, click **Audit Log** from the
-left hand menu to view the [audit log](/pipes/docs/activity#audit-log) of API activity associated to your account.
+You can also rotate your **Database Password**. Every Steampipe user has a
+single password they can use to log in to the workspaces to which they have
+access. (This is the password that appears in the connection string.) You can
+rotate your password at any time by clicking **Rotate Password** on the profile
+page. This may take a couple of minutes to propagate to all of your workspaces.
+Note that existing connections will not be terminated when you rotate your
+password.
 
-## Advanced
 
-### Updating Your User Handle
-
-You can update your user handle at any time. Note, however, that your workspace
-DNS names all contain your user handle; changing it will result in changing the
-DNS name for ALL of your workspaces.
-
-On the **Settings** page for your developer account, click **Advanced** from the left
-hand menu. Enter your new handle and click **Save**.
 
 ### Reset Authentication
 
@@ -78,7 +86,7 @@ tokens issued via console or
 [tokens](#tokens) managed via your profile settings.
 
 If you wish to reset authentication to your user for all issued tokens, you can
-do so by going to the **Settings** page for your user, then clicking
+do so by going to the **Advanced** page for your user, then clicking
 **Advanced** from the left hand menu. From here you'll find a
 `Reset authentication` section. Clicking the `Reset authentication` button will
 reset authentication for all existing temporary and user tokens.
@@ -91,12 +99,28 @@ that stage. You will also need to re-generate any
 <br />
 
 
-### Permanently Deleting Your Turbot Pipes Account
 
-If you wish, you can permanently remove your developer account and all of its
-contents from the Steampipe platform. (We hate to see you go!) This action is
-not reversible, so please continue with caution.
+## Notifications
 
-On the **Settings** page for your user, click **Advanced** from the left hand
-menu, and then click **Delete developer account**. You will be prompted to
-confirm deletion; enter your user handle and click **Delete**.
+On the **Advanced** page for your user, click **Notifications** from the left
+hand menu to manage your Turbot Pipes notification preferences. Choose what type
+of emails you wish to receive from Turbot Pipes:
+
+| Type                  | Description                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **Community Updates** | Get notified of community information and events you may be interested in.                                    |
+| **Product Updates**   | Get notified of product updates as they are released.                                                         |
+| **Tips & Tricks**     | Get useful tips & tricks on using Turbot Pipes.                                                               |
+| **System**            | Important system notifications related to your Turbot Pipes account. System notifications cannot be disabled. |
+
+
+
+<!--
+## Audit Log
+
+On the **Advanced** page for your developer account, click **Audit Log** from the
+left hand menu to view the [audit log](/pipes/docs/activity#audit-log) of API activity associated to your account.
+
+
+-->
+
