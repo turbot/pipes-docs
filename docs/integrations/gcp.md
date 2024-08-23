@@ -20,8 +20,8 @@ You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organi
 
 
 First, navigate to the **Integrations** page for the appropriate resource:
-- To configure an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
-- To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
+- To configure an GCP integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure an GCP integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
 ![](/images/docs/pipes/org-integrations-tab.png)
@@ -34,20 +34,31 @@ Select **GCP** and click **Next**.
 
 ![](/images/docs/pipes/org-integrations-gcp-setup.png)
 
-
 Provide a **Handle** for the integration.  This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).
 
-Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
+Configure the **Discovery Settings**, including the credentials that Pipes should use *to discover the organization's resources*.  
 
-Add your **Credentials**, in the form of a JSON key pair for an existing [GCP service account](https://console.cloud.google.com/apis/credentials/serviceaccountkey).  As a minimum, grant your service account the **Viewer** role in the projects and folders that you wish to manage.
+![](/images/docs/pipes/org-integrations-aws-discovery.png)
+
+These credentials need permission to read the project data in the GCP Organizations project.  You may either authenticate using service-account impersonation (recommended) or a service key file.
+
+- To use service-account impersonation, select **Service Account Impersonation** from the **Access Mode** dropdown. You will need to grant the _Service Account Token Creator_ role to the Pipes service and add a label named _turbot-pipes_ to your project, with the value shown in the form. You can automate the granting of the role to Pipes service using the Terraform plan or the copy-able `gcloud` command. Click the **Test Discovery** button to verify that the credentials are configured correctly.
+
+- To use a service key file, select **Credentials** from the **Access Mode** dropdown and upload the key file in the form of a JSON key pair for an existing [GCP service account](https://console.cloud.google.com/apis/credentials/serviceaccountkey).  As a minimum, grant your service account the **Viewer** role in the projects and folders that you wish to manage.
+
+Click **Next**.
+
+Configure the **Connection settings**.
+
+![](/images/docs/pipes/org-integrations-aws-setup.png)
+
+Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
 
 If desired, you can click **Advanced Options** to set default settings for the imported connections.  All connections created by the integration will inherit these settings, though you can override them later for each connection if you want.
 
 ![](/images/docs/pipes/org-integrations-gcp-setup-advanced.png)
 
-
-Click the **Test Discovery** button to verify that the credentials are configured correctly, then click **Next**.
-
+Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
 
 Finally, select the [Permissions](/pipes/docs/tenants/connections#permissions). 
 
