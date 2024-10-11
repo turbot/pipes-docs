@@ -12,42 +12,80 @@
         "id": "using",
         "link": "using",
         "items": [
-          "dashboards",
-          "queries",
           {
             "type": "category",
-            "id": "connect",
-            "link": "connect",
+            "id": "using_steampipe",
+            "link": "using/steampipe",
             "items": [
-              "connect/apachesuperset",
-              "connect/azuredatastudio",
-              "connect/cli",
-              "connect/datagrip",
-              "connect/dbeaver",
-              "connect/dbt",
-              "connect/deepnote",
-              "connect/duckdb",
-              "connect/gitpod",
-              "connect/golang",
-              "connect/grafana",
-              "connect/heidisql",
-              "connect/javascript",
-              "connect/jupyter",
-              "connect/looker",
-              "connect/metabase",
-              "connect/navicat",
-              "connect/pgadmin",
-              "connect/pgcli",
-              "connect/powerbi",
-              "connect/psql",
-              "connect/python",
-              "connect/r",
-              "connect/razorsql",
-              "connect/rstudio",
-              "connect/sigma",
-              "connect/tableau",
-              "connect/tableplus",
-              "connect/vscode"
+              "using/steampipe/query",
+              "using/steampipe/snapshots",
+              
+              {
+                "type": "category",
+                "id": "schemas",
+                "link": "using/steampipe/schemas",
+                "items": [
+                  "connections",
+                  "aggregators",
+                  "datatank"
+                ]
+              },
+
+              {
+                "type": "category",
+                "id": "connect",
+                "link": "connect",
+                "items": [
+                  "connect/apachesuperset",
+                  "connect/azuredatastudio",
+                  "connect/cli",
+                  "connect/datagrip",
+                  "connect/dbeaver",
+                  "connect/dbt",
+                  "connect/deepnote",
+                  "connect/duckdb",
+                  "connect/gitpod",
+                  "connect/golang",
+                  "connect/grafana",
+                  "connect/heidisql",
+                  "connect/javascript",
+                  "connect/jupyter",
+                  "connect/looker",
+                  "connect/metabase",
+                  "connect/navicat",
+                  "connect/pgadmin",
+                  "connect/pgcli",
+                  "connect/powerbi",
+                  "connect/psql",
+                  "connect/python",
+                  "connect/r",
+                  "connect/razorsql",
+                  "connect/rstudio",
+                  "connect/sigma",
+                  "connect/tableau",
+                  "connect/tableplus",
+                  "connect/vscode"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "id": "using_powerpipe",
+            "link": "using/powerpipe",
+            "items": [
+              "using/powerpipe/dashboards",
+              "using/powerpipe/snapshots",
+              "using/powerpipe/mods"
+            ]
+          },
+          {
+            "type": "category",
+            "id": "using_flowpipe",
+            "link": "using/flowpipe",
+            "items": [
+              "using/flowpipe/pipelines",
+              "using/flowpipe/mods"
             ]
           }
         ]
@@ -57,18 +95,10 @@
         "id": "workspaces",
         "link": "workspaces",
         "items": [
-          {
-            "type": "category",
-            "id": "schemas",
-            "link": "schemas",
-            "items": [
-              "connections",
-              "aggregators",
-              "datatank"
-            ]
-          },
-          "mods",
-          "pipelines",
+          "workspaces/pipes",          
+          "workspaces/people",
+          "workspaces/connections",
+          "workspaces/notifiers",
           "activity"
         ]
       },

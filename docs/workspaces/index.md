@@ -5,8 +5,6 @@ sidebar_label: Workspaces
 
 # Workspaces
 
-## Overview
-
 A **Workspace** provides a bounded context for managing, operating, and securing
 Steampipe resources. A workspace comprises a single Steampipe database instance
 as well as a directory of mod resources such as queries, benchmarks, and
@@ -17,6 +15,7 @@ The Steampipe workspace database instance is hosted in Turbot Pipes, and availab
 a public Postgres endpoint. You can query the workspace from the Turbot Pipes
 web console, run queries or controls from a remote Steampipe CLI instance, or
 connect to your workspace from many third-party tools.
+
 
 ## Creating Workspaces
 

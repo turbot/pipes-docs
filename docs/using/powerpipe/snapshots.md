@@ -1,25 +1,10 @@
 ---
-title: Dashboards
-sidebar_label: Dashboards
+title: Snapshots
+sidebar_label: Snapshots
 ---
 
-# Viewing Dashboards
 
-Once you've added a connection and installed one or more mods into your
-workspace, the [Dashboards](https://steampipe.io/docs/dashboard/overview) (including
-[Benchmarks](https://steampipe.io/docs/check/overview) will become available for you to run in the
-**Dashboards** tab. You can browse the list, or use the powerful search to
-filter by name / tag etc.
-
-<img src="/images/docs/pipes/gs_dashboard_list.png" width="400pt"/>
-<br />
-
-Click on a dashboard to run it.
-
-<img src="/images/docs/pipes/dash_example_1.png" width="400pt"/>
-<br />
-
-## Saving & Sharing Snapshots
+# Snapshots
 
 Turbot Pipes allows you to save and share dashboard **snapshots**. A snapshot is
 a saved view of a dashboard at a point in time with a given set of inputs and
