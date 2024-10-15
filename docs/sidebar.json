@@ -98,7 +98,6 @@
           "workspaces/pipes",          
           "workspaces/people",
           "workspaces/connections",
-          "workspaces/notifiers",
           "activity"
         ]
       },
@@ -111,9 +110,15 @@
           "integrations/aws",
           "integrations/azure",
           "integrations/gcp",
-          "integrations/github"
+          "integrations/github",
+          "integrations/slack"
+
         ]
       },
+
+      "connections",
+      "notifiers",
+
 
       {
         "type": "category",
