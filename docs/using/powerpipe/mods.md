@@ -5,7 +5,7 @@ sidebar_label: Mods
 
 # Managing Mods
 
-Your workspace includes a hosted [Powerpipe](https://powerpipe.io/) dashboard server, allowing you to [view interactive dashboards and benchmarks](/pipes/docs/dashboards#viewing-dashboards), [save and share snapshots](/pipes/docs/dashboards#saving--sharing-snapshots) and even [schedule them to run and deliver via Slack or Teams](/pipes/docs/dashboards#scheduling-snapshots).   You can add and remove dashboards and benchmarks from your workspace by installing and removing [mods](https://powerpipe.io/docs/build). 
+Your workspace includes a hosted [Powerpipe](https://powerpipe.io/) dashboard server, allowing you to [view interactive dashboards and benchmarks](/pipes/docs/using/powerpipe/dashboards), [save and share snapshots](/pipes/docs/using/powerpipe/snapshots) and even [schedule them to run and deliver via Slack or Teams](/pipes/docs/using/powerpipe/snapshots#scheduling-snapshots).   You can add and remove dashboards and benchmarks from your workspace by installing and removing [mods](https://powerpipe.io/docs/build). 
 
 
 ## Installing Recommended Mods

@@ -45,6 +45,8 @@ You will be prompted to grant permissions to access the Slack workspace.  If you
 ![](/images/docs/pipes/slack_oauth_perms.png)
 
 
+> Note:  After the Slack integration has been created and the app has been added to your Slack workspace, you must [add the integration to any channel](https://slack.com/help/articles/201980108-Add-people-to-a-channel) to which you wish to send messages (you can use the `/invite @turbot-pipes` slash command)!
+
 ## Modifying the Slack Integration
 
 

@@ -17,20 +17,19 @@
             "id": "using_steampipe",
             "link": "using/steampipe",
             "items": [
-              "using/steampipe/query",
-              "using/steampipe/snapshots",
-              
               {
                 "type": "category",
                 "id": "schemas",
                 "link": "using/steampipe/schemas",
                 "items": [
-                  "connections",
+                  "using/steampipe/connections",
                   "aggregators",
                   "datatank"
                 ]
               },
-
+              "using/steampipe/query",
+              "using/steampipe/snapshots",
+              
               {
                 "type": "category",
                 "id": "connect",
@@ -98,27 +97,23 @@
           "workspaces/pipes",          
           "workspaces/people",
           "workspaces/connections",
-          "activity"
+          "workspaces/notifiers",
+          "activity",
+          {
+            "type": "category",
+            "id": "integrations",
+            "link": "integrations",
+            "items": [
+              "integrations/aws",
+              "integrations/azure",
+              "integrations/gcp",
+              "integrations/github",
+              "integrations/slack"
+    
+            ]
+          }
         ]
       },
-
-      {
-        "type": "category",
-        "id": "integrations",
-        "link": "integrations",
-        "items": [
-          "integrations/aws",
-          "integrations/azure",
-          "integrations/gcp",
-          "integrations/github",
-          "integrations/slack"
-
-        ]
-      },
-
-      "connections",
-      "notifiers",
-
 
       {
         "type": "category",

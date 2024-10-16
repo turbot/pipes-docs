@@ -5,16 +5,13 @@ sidebar_label: Workspaces
 
 # Workspaces
 
-A **Workspace** provides a bounded context for managing, operating, and securing
-Steampipe resources. A workspace comprises a single Steampipe database instance
-as well as a directory of mod resources such as queries, benchmarks, and
-controls. Workspaces allow you to separate your Steampipe instances for
-security, operational, or organizational purposes.
-
-The Steampipe workspace database instance is hosted in Turbot Pipes, and available via
-a public Postgres endpoint. You can query the workspace from the Turbot Pipes
-web console, run queries or controls from a remote Steampipe CLI instance, or
+The **Workspace** is where work gets done!  A **Workspace** provides a secure, independent set of Pipes resources.  Workspaces allow you to separate your Steampipe instances for
+security, operational, or organizational purposes.  Your workspace includes:
+- A dedicated [Steampipe](/pipes/docs/using/steampipe/) database instance hosted in Turbot Pipes and available via a public Postgres endpoint. You can query the workspace database from the Turbot Pipes
+web console, run queries or controls from a remote Powerpipe or Steampipe CLI instance, or
 connect to your workspace from many third-party tools.
+- Your own hosted [Powerpipe](/pipes/docs/using/powerpipe/) server, providing secure access to your benchmarks and dashboards from any mod hosted in a public or private Github repository.
+- Your own hosted [Flowpipe](/pipes/docs/using/flowpipe/) server allowing you to run pipelines and set up always-on triggers to run your pipelines automatically on a schedule or in response to events.
 
 
 ## Creating Workspaces
@@ -63,25 +60,6 @@ delete. On the workspace page, go to the **Advanced** tab, select **Workspace**
 from the menu on the left, and click **Delete workspace**. You will be prompted
 to confirm deletion; enter the workspace name and click **Delete**.
 
-
-## Steampipe Database Search Path
-
-Your workspace includes a Steampipe database, and this database may include many [schemas](/pipes/docs/schemas).  When querying the database, any unqualified table names are resolved using the schema [search path](https://steampipe.io/docs/guides/search-path).  Mods are written using unqualified names, which allows you to target specific [datatanks](/pipes/docs/datatank), [connections](/docs/connections), and [aggregators](/pipes/docs/aggregators).  Pipes is opinionated on the search path, because *usually* you want to use a table from the datatank if it exists, otherwise an aggregator if one exists, otherwise a connection.
-
-By default, Pipes builds the search path as follows:
-1. The `public` schema
-2. Datatank schemas, alphabetically
-2. Aggregator schemas, alphabetically
-2. Connection schemas, alphabetically
-
-Usually, this is the desired order, however you can set a default [search path prefix](https://steampipe.io/docs/guides/search-path#search-path-prefix) if you want to customize the search path
-
-You can set the prefix from the **Advanced** / **Workspace** page for your workspace.
-
-
-![](/images/docs/pipes/pipes_workspace_search_path.png)
-
-The active default search path is displayed.  To add or change the prefix, click **edit**, select the schemas from the list, in the order you would like them to appear, then click **Save**.
 
 
 ## Workspace Maintenance
