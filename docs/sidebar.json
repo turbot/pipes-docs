@@ -17,18 +17,12 @@
             "id": "using_steampipe",
             "link": "using/steampipe",
             "items": [
-              {
-                "type": "category",
-                "id": "schemas",
-                "link": "using/steampipe/schemas",
-                "items": [
-                  "using/steampipe/connections",
-                  "aggregators",
-                  "datatank"
-                ]
-              },
               "using/steampipe/query",
               "using/steampipe/snapshots",
+              "using/steampipe/connections",
+
+              "aggregators",
+              "datatank",
               
               {
                 "type": "category",

@@ -3,6 +3,7 @@ title: Steampipe
 sidebar_label: Steampipe
 ---
 
+
 # Steampipe
 
 Your workspace includes a hosted [Steampipe](https://steampipe.io) database.  Steampipe exposes APIs and services as a high-performance relational database, enabling you to write SQL-based queries to explore dynamic data.

@@ -5,23 +5,9 @@ sidebar_label: Connections
 
 # Connections
 
-Pipes allows you 
+At its core, Turbot Pipes is a platform to help you manage **your** stuff, and **Connections** are the way to configure Pipes to interact with your systems and services.
 
-connection definition will be used to define the credentials, scope, and configuration for interacting with an external system.
-
-
-
-
-Flowpipe Connections provide a mechanism for defining and sharing secrets in your Flowpipe environment.
-
-
-
-Levels - create at tenant, rg, or workspace....
-
-
-
-
-A **[Connection](https://steampipe.io/docs/managing/connections)** represents a set of tables for a **single data source**.  To query data, you'll need at least one connection, as the other schema types depend on connections to provide credentials and other configuration information.
+Connections provide the credentials, scope, and configuration information for interacting with an external system.  For example, you may create AWS connections and add them as schemas to Steampipe so that you can query your AWS configuration.  Flowpipe pipelines can also use these connections, allowing you to perform remediaton actions in those same accounts.
 
 You can organize connections into **Connection Folders**. This makes it easier to share groups of connections across workspaces in your tenant or organization.
 
@@ -31,17 +17,18 @@ Connections and connection folders may be created at any level of the hierarchy:
 - Workspace-level connections and folders may only be used within the workspace in which they are defined; they cannot be shared.
 
 
+Some [Integrations](/pipes/docs/integrations) can create connections and folders automatically for you.  The [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations, for example, can be configured to automatically import a connection folder hierarchy that mirrors your organization structure, including a connection for each account/subscription/project in your organization.  The integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as resources are created, deleted, or changed in your cloud organization structure.
+
 
 ## Managing Workspace Connections
 
-You can manage your workspace's connections from the **Advanced** tab.  Navigate to your workspace, go to the **Advanced** tab, then click **Connections** from the menu on the left to see a list of the connections that are currently available to the workspace.   
+You can manage your workspace's connections from the **Connections** tab.  Navigate to your workspace and then click to the **Connections** tab to see a list of the connections that are currently available to the workspace.   
 
 ![](/images/docs/pipes/pipes_workspace_connections.png)
 
+The connections page will show the connections and folders in the workspace, arranged hierarchically, and you can click on folders to navigate the folder tree.   
 
-The connections page will show the connections and folders in the tenant, arranged hierarchically, and you can click on folders to navigate the folder tree.   
-
-This view will include all the connections that the workspace has permission to use, including tenant-level and organization-level connections and folders, as well as the ones created directly in the workspace. Note that you can add and remove the schemas for the tenant-level and organization-level connections and folders, but you cannot manage their settings here;  The connection properties and folder contents can only be managed on the object where they are defined.  Connections and folders that are created by integrations are dynamically managed by the integration and cannot be manually modified.
+This view will include all the connections that the workspace has permission to use, including tenant-level and organization-level connections and folders, as well as the ones created directly in the workspace.  Note that you can add and remove Steampipe schemas for the tenant-level and organization-level connections and folders, but you cannot manage their settings here;  The connection properties and folder contents can only be managed on the object where they are defined.  Connections and folders that are created by integrations are dynamically managed by the integration and cannot be manually modified.
 
 
 ## Creating Connections & Folders
@@ -60,22 +47,21 @@ You can create connections and folders manually, but they may also be created by
 
 ## Adding Schemas
 
-Granting permissions on a connection or folder makes it available for a workspace to use, but it does not automatically add it as a schema to your workspace database.   After the connection or folder has been created and the permissions have been set, you can add the schema to your workspace from the **Advanced/Connections** page for your workspace. 
+Granting permissions on a connection or folder makes it available for a workspace to use, but it does not automatically add it as a schema to your Steampipe workspace database.   After the connection or folder has been created and the permissions have been set, you can add the schema to your workspace from the **Connections** tab for your workspace. 
 
 You may add schemas for a single connection or a folder.  Adding a folder schema makes the schemas for *all the descendent connections* available as schemas in your workspace database.  Your workspace's schemas will remain synchronized when the folder changes;  If a connection is subsequently added to the folder, the schema will automatically be added to any workspace that has the folder attached.  Likewise, when connections are removed from the folder, the corresponding schemas are removed from the workspace.
 
-To add a schema, go to the **Advanced/Connections** page for your workspace, and navigate to the folder or connection you wish to add, then click **Add to Schema** from the list.
-
+To add a schema, go to the **Connections** tab for your workspace, and navigate to the folder or connection you wish to add, then click **Add to Schema** from the list.
 
 
 ## Removing Schemas
-You can remove connection schemas from the **Advanced/Connections** page for your workspace.  Simply find the connection or folder in the list and click **Remove from Schema**.
+You can remove connection schemas from the **Connections** tab for your workspace.  Simply find the connection or folder in the list and click **Remove from Schema**.
 
 You may only detach connections or folders at the level from which they were attached.  If a connection folder is attached, you cannot detach the connection schemas individually, you must detach the folder.
 
 
 ## Deleting Connections & Folders
-You can delete workspace-level connections and folders from the **Advanced/Connections** page for your workspace.  
+You can delete workspace-level connections and folders from the **Connections** tab for your workspace.  
 
 ![](/images/docs/pipes/pipes_workspace_connection_advanced.png)
 
