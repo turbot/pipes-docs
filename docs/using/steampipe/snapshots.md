@@ -3,91 +3,90 @@ title: Snapshots
 sidebar_label: Snapshots
 ---
 
-
-## Saving Snapshots
+# Snapshots
 
 Turbot Pipes allows you to save and share query **snapshots** that are
-dashboards containing a table generated from your query results.
+dashboards containing a table generated from your query results.  You can [save](/pipes/docs/using/steampipe/query#saving-snapshots) and [schedule](/pipes/docs/using/steampipe/query#scheduling-query-snapshots) query snapshots from the **Query** tab, or [take snapshots from the Steampipe CLI](https://steampipe.io//docs/query/snapshots) and upload them to your workspace.
 
-To take a snapshot, click the **Snap** button at the top of the query editor
-after you have run the query you wish to snap.
+You can manage these snapshots from the **Snapshots** tab for the Steampipe service in your workspace.
 
-<img src="/images/docs/pipes/cloud-query-toolbar.png" width="200pt"/>
-<br />
 
-This will then take you to the dashboard snapshot view.
+## Browsing Snapshots
 
-<img src="/images/docs/pipes/cloud-query-snapshot.png" width="400pt"/>
-<br />
+To view a list of snapshots, navigate to your workspace.  From the **Pipes** tab, select **Steampipe**, then go to the **Snapshots** tab.
 
-You can [manage](/pipes/docs/dashboards#managing-snapshots) this snapshot and
-[browse](/pipes/docs/dashboards#browsing-snapshots) others from the
-**Dashboards** page.
+The **Snapshots** tab lists all the query snapshots in the workspace, including the snapshot title, tags, and the date and time when the snapshot was taken.  
 
-## Scheduling Query Snapshots
+![](/images/docs/pipes/steampipe/steampipe_snapshot_list.png)
 
-Rather than manually capture query snapshots, Turbot Pipes allows you to
-schedule them and be notified when complete.
+Click on a snapshot title to [view or edit it](#editing-snapshots).
 
-Scheduling a snapshot is as simple as navigating to the query editor, selecting
-a table or writing a query and choosing the **Schedule** dropdown from the query
-toolbar.
 
-<img src="/images/docs/pipes/cloud-query-snapshot-schedule-dropdown.png" width="300pt"/>
-<br />
+## Sharing Snapshots
 
-From here you can either choose to create a new schedule, or see any existing
-schedules that are configured for this query.
 
-If you select **New Schedule** you'll be presented with the following screen.
+When taking a snapshot, you can choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it such that anyone on the internet with the link can view it.
 
-<img src="/images/docs/pipes/cloud-query-snapshot-schedule-new.png" width="300pt"/>
-<br />
+You can subsequently change the visibility in Pipes in multiple places:
+- From the Steampipe **Snapshots** tab for your workspace, click the sharing icon for the snapshot you wish to modify. 
+- From the snapshot, click the **Share** button.
+- From the snapshot properties panel, click the pencil next to the **Visibility**
 
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td nowrap="true">Title</td>
-    <td>The title of the <a href="/pipes/docs/pipelines">pipeline</a> that will run this schedule.</td>
-  </tr>
+In all cases, a dialog will appear showing the current visibility.  
 
-  <tr>
-    <td nowrap="true">Frequency</td>
-    <td>How often scheduled snapshot should run: 
-       <inlineCode>Weekly</inlineCode>, <inlineCode>Daily</inlineCode>, <inlineCode>Hourly</inlineCode>, <inlineCode>Custom</inlineCode><br/>
-      For <inlineCode>Weekly</inlineCode>, <inlineCode>Daily</inlineCode> and <inlineCode>Hourly</inlineCode> frequencies, Turbot Pipes will automatically allocate a random time for these, with <inlineCode>Weekly</inlineCode> schedules being run at that time on a Sunday. For a <inlineCode>Custom</inlineCode> frequency, you can supply a cron schedule (not more than once every 15 minutes).
-    </td>
+To make the snapshot available to anyone with the link, select **Anyone with Link**, then click **Share and Copy Link**.  
 
-  </tr>
 
-  <tr>
-    <td nowrap="true">Visibility</td>
-    <td>Optionally choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it such that anyone on the internet with the link can view it.</td>
-  </tr>
+![](/images/docs/pipes/steampipe/steampipe_snapshot_share.png)
 
-  <tr>
-    <td nowrap="true">Notifications</td>
-    <td>Optionally send a summary notification to a Slack and/or Microsoft Teams webhook. This will contain a link back to the Snapshot.
-    </td>
-  </tr>
+To restrict access to workspace members only, click **Delete Shared Link**.
 
-  <tr>
-    <td nowrap="true">Snapshot tags</td>
-    <td>Add optional tags to the created snapshot. These can be used to easily find snapshots at a later date via the search functionality.</td>
-  </tr>
-</table>
 
-After scheduling a snapshot, you will be taken to the
-[pipeline detail](/pipes/docs/pipelines) page, which shows you editable details
-of the schedule, information on its next run and last run status, along with a
-link out to the [process](/pipes/docs/activity#processes) logs.
+![](/images/docs/pipes/steampipe/steampipe_snapshot_unshare.png)
 
-The scheduled snapshot pipeline will upload the snapshot to your workspace as
-the `system` user, rather than attribute the activity to the user creating the
-schedule. We will retry steps in the pipeline where possible e.g. any 5xx series
-errors from a call to a notification webhook will retry up to a maximum of 2
-times, whereas a 400 error would not retry.
 
+## Editing Snapshots
+
+You can edit a snapshots **Title**, **Tags**, and **Visibility** from the snapshot's properties panel.  To view the properties panel:
+- From the Steampipe **Snapshots** tab for your workspace, click the gear icon for the snapshot you wish to modify; or
+- From a snapshot, click the gear icon at the top right.
+
+
+![](/images/docs/pipes/steampipe/steampipe_snapshot_property_panel.png)
+
+
+The properties panel will show details about the snapshot. Editable fields will have a pencil icon next to them; click the pencil to edit the field.
+
+You can also **download** or **delete** the snapshot from the properties panel.
+
+
+## Deleting Snapshots
+To delete a snapshot, click the trash can icon for the snapshot you wish to delete. 
+
+You can also delete the snapshot directly from the snapshot itself.  Click the gear icon at the top right to show the the properties panel, then click **Delete Snapshot**.  
+
+You will be prompted to confirm deletion.
+
+![](/images/docs/pipes/steampipe/steampipe_snapshot_delete_confirm.png)
+
+
+
+## Managing Snapshot Schedules
+
+To view a list of snapshot schedules, navigate to your workspace.  From the **Pipes** tab, select **Steampipe**, then go to the **Snapshots** tab.  
+
+Click the **Scheduled** sub-tab to view a list of all the query snapshot schedules in the workspace, including the schedule title, the next run time, last run time, and tags.
+
+![](/images/docs/pipes/steampipe/steampipe_snapshot_schedule_list.png)
+
+
+Click on a schedule title to view or manage the schedule.
+
+![](/images/docs/pipes/steampipe/steampipe_snapshot_schedule_detail.png)
+...
+
+From this page, you can edit the schedule **Title**, **Frequency** and **Notifications**, as well as the **Title**, **Tags**, and **Visibility** for the snapshots that it will generate.  Click the pencil icon next to the relevant field to edit it.
+
+The status of the last run appears at the top of the page, but you can link to the previous executions as well by clicking **All Runs**. This will take you to the **Activity** page, filtered to show only the process related to this query snapshot schedule.
+
+If you want to delete the schedule, click **Delete Pipeline**.  You will be prompted to confirm deletion.  alternatively, can delete the schedule from the list on the **Scheduled** sub-tab by clicking the trashcan icon for the schedule you wish to delete.

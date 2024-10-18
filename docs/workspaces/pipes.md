@@ -5,12 +5,8 @@ sidebar_label: Pipes
 
 # Pipes
 
+The Turbot Pipes platform built provides hosted services for [Steampipe](/pipes/docs/using/steampipe/), [Powerpipe](/pipes/docs/using/powerpipe/), and [Flowpipe](/pipes/docs/using/flowpipe/).
+
+To manage a service for your workspace, go to the **Pipes** tab for your workspace and click the service that you would like to manage.
 
 ![](/images/docs/pipes/workspace_pipes_home.png)
-
-
-
-- [Steampipe](/pipes/docs/using/steampipe/):  Dynamically query APIs, code and more with SQL. Zero-ETL from 140 data sources.
-- [Powerpipe](/pipes/docs/using/powerpipe/): Assess security posture against popular benchmarks. Visualize cloud configurations. Bring your own custom dashboards.
-- [Flowpipe](/pipes/docs/using/flowpipe/):  Automate cloud operations. Coordinate people and pipelines. Build workflows as code.
-

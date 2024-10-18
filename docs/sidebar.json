@@ -20,9 +20,8 @@
               "using/steampipe/query",
               "using/steampipe/snapshots",
               "using/steampipe/connections",
-
-              "aggregators",
-              "datatank",
+              "using/steampipe/aggregators",
+              "using/steampipe/datatank",
               
               {
                 "type": "category",
@@ -91,8 +90,6 @@
           "workspaces/pipes",          
           "workspaces/people",
           "workspaces/connections",
-          "workspaces/notifiers",
-          "activity",
           {
             "type": "category",
             "id": "integrations",
@@ -105,45 +102,53 @@
               "integrations/slack"
     
             ]
+          },
+          "workspaces/notifiers",
+          "activity"
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "accounts",
+        "link": "accounts",
+        "items": [
+          {
+            "type": "category",
+            "id": "developer-account",
+            "link": "developer-account",
+            "items": [
+              "da-workspaces",
+              "da-connections",
+              "da-settings"
+            ]
+          },
+          {
+            "type": "category",
+            "id": "organizations",
+            "link": "orgs",
+            "items": [
+              "orgs/workspaces",
+              "orgs/connections",
+              "orgs/people",
+              "orgs/settings"
+            ]
+          },
+          {
+            "type": "category",
+            "id": "tenants",
+            "link": "tenants",
+            "items": [
+              "tenants/developer-account",
+              "tenants/organizations",
+              "tenants/connections",
+              "tenants/people",
+              "tenants/settings",
+              "tenants/authentication"
+            ]
           }
         ]
       },
-
-      {
-        "type": "category",
-        "id": "developer-account",
-        "link": "developer-account",
-        "items": [
-          "da-workspaces",
-          "da-connections",
-          "da-settings"
-        ]
-      },
-      {
-        "type": "category",
-        "id": "organizations",
-        "link": "organizations",
-        "items": [
-          "org-workspaces",
-          "org-connections",
-          "people",
-          "org-settings"
-        ]
-      },
-      {
-        "type": "category",
-        "id": "tenants",
-        "link": "tenants",
-        "items": [
-          "tenants/developer-account",
-          "tenants/organizations",
-          "tenants/connections",
-          "tenants/people",
-          "tenants/settings",
-          "tenants/authentication"
-        ]
-      },
-
       {
         "type": "category",
         "id": "plans",

@@ -19,72 +19,61 @@ Datatank is a paid Turbot Pipes feature. It is not available in the free Develop
 
 A **Datatank** is a [Postgres schema](https://www.postgresql.org/docs/current/ddl-schemas.html) that includes persistent tables that are populated at regular intervals. 
 
-A datatank contains **tables**. Each table is populated via system [pipelines](pipelines) that run a query on a schedule and merge the results into a persistent table. You can query the datatank tables like any other tables in Steampipe. By default, datatank schemas are prepended to the front of the [search path](https://steampipe.io/docs/guides/search-path), so using the data is as simple as running a query with unqualified table names and relying on the schema search path to prioritize the persistent tables.
+A datatank contains **tables**. Each table is populated via system pipelines that run a query on a schedule and merge the results into a persistent table. You can query the datatank tables like any other tables in Steampipe. By default, datatank schemas are prepended to the front of the [search path](https://steampipe.io/docs/guides/search-path), so using the data is as simple as running a query with unqualified table names and relying on the schema search path to prioritize the persistent tables.
 
 A datatank table is composed of one or more **parts**. A part represents a set of data that is refreshed and updated as a single atomic unit. When you *add a table* to the datatank, Turbot Pipes will create a part for each `connection` in the source schema. 
 
-Turbot Pipes creates a system [pipeline](/pipes/docs/pipelines) for each part to refresh it according to the interval or schedule specified for the parent table.You do not need to manage this pipeline - Turbot Pipes will add and remove parts as connections are added and removed from the source aggregator. When the refresh pipeline runs, Pipes will move the connection associated with the part to the front of the `search_path` before running the update query, thereby scoping the update to the relevant connection. Updates to each part either occur in their entirety or not at all. 
+Turbot Pipes creates a system pipeline for each part to refresh it according to the interval or schedule specified for the parent table.You do not need to manage this pipeline - Turbot Pipes will add and remove parts as connections are added and removed from the source aggregator. When the refresh pipeline runs, Pipes will move the connection associated with the part to the front of the `search_path` before running the update query, thereby scoping the update to the relevant connection. Updates to each part either occur in their entirety or not at all. 
 
 
 ---
 ## Creating a Datatank
 
-Datatanks are a type of workspace-level connection. To create one, navigate to the **Settings** page for your workspace and click **Connections**. From the **New Connection** dropdown, select **Create Datatank**.
+Datatanks are a type of workspace-level connection. To create one, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab. Click the **New Datatank** button.
 
 > Note:  Because the datatank is meant to be persistent, you may only create a datatank on persistent workspace instance types - you cannot create a datatank on a `shared` instance type.
 
-<img src="/images/docs/pipes/pipes_workspace_new_connection.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/steampipe_datatanks_list.png)
+
 
 Enter a handle for your datatank. This handle will also be used as the Postgres schema name, and must be unique among all schemas in the workspace. You may optionally enter a description as well. Click **Create Datatank**.
 
-<img src="/images/docs/pipes/pipes_datatank_add.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_add.png")
 
-Next you will be prompted to add a table to your Datatank.  
+Next you will be prompted to add a table to your Datatank.
 
-<img src="/images/docs/pipes/pipes_datatank_new_table.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_new_table.png)
 
 
 You can click **Skip** if you don't want to add any tables at this time, otherwise choose a table to sync and the refresh frequency and then click **Create Table**. The initial refresh will be initiated and you will be returned to the table status page for the datatank.
 
-<img src="/images/docs/pipes/pipes_datatank_table_added.png" width="400pt"/>
-<br />
+
+![](/images/docs/pipes/steampipe/pipes_datatank_table_added.png)
 
 ---
-## Modifying a Datatank
 
-You can change the handle for your datatank after it has been created, but note that the Postgres schema will also be renamed. If you are using any qualified queries in your pipelines, you will need to update them with the new name.
 
-To modify the datatank, navigate to the **Settings** page for your workspace and click **Connections**. From the list of connections, click the options menu ('three dots' button) next to the datatank that you wish to change, and then click **Settings** from the dropdown menu to go to the datatank settings page.
 
-<img src="/images/docs/pipes/pipes_datatank_settings.png" width="400pt"/>
-<br />
-
-To change the handle, enter a new handle and then click **Save**.
-
----
 ## Deleting a Datatank
 
 You can permanently delete a datatank and all of its tables.
 
-To delete the datatank, navigate to the **Settings** page for your workspace and click **Connections**.  From the list of connections, click the options menu ('three dots' button) next to the datatank that you wish to change, and then click **Settings** from the dropdown menu to go to the datatank settings page.
+To delete the datatank, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab.  From the list of datatanks, click the gear icon next to the datatank that you wish to delete.
 
-<img src="/images/docs/pipes/pipes_datatank_settings.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_settings.png)
 
 Click **Delete Datatank**. You will be prompted to confirm deletion; enter the datatank name and click **Delete**. This action is not reversible.
 
-<img src="/images/docs/pipes/pipes_datatank_delete_confirm.png" width="400pt"/>
+
+<img src="/images/docs/pipes/steampipe/pipes_datatank_delete_confirm.png" width="400pt"/>
 <br />
 
 ---
 ## Creating a Table
 
-You can add a table from the datatank page. To get to the datatank page, navigate to the **Settings** page for your workspace and click **Connections**. From the list of connections, click the datatank.
+You can add a table from the datatank page. To get to the datatank page, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab. From the list of datatanks, click the datatank that you want to add a table to.
 
-Click the **New Table** dropdown button.You are presented with 2 options:
+Click the **New Table** dropdown button.  You are presented with 2 options:
 - **Add Table**:  Accelerate and synchronize an existing live table from your workspace. Use this option to quickly create a table in your datatank that mirrors an existing table.
 - **Create Table From Query**: Populate a table from a custom query that will run against your workspace. Use this option if you want to create a custom table from a query you specify.
 
@@ -93,8 +82,8 @@ Datatank allows you to accelerate queries to Steampipe by periodically fetching 
 
 You can add a table from the datatank page. Click the **New Table** dropdown button and select **Add Table**.
 
-<img src="/images/docs/pipes/pipes_datatank_new_table.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_new_table.png)
+
 
 Select the table that you wish to add. The list of tables includes the first instance of each table per the search path, but you can click **Select Schema** if you wish to use a different schema. Select the **Refresh Frequency** to specify the desired update interval. When finished, click **Add Table**. You will be returned to the datatank page, and your new table will appear in the list. 
 
@@ -105,8 +94,8 @@ Datatank enables you to create a custom table using a query that you specify. Th
 
 You can add a custom table from the datatank page. Click the **New Table** dropdown button and select **Create Table From Query**.
 
-<img src="/images/docs/pipes/pipes_datatank_add_custom_table.png" width="400pt"/>
-<br />
+
+![](/images/docs/pipes/steampipe/pipes_datatank_add_custom_table.png)
 
 Enter a **Name** for your table that is unique in the datatank and is a valid Postgres identifier - The name must only contain lowercase alphanumeric characters or single underscores and cannot start with a number. If desired, enter a **Description**. Select the **Refresh Frequency** to specify the desired update interval. 
 
@@ -128,25 +117,24 @@ When finished, click **Add Table**. You will be returned to the datatank page, a
 
 You can permanently delete a datatank table and all of its data.
 
-From the  **Connections** page for your workspace, click the datatank connection to go to the datatank page. From this list of tables, click the table that you wish to delete, then click **Settings** to go to the table settings page. Click **Advanced**. 
+From the Steampipe **Datatank** page for your workspace, click the datatank to go to the datatank page. From this list of tables, click the table that you wish to delete, then click **Settings** to go to the table settings page. Click **Advanced**. 
 
 
-<img src="/images/docs/pipes/pipes_datatank_table_advanced.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_table_advanced.png)
+
 
 To permanently delete this datatank table and all of its data, click **Delete Table**. You will be prompted to confirm deletion; enter the datatank name and click **Delete**. This action is not reversible.
 
-<img src="/images/docs/pipes/pipes_datatank_table_delete_confirm.png" width="400pt"/>
+<img src="/images/docs/pipes/steampipe/pipes_datatank_table_delete_confirm.png" width="400pt"/>
 <br />
 
 ---
 ## Modifying a Table
 You can modify a table after it has been created. After changing the table settings, a refresh will begin for all parts in the table.
 
-From the  **Connections** page for your workspace, click the datatank connection to go to the datatank page. From this list of tables, click the table that you wish to modify, then click **Settings** to go to the table settings page. Make your desired changes and then click **Save**.
+From the Steampipe **Datatanks** page for your workspace, click the datatank to go to the datatank page. From this list of tables, click the table that you wish to modify, then click **Settings** to go to the table settings page. Make your desired changes and then click **Save**.
 
-<img src="/images/docs/pipes/pipes_datatank_table_config.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_table_config.png)
 
 Note: If you edit the source query and press `Save` your query runs immediately to refresh the data, and then repeats according to the schedule.
 
@@ -154,11 +142,11 @@ Note: If you edit the source query and press `Save` your query runs immediately 
 
 You can modify the [state of datatank table](#table-states) from the **Advanced** settings page for the table.
 
-From the  **Connections** page for your workspace, click the datatank connection to go to the datatank page. From this list of tables, click the table that you wish to modify, then click **Settings** to go to the table settings page. Click **Advanced**. 
+From the Steampipe **Datatanks** page for your workspace, click the datatank connection to go to the datatank page. From this list of tables, click the table that you wish to modify, then click **Settings** to go to the table settings page. Click **Advanced**. 
 
 
-<img src="/images/docs/pipes/pipes_datatank_table_advanced.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_table_advanced.png)
+
 
 Use the buttons in the **Status** section to change the state:
 - If the table is currently enabled, you may **Disable** or **Pause** it. 
@@ -177,12 +165,12 @@ Use the buttons in the **Status** section to change the state:
 
 ---
 ## Managing Parts 
-You can view the status for your tables from the datatank page. To get to the datatank page, navigate to the **Settings** page for your workspace and click **Connections**. From the list of connections, click the Datatank.
+You can view the status for your tables from the datatank page. To get to the datatank page, navigate to the **Pipes** page for your workspace and select Steamipe, then go to the **Datatanks** tab. Click the Datatank you want to manage.
 
-<img src="/images/docs/pipes/pipes_datatank_tables.png" width="400pt"/>
-<br />
 
-The datatank page lists the tables that have been added to the tank along with the refresh interval and the data freshness.Each part tracks its own freshness, and the freshness of all parts is summarized for the table -- The freshness graphs provides a quick view of the update status of your table.
+![](/images/docs/pipes/steampipe/pipes_datatank_tables.png)
+
+The datatank page lists the tables that have been added to the tank along with the refresh interval and the data freshness.  Each part tracks its own freshness, and the freshness of all parts is summarized for the table -- The freshness graphs provides a quick view of the update status of your table.
 
 | Freshness  | Description
 |------------|------------------------------------------------------
@@ -197,17 +185,17 @@ The datatank page lists the tables that have been added to the tank along with t
  
 To see more information about a table and its parts, click the table name. 
 
-<img src="/images/docs/pipes/pipes_datatank_table_parts_running.png" width="400pt"/>
-<br />
+![](/images/docs/pipes/steampipe/pipes_datatank_table_parts_running.png)
+
 
 From this page, you can see the details for each part including the freshness, last update time, and a graph displaying the status of the most recent refresh process.Clicking on any of the **Recent Runs** will take you to the logs for that process.
-<img src="/images/docs/pipes/pipes_datatank_process_log.png" width="400pt"/>
-<br />
+
+
+
+![](/images/docs/pipes/steampipe/pipes_datatank_process_log.png)
 
 You can can [manually refresh, pause, or disable](#part-states) a part from the options menu ('three dots' button) at the end of each line.
 
-<img src="/images/docs/pipes/pipes_datatank_parts_hamburger.png" width="400pt"/>
-<br />
 
 ### Part States
 

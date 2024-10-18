@@ -15,7 +15,9 @@ You can also create your own aggregators, with your own matching rules.
 
 ## Adding & Removing Aggregators
 
-To manage the aggregators for your workspace, navigate to the workspace, and from the **Advanced** tab, select **Aggregators**.
+To manage the aggregators for your workspace, navigate to your workspace, then select Steampipe from the **Pipes** tab, then select the **Aggregators** tab.
+
+![](/images/docs/pipes/steampipe/steampipe_aggregators_list.png)
 
 You will see a list of aggregators for the workspace. Click on an aggregator to view it. The **Connections** tab will list the connections that are currently included in the aggregator. You can change the handle or the included connections of the aggregator from the **Settings** tab.   
 
@@ -34,7 +36,6 @@ You can choose **All Connections** to target all existing and future Amazon Web 
 <br />
 
 
-Finally, select **Add to workspace schema automatically** to attach the aggregator schema to the workspaces (?? Do we still need to do this ??).  Click **Create Aggregator**.
-
+Finally, select **Add to workspace schema automatically** to attach the aggregator schema to the workspaces.  Click **Create Aggregator**.
 
 To delete an aggregator, find the one you wish to delete and click its handle or the cog icon to go to the aggregator detail page.  On the **Settings** tab for the aggregator, click **Delete aggregator** to permanently remove this aggregator. You will be prompted to confirm deletion. Enter the aggregator's handle and click **Delete**.  ***This action is not reversible.*** 

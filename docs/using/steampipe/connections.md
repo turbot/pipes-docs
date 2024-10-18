@@ -16,6 +16,9 @@ You may [create a connection](/pipes/docs/workspaces/connections) at the tenant,
 
 To add a schema for an existing connection, navigate to your workspace, and then to the **Connections** tab.  Find the schema that you wish to add and click **Add to Schema**.
 
+![](/images/docs/pipes/steampipe/steampipe_schemas_add_remove.png)
+
+
 To add schemas for all connections in a folder, navigate to your workspace, and then to the **Connections** tab.  Find the folder whose schemas you wish to add and click **Add to Schema**.
 
 You can also create new connections for your workspace from the **Connections** tab.  When creating a new connection, you can choose to  **Add to Steampipe schema automatically** during creation to create the connection and add the schema in a single step
