@@ -5,7 +5,7 @@ sidebar_label: Integrations
 
 # Integrations
 
-Like [connections](/pipes/docs/connections), **Integrations** are used to interface with external systems, but they differ from connections in a few ways:
+Like [connections](/pipes/docs/workspaces/connections), **Integrations** are used to interface with external systems, but they differ from connections in a few ways:
 
 - Integrations may require bidirectional communication with the external system, often needing a public HTTP endpoint in Pipes for asynchronous communication flow.
 - Integrations often manage other Pipes resources, such as mods and connections.

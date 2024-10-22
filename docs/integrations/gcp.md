@@ -11,12 +11,12 @@ The GCP integration will automatically keep the configuration up to date as your
 
 ## Creating the GCP Integration
 
-You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/organizations)), and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.
+You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/accounts/org)), and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.
 
 | Level                        | Plan                       | Description
 |------------------------------|----------------------------|----------------
-| [Tenant](/pipes/docs/tenants) | [Enterprise](/pipes/docs/plans/enterprise) | Selectively share GCP connections and folders with any (or all) organization or workspace in the tenant.
-| [Org](/pipes/docs/organizations) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  | Selectively share GCP connections and folders with any (or all) workspace in the organization.
+| [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/plans/enterprise) | Selectively share GCP connections and folders with any (or all) organization or workspace in the tenant.
+| [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  | Selectively share GCP connections and folders with any (or all) workspace in the organization.
 
 
 First, navigate to the **Integrations** page for the appropriate resource:

@@ -11,6 +11,6 @@ An identity may belong to either the Pipes public SaaS tenant (https://pipes.tur
 
 There are 2 types of identities:
 - A [Developer Account](/pipes/docs/developer-account) is created for each user that signs up for Pipes.  Your developer account allows you to create workspaces for your personal use, but they cannot be shared; A developer account has only a single member (the owner). The developer account is covered by the [Developer Plan](/pipes/pricing), which provides some amount of free compute and storage, with additional capacity available in a monthly pay-as-you-go model. The exception to this is a developer within a [custom tenant](/pipes/docs/enterprise), whose usage contributes towards that of the tenant. 
-- You may create [Organizations](/pipes/docs/organizations) to enable you to share workspaces and connections with other team members. Organizations in the Pipes SaaS tenant are a paid feature of the [Team Plan](/pipes/pricing).
+- You may create [Organizations](/pipes/docs/accounts/org) to enable you to share workspaces and connections with other team members. Organizations in the Pipes SaaS tenant are a paid feature of the [Team Plan](/pipes/pricing).
 
 Each identity is a distinct namespace and security boundary for [workspaces](/pipes/docs/workspaces) and [connections](/pipes/docs/connections).  Every identity has a handle, and the handle must be globally unique in Turbot Pipes.

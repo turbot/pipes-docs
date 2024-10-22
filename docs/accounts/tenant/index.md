@@ -7,7 +7,16 @@ sidebar_label: Tenants
 
 With [Pipes Enterprise](/pipes/docs/plans/enterprise), you can create your own isolated **Tenant**, with a custom domain for your environment (e.g. `acme.pipes.turbot.com`).  Your tenant has its own discrete set of user accounts, organizations, and workspaces, giving you centralized visibility and control.  You can choose which [authentication methods](/pipes/docs/tenants/settings#authentication-methods) are allowed, configure which [domains to trust](/pipes/docs/tenants/settings#trusted-login-domains), and set up [SAML](/pipes/docs/tenants/settings#saml) to integrate your Pipes tenant with your single-sign-on solution.  
 
-Tenants are only available in the [Enterprise](/pipes/docs/plans/enterprise) plan.
+Tenants are only available in the [Enterprise plan](#enterprise-plan).
+
+
+## Enterprise Plan
+
+The **Enterprise Plan** provides organization-wide security, compliance, and scalability.
+
+The enterprise plan provides the ability to create a single tenant.  The base price includes 3 users, 10,000 compute minutes, and 100GB storage capacity, but you can [purchase additional capacity](/pipes/pricing) in a monthly pay-as-you-go model.
+
+
 
 ## Creating Tenants
 

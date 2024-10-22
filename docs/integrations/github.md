@@ -19,8 +19,8 @@ You can create an integration for a tenant or an identity (organization or devel
 
 | Level                        | Plan                       | Description
 |------------------------------|----------------------------|----------------
-| [Tenant](/pipes/docs/tenants) | [Enterprise](/pipes/docs/plans/enterprise) | Mods are available to all workspaces in the tenant.
-| [Org](/pipes/docs/organizations) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  | Mods are available to all workspaces in the organization.
+| [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/plans/enterprise) | Mods are available to all workspaces in the tenant.
+| [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  | Mods are available to all workspaces in the organization.
 | [User (Developer Account)](/pipes/docs/developer-account) | any | Mods are available to all workspaces in the account.
 
 First, navigate to the **Integrations** page for the appropriate resource:

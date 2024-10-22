@@ -10,7 +10,16 @@ not shared with other users. Steampipe **Organizations**, on the other hand,
 include multiple users and are intended for organizations to collaborate and
 share workspaces and connections. 
 
-Organizations are available on the [Team](/pipes/docs/plans/team) and [Enterprise](/pipes/docs/plans/enterprise) plans.
+Organizations are available on the [Team](#team-plan) and [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) plans.
+
+## Team Plan
+
+The **Team Plan** provides collaboration features to elevate team productivity and coordination.
+
+With the team plan, you can create an organization to share your [connections](/pipes/docs/accounts/org/connection) and [workspaces](/pipes/docs/workspaces) with other members of your team.
+
+The team plan includes 3 users, 2,000 compute minutes, and 20GB storage capacity, but you can [purchase additional capacity](/pipes/pricing) in a monthly pay-as-you-go model.
+
 
 ## Creating Organizations
 
@@ -20,6 +29,5 @@ unique handle for your organization. This handle must be a unique name across
 all developer accounts and organizations. Optionally, expand the **Profile** and set
 a **Logo URL** (publicly accessible URL for the organization's logo) and **URL**
 (publicly accessible URL for the organization). Click **Create Organization**.
-
 
 

@@ -90,21 +90,24 @@
           "workspaces/pipes",          
           "workspaces/people",
           "workspaces/connections",
-          {
-            "type": "category",
-            "id": "integrations",
-            "link": "integrations",
-            "items": [
-              "integrations/aws",
-              "integrations/azure",
-              "integrations/gcp",
-              "integrations/github",
-              "integrations/slack"
-    
-            ]
-          },
           "workspaces/notifiers",
-          "activity"
+          "activity",
+          "workspaces/usage"
+          
+        ]
+      },
+
+      {
+        "type": "category",
+        "id": "integrations",
+        "link": "integrations",
+        "items": [
+          "integrations/aws",
+          "integrations/azure",
+          "integrations/gcp",
+          "integrations/github",
+          "integrations/slack"
+
         ]
       },
 
@@ -116,50 +119,57 @@
           {
             "type": "category",
             "id": "developer-account",
-            "link": "developer-account",
+            "link": "accounts/developer",
             "items": [
-              "da-workspaces",
-              "da-connections",
-              "da-settings"
+              "accounts/developer/workspaces",
+              "accounts/developer/integrations",
+              "accounts/developer/connections",
+              "accounts/developer/notifiers",
+              "accounts/developer/settings"
             ]
           },
           {
             "type": "category",
             "id": "organizations",
-            "link": "orgs",
+            "link": "accounts/org",
             "items": [
-              "orgs/workspaces",
-              "orgs/connections",
-              "orgs/people",
-              "orgs/settings"
+              "accounts/org/workspaces",
+              "accounts/org/people",
+              "accounts/org/integrations",
+              "accounts/org/connections",
+              "accounts/org/notifiers",
+              "accounts/org/activity",
+
+              {
+                "type": "category",
+                "id": "organizations-advanced",
+                "link": "accounts/org/advanced",
+                "items": [
+                  "accounts/org/usage",
+                  "accounts/org/usage-thresholds",
+                  "accounts/org/billing"
+                  
+                ]
+              }
             ]
           },
           {
             "type": "category",
             "id": "tenants",
-            "link": "tenants",
+            "link": "accounts/tenant",
             "items": [
-              "tenants/developer-account",
-              "tenants/organizations",
-              "tenants/connections",
-              "tenants/people",
-              "tenants/settings",
-              "tenants/authentication"
+              "accounts/tenant/developer-account",
+              "accounts/tenant/organizations",
+              "accounts/tenant/people",
+              "accounts/tenant/integrations",
+              "accounts/tenant/connections",
+              "accounts/tenant/notifiers",
+              "accounts/tenant/settings",
+              "accounts/tenant/authentication"
             ]
           }
         ]
       },
-      {
-        "type": "category",
-        "id": "plans",
-        "link": "plans",
-        "items": [
-          "plans/developer",
-          "plans/team",
-          "plans/enterprise"
-        ]
-      },
-
       {
         "type": "category",
         "id": "usage-billing",

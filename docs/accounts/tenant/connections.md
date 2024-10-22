@@ -5,7 +5,7 @@ sidebar_label: Connections
 
 # Connections
 
-A **[Connection](/pipes/docs/connections)** represents a set of tables for a **single data source**.  To query data, you'll need at least one connection to provide credentials and other configuration information.
+[Connections](/docs/workspaces/connections) provide the credentials, scope, and configuration information for interacting with an external system.
 
 You can organize connections into **Connection Folders**. This makes it easier to [share](#permissions) groups of connections across workspaces in your tenant.
 

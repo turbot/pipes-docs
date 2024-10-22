@@ -13,12 +13,12 @@ The Slack Integration allows Turbot Pipes to send notifications to specified Sla
 ## Creating the Slack Integration
 
 
-You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/organizations)), and where you create the integration affects the scope where it can be used; the resulting integration can only be added to notifiers within the entity in which it was created.
+You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/accounts/org)), and where you create the integration affects the scope where it can be used; the resulting integration can only be added to notifiers within the entity in which it was created.
 
 | Level                        | Plan                       | Description
 |------------------------------|----------------------------|----------------
-| [Tenant](/pipes/docs/tenants) | [Enterprise](/pipes/docs/plans/enterprise) | The Integration is available to any notifier in any organization or workspace in the tenant.
-| [Org](/pipes/docs/organizations) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  |  The Integration is available to any notifier in any workspace in the organization.
+| [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/plans/enterprise) | The Integration is available to any notifier in any organization or workspace in the tenant.
+| [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  |  The Integration is available to any notifier in any workspace in the organization.
 | [User (Developer Account)](/pipes/docs/developer-account) | any | The Integration is available to any notifier in any workspace in the account.
 
 
