@@ -7,8 +7,8 @@ sidebar_label: Authentication
 
 The **Authentication** page allows you to control which [domains are trusted](#trusted-login-domains), as well as to enable, disable, and configure [authentication methods](#authentication-methods) like Email, [SAML](#saml), [GitHub](#github), and [Google](#google).
 
-To manage the authentication settings for your tenant, select your profile picture at the top right of the Pipes console, and select **Tenant Settings**. 
-This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles). 
+To manage the authentication settings for your tenant, navigate to your tenant, then click the double arrow button from the navigation at the top of the page and select **Tenant Settings** from the dropdown. 
+This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles). 
 
 
 ## Trusted Login Domains
@@ -72,10 +72,10 @@ Once you have entered the required information from the SAML IdP configuration, 
 
 ### GitHub
 
-You can enable GitHub authentication by toggling the radio button.  When Github authentication is enabled, any user that has been authenticated by GitHub whose primary email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/tenants/people#tenant-roles) in the tenant. 
+You can enable GitHub authentication by toggling the radio button.  When Github authentication is enabled, any user that has been authenticated by GitHub whose primary email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
 
 **Please note** the user's *primary GitHub email address* is presented and therefore used when evaluating [trusted login domain](#trusted-login-domains) restrictions.
 
 
 ### Google
-You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user that has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/tenants/people#tenant-roles) in the tenant. 
+You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user that has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 

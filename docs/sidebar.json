@@ -91,7 +91,7 @@
           "workspaces/people",
           "workspaces/connections",
           "workspaces/notifiers",
-          "activity",
+          "workspaces/activity",
           "workspaces/usage"
           
         ]
@@ -123,9 +123,18 @@
             "items": [
               "accounts/developer/workspaces",
               "accounts/developer/integrations",
-              "accounts/developer/connections",
               "accounts/developer/notifiers",
-              "accounts/developer/settings"
+              "accounts/developer/activity",
+
+              {
+                "type": "category",
+                "id": "developer-account-advanced",
+                "link": "accounts/developer/advanced",
+                "items": [
+                  "accounts/developer/usage",
+                  "accounts/developer/billing"
+                ]
+              }
             ]
           },
           {
@@ -146,7 +155,6 @@
                 "link": "accounts/org/advanced",
                 "items": [
                   "accounts/org/usage",
-                  "accounts/org/usage-thresholds",
                   "accounts/org/billing"
                   
                 ]
@@ -164,20 +172,21 @@
               "accounts/tenant/integrations",
               "accounts/tenant/connections",
               "accounts/tenant/notifiers",
-              "accounts/tenant/settings",
-              "accounts/tenant/authentication"
+              "accounts/tenant/activity",
+
+              {
+                "type": "category",
+                "id": "tenant-advanced",
+                "link": "accounts/tenant/advanced",
+                "items": [
+                  "accounts/tenant/authentication",
+                  "accounts/tenant/usage",
+                  "accounts/tenant/billing"
+                  
+                ]
+              }              
             ]
           }
-        ]
-      },
-      {
-        "type": "category",
-        "id": "usage-billing",
-        "link": "usage-billing",
-        "items": [
-          "usage",
-          "usage-thresholds",
-          "billing"
         ]
       },
 

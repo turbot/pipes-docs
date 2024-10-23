@@ -7,7 +7,7 @@ sidebar_label: Activity
 
 The **Activity** tab provides visibility into the events that occur in your
 Turbot Pipes environment.
-
+<!--
 ## Audit Log
 
 The **Audit Log** provides a log of API activity associated with your user,
@@ -56,3 +56,6 @@ available.
 
 <img src="/images/docs/pipes/cloud-process-logs.png" width="400pt"/>
 <br />
+
+
+-->

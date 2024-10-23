@@ -5,32 +5,18 @@ sidebar_label: Billing
 
 # Billing
 
-The **Billing** page provides visibility into the current state of billing for your identity. 
+The **Billing** page provides visibility into the current state of billing for your organization. 
 
-For developers, this will always be free (subject to plan inclusions) with the option to upgrade to a [paid plan](/pipes/docs/billing#developers) to unlock additional usage.
-
-For tenants and organizations, the billing options available to you are:
-
-- [Free trial](/pipes/docs/billing#free-trial)
-- [Debit / Credit Card Payment](/pipes/docs/billing#debit--credit-card-payment)
-- [AWS Marketplace](/pipes/docs/billing#aws-marketplace-subscription)
-
-To manage billing, go to the **Settings** page for your tenant, organization or developer account and click **Billing** from the left
-hand menu.
+To manage billing, go to the **Advanced** page for your organization and click **Billing** from the left hand menu.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your bill from the [tenant billing page](/pipes/docs/accounts/tenant/billing).
 
 <img src="/images/docs/pipes/pipes_billing.png" width="400pt"/>
-
-## Developers
-
-For developers, you have the option to upgrade to a paid plan. This will allow you to unlock additional usage, which you will be billed for in arrears on a monthly basis. For more information please see our [pricing FAQs](/pipes/pricing).
-
-To upgrade to a paid plan, first [add a payment card](#debit--credit-card-payment), then click the **Create Subscription** button. You are free to cancel this at any stage by clicking the **Cancel Subscription** button, which will produce a final invoice for the subscription and return you back to the included usage limits.
+ 
 
 ## Free Trial
 
-When you first create a [tenant](/pipes/docs/enterprise#creating-tenants) or [organization](/pipes/docs/organizations#creating-organizations), you will be signed up to a 14-day free trial. 
+When you first enroll in the [Team Plan](/pipes/docs/accounts/org#team-plan) and create an [organization](/pipes/docs/organizations#creating-organizations), you will be signed up to a 14-day free trial. 
 
-During this period, you will have access to all the features of the [Enterprise or Team Plan](/pipes/pricing), with 1/2 of the normal included monthly compute minutes.
+During this period, you will have access to all the features of the plan, with 1/2 of the normal included monthly compute minutes.
 
 After or during the trial period, you will need to upgrade to a paid plan to continue using the service. Failure to do so will result in your workspaces being suspended.
 
@@ -47,7 +33,7 @@ This will create a secure connection between your browser and our payment provid
 At the top of the page you will see a summary of your billing information:
 
 - The billing [plan](/pipes/pricing) for this account.
-- The dates of the current billing cycle.  Billing cycles vary by tenant/organization/developer, and may not coincide with a calendar month.
+- The dates of the current billing cycle.  Billing cycles vary by organization, and may not coincide with a calendar month.
 - The amount of the last invoice, along with its payment status
 - The amount of the next invoice
 
