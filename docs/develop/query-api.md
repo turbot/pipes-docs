@@ -8,7 +8,7 @@ sidebar_label: Query API
 ## Authentication
 
 To use the [Turbot Pipes API](/pipes/docs/reference/api), you must connect with an
-[API token](/pipes/docs/da-settings#tokens). The examples in this section assume
+[API token](/pipes/docs/accounts/developer/advanced#tokens). The examples in this section assume
 that you have set the
 [`PIPES_TOKEN`](https://steampipe.io/docs/reference/env-vars/PIPES_TOKEN) to a valid
 API token:

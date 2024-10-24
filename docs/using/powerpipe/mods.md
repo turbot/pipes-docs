@@ -5,8 +5,13 @@ sidebar_label: Mods
 
 # Managing Mods
 
-Your workspace includes a hosted [Powerpipe](https://powerpipe.io/) dashboard server, allowing you to [view interactive dashboards and benchmarks](/pipes/docs/using/powerpipe/dashboards), [save and share snapshots](/pipes/docs/using/powerpipe/snapshots) and even [schedule them to run and deliver via Slack or Teams](/pipes/docs/using/powerpipe/snapshots#scheduling-snapshots).   You can add and remove dashboards and benchmarks from your workspace by installing and removing [mods](https://powerpipe.io/docs/build). 
+Your workspace includes a hosted [Powerpipe](https://powerpipe.io/) dashboard server, allowing you to [view interactive dashboards and benchmarks](/pipes/docs/using/powerpipe/dashboards), [save and share snapshots](/pipes/docs/using/powerpipe/dashboards#saving-snapshots) and even [schedule them to run and deliver via Slack or Teams](/pipes/docs/using/powerpipe/dashboards#scheduling-snapshots).   You can add and remove dashboards and benchmarks from your workspace by installing and removing [mods](https://powerpipe.io/docs/build). 
 
+You can manage mods from the **Mods** tab for the Powerpipe service in your workspace.
+
+Navigate to your workspace, then the the **Pipes** tab, and choose **Powerpipe**.  The **Mods** tab will list the mods that you have installed, as well as information about the version or branch that is installed.  You can type a search string or filter in the search box to filter the list.
+
+![](/images/docs/pipes/powerpipe/powerpipe_mods_list.png)
 
 ## Installing Recommended Mods
 
@@ -14,10 +19,11 @@ You can install mods from the **Settings** tab of your workspace. On the setting
 
 Within the install mods screen, you will be presented with a list of the
 recommended mods that are compatible with the
-[connections](/pipes/docs/workspaces#managing-workspace-connections) that are currently present
+[connections](/pipes/docs/workspaces/connections) that are currently present
 in your workspace. 
 
-![](/images/docs/pipes/mod_install_1.png)
+![](/images/docs/pipes/powerpipe/powerpipe_mod_install_recommended.png)
+
 
 To install them, choose one or more mods, then click the **Install Mods** button.
 
@@ -32,7 +38,7 @@ Rather than selecting an official mod within the install mods screen, you can ch
 
 You can install custom mods from the **Settings** tab of your workspace. On the settings page, click **Mods**, then click the **Install Mods** button.  From the mod installation page, click the **Custom** tab.
 
-![](/images/docs/pipes/mod_install_custom_filled_integration.png)
+![](/images/docs/pipes/powerpipe/mod_install_custom_filled_integration.png)
 
 Choose the **Integration** that hosts the repo for the mod you wish to install, then select the **Mod Repo** from the dropdown list.  
 
@@ -55,7 +61,7 @@ semver constraint. The default of `*` means that the latest tagged version will
 be installed daily.
 
 
-![](/images/docs/pipes/mod_install_custom_filled_no_int.png)
+![](/images/docs/pipes/powerpipe/mod_install_custom_filled_no_int.png)
 
 
 Enter your custom mod publicly hosted GitHub URL and a version constraint if
@@ -71,13 +77,14 @@ the custom mod you installed.
 
 When you install a mod in a workspace, any [variables](https://powerpipe.io/docs/build/mod-variables) that the mod uses will be visible in Turbot Pipes.
 
-Go to the **Settings** tab of your workspace and then to the **Mods** sub-tab.
-From there you can click the mod you wish to view/manage the variables for.
+From the Powerpipe **Mods** tab, can click the mod you wish to view/manage the variables for.
+
+![](/images/docs/pipes/powerpipe/powerpipe_mod_variables.png)
+
 
 Within the mod detail screen, you will see a list of the available variables,
 with a section per variable. You'll see the current value and can edit this and
-**Save** if you are an owner of the workspace (implicit for personal workspaces,
-but [explicit within an organization](/pipes/docs/organizations#managing-users)).
+**Save** if you are an owner of the workspace.
 
 Depending on the type of the variable, the editor will change, but you'll
 typically see either a text, a number or a text/number list editor that will
@@ -89,12 +96,11 @@ tab, you will see the impact of that change in any dashboards that depend on it.
 
 ## Uninstalling Mods
 
-You can delete a workspace from its detail view. First, go to the **Settings**
-tab. You should be on the **Mods** sub-tab by default. From there you'll see a
-list of mods installed in the workspace. Click on the mod you wish to delete and
-in the detail screen that's shown, scroll to the bottom and click **Uninstall
-Mod**. Follow the confirmation instructions in the modal and the mod will be
-uninstalled from your workspace.
+You can delete a mod from its detail view. From the list of installed mods in the Powerpipe **Mods** tab, click on the mod you wish to delete to go to the mod detail page.
+
+![](/images/docs/pipes/powerpipe/powerpipe_mod_settings.png)
+
+On the detail screen, scroll to the bottom and click **Uninstall Mod**. Follow the confirmation instructions in the modal and the mod will be uninstalled from your workspace.
 
 After this has completed, you'll no longer see any dashboards for this mod in
 the **Dashboards** tab.

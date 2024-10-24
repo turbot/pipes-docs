@@ -55,7 +55,7 @@ left hand menu to view [usage information](/pipes/docs/accounts/developer/usage)
 The **Billing** page provides visibility into the current state of billing for your account. 
 
 On the **Advanced** tab for your account, click **Billing** from the
-left hand menu to view [billing information](/pipes/docs/accounts/developer/billing) for your account.  The billing page will not bt available if your developer account is part of a [tenant](/pipes/docs/accounts/tenant).
+left hand menu to view [billing information](/pipes/docs/accounts/developer/billing) for your account.  The billing page will not be available  if your developer account is part of a [tenant](/pipes/docs/accounts/tenant).
 
 
 

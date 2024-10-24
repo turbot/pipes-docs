@@ -12,6 +12,7 @@ Flowpipe pipelines are defined in [mods](https://flowpipe.io/docs/build).  You c
 
 You can view the mods that are installed in your workspace from the **Mod** tab for the Flowpipe service in your workspace.  Navigate to your workspace, then the the **Pipes** tab, and choose **Flowpipe**.  The **Mods** tab will list the mods that you have installed, as well as information about the version or branch that is installed.  You can type a search string or filter in the **Query** box to filter the list.
 
+![](/images/docs/pipes/flowpipe/flowpipe_mod_list.png)
 
 
 ## Installing Recommended Mods
@@ -23,9 +24,13 @@ recommended mods that are compatible with the
 [connections](/pipes/docs/workspaces#managing-workspace-connections) that are currently present
 in your workspace. 
 
-SCREENSHOT...
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_recommended.png)
 
 To install one, select it and then click the **Install Mod** button.  Installation should typically take about 30-60 seconds.
+
+After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
+
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_variables.png)
 
 
 ## Installing a Custom Mod from an Integration
@@ -34,13 +39,15 @@ Rather than selecting an official mod within the install mods screen, you can ch
 
 You can install mods from the Flowpipe **Mods** tab of your workspace. On the **Mods** page, click the **Install Mod** button.  From the mod installation page, click the **Custom** tab.
 
-SCREENSHOT...
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_custom_integration.png)
 
 Choose the **Integration** that hosts the repo for the mod you wish to install, then select the **Mod Repo** from the dropdown list.  
 
 Choose the **Branch or Version Constraint** for the mod.  Unlike recommended mods which are only updated once a day, custom mods from integrations are updated in Pipes whenever the source repository is modified. 
 
 When finished, click **Install Mod**.
+
+After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
 
 
 ## Installing a Mod from a GitHub Link
@@ -56,12 +63,12 @@ The default of `*` means that the latest tagged version will
 be installed.
 
 
-SCREENSHOT...
-
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_custom_link.png)
 
 Enter your custom mod publicly hosted GitHub URL and a version constraint if
 applicable (if left empty, will default to `*`). When finished, click **Install Mod**.  Installation should typically take about 30-60 seconds.
 
+After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
 
 ## Managing Mod Variables
 
@@ -69,10 +76,11 @@ When you install a mod in a workspace, any [variables](https://flowpipe.io/docs/
 
 Go to the Flowpipe **Mods** tab for your workspace.  From the list of installed mods, click the mod you wish to view/manage the variables for.
 
+![](/images/docs/pipes/flowpipe/flowpipe_mod_variables.png)
+
 Within the mod detail screen, you will see a list of the available variables,
 with a section per variable. You'll see the current value and can edit this and
-**Save** if you are an owner of the workspace (implicit for personal workspaces,
-but [explicit within an organization](/pipes/docs/organizations#managing-users)).
+**Save** if you are an owner of the workspace.
 
 Depending on the type of the variable, the editor will change, but you'll
 typically see either a text, a number or a text/number list editor that will
@@ -83,8 +91,11 @@ within a matter of seconds.
 
 ## Uninstalling Mods
 
-You can delete a workspace from its detail view. First, go to the Flowpipe **Mods**
-tab.  From there you'll see a list of mods installed in the workspace. Click on the mod you wish to delete and in the detail screen that's shown, scroll to the bottom and click **Uninstall Mod**. Follow the confirmation instructions in the modal and the mod will be uninstalled from your workspace.
+You can delete a workspace from its detail view. From the list of installed mods in the Flowpipe **Mods** tab, click on the mod you wish to delete.
+
+![](/images/docs/pipes/flowpipe/flowpipe_mod_settings.png)
+
+In the detail screen that's shown, scroll to the bottom and click **Uninstall Mod**. Follow the confirmation instructions in the modal and the mod will be uninstalled from your workspace.
 
 After this has completed, you'll no longer see any pipelines for this mod in
 the **Pipelines** tab.

@@ -5,7 +5,7 @@ sidebar_label: Connections
 
 # Connections
 
-[Connections](/docs/workspaces/connections) provide the credentials, scope, and configuration information for interacting with an external system.  
+[Connections](/pipes/docs/workspaces/connections) provide the credentials, scope, and configuration information for interacting with an external system.  
 
 You can organize connections into **Connection Folders**. This makes it easier to share groups of connections across workspaces in your tenant or organization.
 
@@ -37,7 +37,7 @@ To create a new folder, go to the folder in which you would like to create the n
 
 To create a connection, navigate to the folder in which you would like to create the connection, then click the **New Connection** button and select **New Connection**.  Select the **Plugin**, enter a **Handle**, and enter any plugin-specific settings.  Click **Test Connection** to verify your credentials, then **Create** to create the connection.  Next, you are prompted to set [permissions](#permissions) on the connection.  You may set permissions on individual connections but remember that they also inherit the permissions of their parent folder; you can revoke permissions that have been granted on a parent folder, though you can add additional permissions. Choose the desired permissions and click **Save**.
 
-Organization-level connections are confined to the organization in which they are defined, and they cannot be shared with other organizations.  If you wish to re-use a connection across organizations, you can create [tenant-level](/pipes/docs/tenants/connections.md) connections and folders instead, and assign permissions to share them with specific organizations or workspaces.  Tenant connections can be created or deleted from the **Connections** tab for your tenant.
+Organization-level connections are confined to the organization in which they are defined, and they cannot be shared with other organizations.  If you wish to re-use a connection across organizations, you can create [tenant-level](/pipes/docs/accounts/tenant/connections) connections and folders instead, and assign permissions to share them with specific organizations or workspaces.  Tenant connections can be created or deleted from the **Connections** tab for your tenant.
  
 You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage permissions to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
 
@@ -55,7 +55,7 @@ Tenant-level connections and folders must be deleted from the **Connections** ta
 
 ## Permissions
 
-Connections defined at the organization level can be shared with any workspace in the organization.  Organization-level connections are confined to the organization in which they are defined, and they cannot be shared with other organizations ([Tenant-level connections](/pipes/docs/tenants/connections) provide this capability).
+Connections defined at the organization level can be shared with any workspace in the organization.  Organization-level connections are confined to the organization in which they are defined, and they cannot be shared with other organizations ([Tenant-level connections](/pipes/docs/accounts/tenant/connections) provide this capability).
 
 You can make connections available to workspaces by setting permissions, either on individual connections or folders.  When you grant permissions on a folder, all the folders and connections that are members of that folder inherit the same permissions; granting access to a folder implicitly grants access to its sub-folders and connections.  Note that permissions are additive and can only be granted, not denied. If you grant permissions to a workspace for a folder you cannot revoke access for these individual connections, only to the folder as a whole.
 
@@ -77,4 +77,4 @@ If the folder or connection is a descendant of a folder that has already been sh
 
 Click **Save** to commit the changes.
 
-Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).
+Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/workspaces/connections#adding-schemas).

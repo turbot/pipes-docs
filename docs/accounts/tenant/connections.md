@@ -5,7 +5,7 @@ sidebar_label: Connections
 
 # Connections
 
-[Connections](/docs/workspaces/connections) provide the credentials, scope, and configuration information for interacting with an external system.
+[Connections](/pipes/docs/workspaces/connections) provide the credentials, scope, and configuration information for interacting with an external system.
 
 You can organize connections into **Connection Folders**. This makes it easier to [share](#permissions) groups of connections across workspaces in your tenant.
 
@@ -16,7 +16,7 @@ You can create connections and folders manually, but they may also be created by
 
 ## Managing Connections
 
-You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  
+You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  
 
 The **Connections** tab will show all the tenant-level connections and folders.
 
@@ -77,4 +77,4 @@ If the folder or connection is a descendant of a folder that has already been sh
 
 Click **Save** to commit the changes.
 
-Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/connections#adding-schemas).
+Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/workspaces/connections#adding-schemas).

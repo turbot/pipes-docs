@@ -14,7 +14,7 @@ Developer accounts are available in the global Pipes tenant under the [Developer
 
 The **Developer Plan** provides essential features for individual users.  
 
-With the developer plan, you get a single developer account that allows you to create [connections](/pipes/docs/accounts/developer/connections) and [workspaces](/pipes/docs/accounts/developer/workspaces) for your personal use.
+With the developer plan, you get a single developer account that allows you to create [workspaces](/pipes/docs/accounts/developer/workspaces) for your personal use.
 
 You can get started for free - No credit card required! The plan includes 400 compute minutes and 3GB storage, but you can [purchase additional capacity](/pipes/pricing) in a monthly pay-as-you-go model.
 

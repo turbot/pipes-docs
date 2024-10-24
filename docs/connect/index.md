@@ -5,7 +5,7 @@ sidebar_label: Connect
 
 # Connecting to your Turbot Pipes Workspace
 
-Turbot Pipes offers various methods to connect and query your data. Run SQL queries and save snapshot results in the [Turbot Pipes UI](/pipes/docs/queries), use the [Query API](/pipes/docs/develop/query-api) for programmatic access, or connect via a [PostgreSQL-compatible client](/pipes/docs/integrations) for leveraging your favorite tools.
+Turbot Pipes offers various methods to connect and query your data. Run SQL queries and save snapshot results in the [Turbot Pipes UI](/pipes/docs/using/steampipe/query), use the [Query API](/pipes/docs/develop/query-api) for programmatic access, or connect via a [PostgreSQL-compatible client](#connecting-turbot-pipes-via-postgresql-compatible-clients) for leveraging your favorite tools.
 
 ## Connecting Turbot Pipes via PostgreSQL-Compatible Clients
 

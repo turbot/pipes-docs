@@ -16,7 +16,7 @@ Organizations are available on the [Team](#team-plan) and [Enterprise](/pipes/do
 
 The **Team Plan** provides collaboration features to elevate team productivity and coordination.
 
-With the team plan, you can create an organization to share your [connections](/pipes/docs/accounts/org/connection) and [workspaces](/pipes/docs/workspaces) with other members of your team.
+With the team plan, you can create an organization to share your [connections](/pipes/docs/accounts/org/connections) and [workspaces](/pipes/docs/workspaces) with other members of your team.
 
 The team plan includes 3 users, 2,000 compute minutes, and 20GB storage capacity, but you can [purchase additional capacity](/pipes/pricing) in a monthly pay-as-you-go model.
 

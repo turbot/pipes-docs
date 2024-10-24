@@ -14,7 +14,7 @@ To manage billing, go to the **Advanced** page for your organization and click *
 
 ## Free Trial
 
-When you first enroll in the [Team Plan](/pipes/docs/accounts/org#team-plan) and create an [organization](/pipes/docs/organizations#creating-organizations), you will be signed up to a 14-day free trial. 
+When you first enroll in the [Team Plan](/pipes/docs/accounts/org#team-plan) and create an [organization](/pipes/docs/accounts/org), you will be signed up to a 14-day free trial. 
 
 During this period, you will have access to all the features of the plan, with 1/2 of the normal included monthly compute minutes.
 

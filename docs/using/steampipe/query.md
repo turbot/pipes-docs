@@ -6,7 +6,7 @@ sidebar_label: Query
 
 # Running Queries
 
-Once you've [added a connection](/docs/using/steampipe/connections) you will be able to run
+Once you've [added a connection](/pipes/docs/using/steampipe/connections) you will be able to run
 [SQL queries](https://steampipe.io/docs/sql/steampipe-sql) to explore your data, either interactively in
 the console, or [via any PostgreSQL-compatible client](/pipes/docs/connect).
 
@@ -63,9 +63,7 @@ This will then take you to the dashboard snapshot view.
 <img src="/images/docs/pipes/cloud-query-snapshot.png" width="400pt"/>
 <br />
 
-You can [manage](/pipes/docs/dashboards#managing-snapshots) this snapshot and
-[browse](/pipes/docs/dashboards#browsing-snapshots) others from the
-**Dashboards** page.
+You can manage this snapshot and browse others from the [snapshots](/pipes/docs/using/steampipe/snapshots) tab.
 
 ## Scheduling Query Snapshots
 
@@ -94,7 +92,7 @@ If you select **New Schedule** you'll be presented with the following screen.
   </tr>
   <tr>
     <td nowrap="true">Title</td>
-    <td>The title of the <a href="/pipes/docs/pipelines">pipeline</a> that will run this schedule.</td>
+    <td>The title of the schedule.</td>
   </tr>
 
   <tr>
@@ -124,14 +122,11 @@ If you select **New Schedule** you'll be presented with the following screen.
 </table>
 
 After scheduling a snapshot, you will be taken to the
-[pipeline detail](/pipes/docs/pipelines) page, which shows you editable details
+schedule detail page, which shows you editable details
 of the schedule, information on its next run and last run status, along with a
-link out to the [process](/pipes/docs/activity#processes) logs.
+link out to the process logs.
 
-The scheduled snapshot pipeline will upload the snapshot to your workspace as
+When the schedule runs, Pipes will upload the snapshot to your workspace as
 the `system` user, rather than attribute the activity to the user creating the
-schedule. We will retry steps in the pipeline where possible e.g. any 5xx series
-errors from a call to a notification webhook will retry up to a maximum of 2
-times, whereas a 400 error would not retry.
-
+schedule. 
 

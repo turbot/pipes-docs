@@ -38,7 +38,7 @@ identifier for your workspace, and must be unique across your workspaces.  You c
 
 ## Set up a Connection
 
-You are now prompted to create a [Connection](/pipes/docs/connections).  A **connection** provides a way for Pipes to interact with an external service or system, and may be used from Steampipe, Flowpipe, or Powerpipe.
+You are now prompted to create a [Connection](/pipes/docs/using/steampipe/connections).  A **connection** provides a way for Pipes to interact with an external service or system, and may be used from Steampipe, Flowpipe, or Powerpipe.
 
 
 <img src="/images/docs/pipes/gs_new_connection.png" width="400pt"/>
@@ -94,9 +94,9 @@ workspace.
 ## Install Mods
 
 You will then be given the opportunity to install one or more
-[Mods](/pipes/docs/mods), which will give you access to hundreds of off-the-shelf
+[mods](/pipes/docs/using/powerpipe/mods), which will give you access to hundreds of off-the-shelf
 dashboards and benchmarks for you to visualize within your workspace. Turbot
-Pipes also allows you to [manage variables](/pipes/docs/mods#managing-mod-variables)
+Pipes also allows you to [manage variables](/pipes/docs/using/powerpipe/mods#managing-mod-variables)
 exposed by the mod, to create dynamic behavior customized to your requirements.
 
 <img src="/images/docs/pipes/gs_install_mods.png" width="400pt"/>
@@ -126,7 +126,7 @@ questions. Click on a dashboard to run it.
 
 ## Query
 
-You can also run [queries](/pipes/docs/queries) from the query tab. You can browse or
+You can also run [queries](/pipes/docs/using/steampipe/query) from the query tab. You can browse or
 search the schemas and tables and run ad-hoc queries right from the web console!
 
 <img src="/images/docs/pipes/gs_query.png" width="400pt"/>

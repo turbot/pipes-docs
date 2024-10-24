@@ -50,7 +50,7 @@ The **Storage (GB)** chart details your total in-use storage capacity per day, b
 
 Pipes **Usage Thresholds** enable you to set usage limits and control what happens when those limits are reached.  
 
-Usage thresholds can only be managed at the billable entity; if your developer account is part of a [tenant](/pipes/docs/accounts/tenant) you must manage the usage thresholds on the tenant.  If your is not a member of a tenant, you will see a summary of your [usage thresholds](#usage-thresholds) at the top of the **Usage** page. Click **Manage** to view and set your usage thresholds.
+Usage thresholds can only be managed at the billable entity; if your developer account is part of a tenant you must manage the usage thresholds on the tenant.  If your is not a member of a tenant, you will see a summary of your usage thresholds at the top of the **Usage** page. Click **Manage** to view and set your usage thresholds.
 
 
 <img src="/images/docs/pipes/user_usage_thresholds.png" width="400pt"/>

@@ -19,7 +19,7 @@ You can accelerate your queries with a Datatank. With Datatank, you can proactiv
 
 ## Steampipe Database Search Path
 
-Your workspace includes a Steampipe database, and this database may include many [schemas](/pipes/docs/schemas).  When querying the database, any unqualified table names are resolved using the schema [search path](https://steampipe.io/docs/guides/search-path).  Mods are written using unqualified names, which allows you to target specific [datatanks](/pipes/docs/datatank), [connections](/docs/connections), and [aggregators](/pipes/docs/aggregators).  Pipes is opinionated on the search path, because *usually* you want to use a table from the datatank if it exists, otherwise an aggregator if one exists, otherwise a connection.
+Your workspace includes a Steampipe database, and this database may include many schemas.  When querying the database, any unqualified table names are resolved using the schema [search path](https://steampipe.io/docs/guides/search-path).  Mods are written using unqualified names, which allows you to target specific [datatanks](/pipes/docs/using/steampipe/datatank), [connections](/pipes/docs/using/steampipe/connections), and [aggregators](/pipes/docs/using/steampipe/aggregators).  Pipes is opinionated on the search path, because *usually* you want to use a table from the datatank if it exists, otherwise an aggregator if one exists, otherwise a connection.
 
 By default, Pipes builds the search path as follows:
 1. The `public` schema

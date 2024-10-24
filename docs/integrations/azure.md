@@ -5,23 +5,23 @@ sidebar_label: Azure
 
 # Azure Integration
 
-The Azure Integration allows you to automatically import a connection folder hierarchy that mirrors your Azure Organization folder structure, with a connection folder for each Azure management group and a [connection](/pipes/docs/connections) for each subscription in your Azure organization.
+The Azure Integration allows you to automatically import a connection folder hierarchy that mirrors your Azure Organization folder structure, with a connection folder for each Azure management group and a [connection](/pipes/docs/workspaces/connections) for each subscription in your Azure organization.
 
 The Azure integration will automatically keep the configuration up to date as your organization changes, adding, removing, and modifying connections and folders as subscriptions and management groups are created, deleted, or changed in your Azure organization.
 
 
 ## Creating the Azure Integration
 
-You can create an integration for a [tenant](/pipes/docs/tenants/) or an [organization]((/pipes/docs/accounts/org)), and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.
+You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an [organization](/pipes/docs/accounts/org), and where you create the integration affects the scope of the resources it creates; the resulting connections and folders can only be shared within the entity in which it was created.
 
 | Level                        | Plan                       | Description
 |------------------------------|----------------------------|----------------
-| [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/plans/enterprise) | Selectively share Azure connections and folders with any (or all) organization or workspace in the tenant.
-| [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/plans/team) or [Enterprise](/pipes/docs/plans/enterprise)  | Selectively share Azure connections and folders with any (or all) workspace in the organization.
+| [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) | Selectively share Azure connections and folders with any (or all) organization or workspace in the tenant.
+| [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/accounts/org#team-plan) or [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan)  | Selectively share Azure connections and folders with any (or all) workspace in the organization.
 
 
 First, navigate to the **Integrations** page for the appropriate resource:
-- To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure an Azure integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
@@ -57,7 +57,7 @@ Optionally, provide a **Handle Prefix** to be pre-pended to the names of connect
 
 Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
 
-Finally, select the [Permissions](/pipes/docs/tenants/connections#permissions).  
+Finally, select the [Permissions](/pipes/docs/accounts/tenant/connections#permissions).  
 
 ![](/images/docs/pipes/org-integrations-perms.png)
 
@@ -78,7 +78,7 @@ This means that the schema names will change in any workspace to which they are 
 - Discovery of subscriptions and management groups occurs using the supplied **Credentials**.  If changing the credentials affects access to these subscriptions and management groups that will be reflected in the folders and connections. For example, if the new credentials do not have access to some management groups or subscriptions that were visible to the previous credentials, then the corresponding folders and connections will be deleted and removed from any workspaces where they are attached.
 
 To modify the integration, navigate to the **Integrations** page for the appropriate resource:
-- To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure an Azure integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 You can change the **Credentials** or **Handle Prefix** from the **Config** tab.
@@ -103,7 +103,7 @@ You can delete an integration from its **Advanced** page.
 *If you delete an integration, all of its associated folders and connections will be deleted and removed from all workspaces.  This action is not reversible!*
 
 Navigate to the **Integrations** page for the appropriate resource:
-- To delete an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To delete an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To delete an Azure integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 Go to the **Advanced** page and click the **Delete Integration** button. 

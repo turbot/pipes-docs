@@ -89,4 +89,4 @@ From this page, you can edit the schedule **Title**, **Frequency** and **Notific
 
 The status of the last run appears at the top of the page, but you can link to the previous executions as well by clicking **All Runs**. This will take you to the **Activity** page, filtered to show only the process related to this query snapshot schedule.
 
-If you want to delete the schedule, click **Delete Pipeline**.  You will be prompted to confirm deletion.  alternatively, can delete the schedule from the list on the **Scheduled** sub-tab by clicking the trashcan icon for the schedule you wish to delete.
+If you want to delete the schedule, click **Delete Delete Scheduled Query**.  You will be prompted to confirm deletion.  alternatively, can delete the schedule from the list on the **Scheduled** sub-tab by clicking the trashcan icon for the schedule you wish to delete.

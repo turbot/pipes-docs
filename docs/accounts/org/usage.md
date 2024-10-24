@@ -58,7 +58,7 @@ The **Users** charts shows the total number of users in your organization as of 
 
 Pipes **Usage Thresholds** enable you to set usage limits and control what happens when those limits are reached.  
 
-Usage thresholds can only be managed at the billable entity; if your organization is part of a [tenant](/pipes/docs/accounts/tenant) you must manage the usage thresholds on the tenant.  If your org is on the [Team Plan](/pipes/docs/accounts/org#team-plan), you will see a summary of your [usage thresholds](#usage-thresholds) at the top of the **Usage** page. Click **Manage** to view and set your usage thresholds.
+Usage thresholds can only be managed at the billable entity; if your organization is part of a [tenant](/pipes/docs/accounts/tenant) you must manage the usage thresholds on the tenant.  If your org is on the [Team Plan](/pipes/docs/accounts/org#team-plan), you will see a summary of your usage thresholds at the top of the **Usage** page. Click **Manage** to view and set your usage thresholds.
 
 
 <img src="/images/docs/pipes/pipes_identity_usage_thresholds.png" width="400pt"/>
