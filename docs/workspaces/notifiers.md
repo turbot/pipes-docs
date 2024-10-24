@@ -10,6 +10,9 @@ Pipelines may need to send notification messages or requests for input.  You may
 
 The [notifier](https://flowpipe.io/docs/reference/config-files/notifier) allows you to define a list of [integrations](/pipes/docs/integrations/) to send notifications to.  Each notifier contains a list of integrations and related settings used to send and receive data to one or more integration.
 
+You can manages your workspace's notifiers from the **Notifiers** tab on your workspace.
+
+![](/images/docs/pipes/notifiers_list.png)
 
 
 ## Default Notifier
@@ -21,3 +24,42 @@ it works out of the box with no configuration necessary.
 
 If you would prefer to use a different default notifier in your workspace, you can do so;
 Pipes allows you to mark *any* notifier as the default for your workspace.  Navigate to the **Settings** page for the notifier that you would like to use.  From the **Workspace precedence** section, click  **Set Default**.
+
+
+
+
+## Creating a Notifier
+
+You can create notifiers at the [tenant](/pipes/docs/accounts/tenant/notifiers), [organization](/pipes/docs/accounts/org/notifiers), [developer account](/pipes/docs/accounts/developer/notifiers), or workspace. Notifiers that are create in a tenant, organization, or developer account are available in all child workspaces.
+
+To create a notifier, navigate to the **Notifiers** for the tenant, organization, developer account or workspace where you wish to create it, and click **New Notifier**
+
+![](/images/docs/pipes/notifiers_list.png)
+
+Enter a unique name for your notifier and click **Next**.
+
+![](/images/docs/pipes/create_notifier_handle.png)
+
+Choose the type of target you want to create.
+
+![](/images/docs/pipes/create_notifier_add_target.png)
+
+Enter the details for the target, the click **Create** to create the notifier.
+
+![](/images/docs/pipes/create_notifier_add_target_slack.png)
+
+
+## Modifying a Notifier
+
+Find the notifier from the list on the **Notifiers** tab and click its title or gear icon.  From the **Settings** sub-tab, you can edit the notifier's name, or set it as the [default for your workspace](#default-notifier).
+
+![](/images/docs/pipes/notifier_settings.png)
+
+You can add or remove notification targets from the **Targets** sub-tab.
+
+![](/images/docs/pipes/notifier_targets.png)
+
+
+## Deleting a Notifier
+ 
+You can delete a notifier from its **Settings** page. Find the notifier from the list on the **Notifiers** tab and click its title or gear icon.  From the **Settings** sub-tab, click **Delete Notifier**.  You will be prompted to confirm by entering the handle and clicking **Delete**.
