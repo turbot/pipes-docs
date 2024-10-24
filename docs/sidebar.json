@@ -77,6 +77,7 @@
             "link": "using/flowpipe",
             "items": [
               "using/flowpipe/pipelines",
+              "using/flowpipe/triggers",
               "using/flowpipe/mods"
             ]
           }

@@ -41,7 +41,7 @@ The pipeline will be submitted for execution, and you will be redirected to the 
 
 ## Scheduling a Pipeline
 
-You can set up triggers to run your pipelines automatically.  You can create a trigger from the **Pipelines** list by clicking the clock icon next to the pipeline you wish to trigger.   Alternately, you can click the **Run Pipeline** dropdown and select **Create Trigger** from either the **Pipelines** page or the pipeline detail page.
+You can set up triggers to run your pipelines automatically.  You can create a trigger from the **Pipelines** list by clicking the clock icon next to the pipeline you wish to trigger.   Alternately, you can click the **Run Pipeline** dropdown and select **Create Trigger** from the pipeline's detail page.
 
 You will be prompted for any parameters.  
 
