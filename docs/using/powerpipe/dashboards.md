@@ -12,7 +12,7 @@ workspace, the [Dashboards](https://powerpipe.io/docs/run/dashboard) and
 filter by name / tag etc.
 
 
-Navigate to your workspace, then the the **Pipes** tab, and choose **Dashbaords**.
+Navigate to your workspace, then from the **Pipes** tab choose **Powerpipe**. 
 
 ![](/images/docs/pipes/gs_dashboard_list.png)
 

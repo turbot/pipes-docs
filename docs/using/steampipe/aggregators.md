@@ -19,7 +19,11 @@ To manage the aggregators for your workspace, navigate to your workspace, then s
 
 ![](/images/docs/pipes/steampipe/steampipe_aggregators_list.png)
 
-You will see a list of aggregators for the workspace. Click on an aggregator to view it. The **Connections** tab will list the connections that are currently included in the aggregator. You can change the handle or the included connections of the aggregator from the **Settings** tab.   
+You will see a list of aggregators for the workspace. 
+
+You can filter the list of aggregators using a query filter.  Click the **Query** dropdown to select a pre-defined filter, or enter your own using the [Pipes query filter syntax](/pipes/docs/reference/query-filter#syntax).
+
+Click on an aggregator to view it. The **Connections** tab will list the connections that are currently included in the aggregator. You can change the handle or the included connections of the aggregator from the **Settings** tab.   
 
 <img src="/images/docs/pipes/cloud-connections-edit-aggregator.png" width="400pt"/>
 <br />

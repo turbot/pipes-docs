@@ -68,7 +68,8 @@
             "items": [
               "using/powerpipe/dashboards",
               "using/powerpipe/snapshots",
-              "using/powerpipe/mods"
+              "using/powerpipe/mods",
+              "using/powerpipe/activity"
             ]
           },
           {
@@ -78,7 +79,8 @@
             "items": [
               "using/flowpipe/pipelines",
               "using/flowpipe/triggers",
-              "using/flowpipe/mods"
+              "using/flowpipe/mods",
+              "using/flowpipe/executions"
             ]
           }
         ]

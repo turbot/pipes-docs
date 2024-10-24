@@ -20,6 +20,10 @@ The **Snapshots** tab lists all the snapshots in the workspace, including the sn
 
 ![](/images/docs/pipes/powerpipe/powerpipe_snapshots_list.png)
 
+
+You can filter the list of snapshots using a query filter.  Click the **Query** dropdown to select a pre-defined filter, or enter your own using the [Pipes query filter syntax](/pipes/docs/reference/query-filter#syntax).
+
+
 Click on a snapshot title to [view or edit it](#editing-snapshots).
 
 

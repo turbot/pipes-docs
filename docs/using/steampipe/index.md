@@ -16,7 +16,6 @@ You can accelerate your queries with a Datatank. With Datatank, you can proactiv
 
 
 
-
 ## Steampipe Database Search Path
 
 Your workspace includes a Steampipe database, and this database may include many schemas.  When querying the database, any unqualified table names are resolved using the schema [search path](https://steampipe.io/docs/guides/search-path).  Mods are written using unqualified names, which allows you to target specific [datatanks](/pipes/docs/using/steampipe/datatank), [connections](/pipes/docs/using/steampipe/connections), and [aggregators](/pipes/docs/using/steampipe/aggregators).  Pipes is opinionated on the search path, because *usually* you want to use a table from the datatank if it exists, otherwise an aggregator if one exists, otherwise a connection.
@@ -74,7 +73,9 @@ You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your worksp
 | `deleted`   | The workspace has been deleted.
 
 
-<!--
- | `pausing`   | The workspace database is running, but all pipelines and datatanks are being paused.
-| `paused` ?   | [Future??] The workspace database is running, but all pipelines and datatanks are paused.
--->
+## Query Log
+
+Turbot Pipes provides a log of the queries that have been run against your
+Steampipe workspace database. You can view the query logs from the Steampipe **Advanced** tab for your workspace.  Navigate to your workspace, and from the **Pipes** tab select **Steampipe**.  From the Steampipe **Advanced** tab, select **Query Log** from the left hand menu.
+
+![](/images/docs/pipes/steampipe/steampipe_query_log.png)
