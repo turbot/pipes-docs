@@ -5,7 +5,7 @@ sidebar_label: Activity
 
 # Activity
 
-The **Activity** tab for your workspace tab provides visibility into the all events that occur in your workspace.  
+The **Activity** tab for your workspace tab provides visibility into all events that occur in your workspace.  
 
 ## Audit Log
 
@@ -20,7 +20,7 @@ To view the audit log for your workspace, navigate to your workspace and then to
 ## Processes
 
 
-Many Turbot Pipes APIs perform tasks asynchronously. These tasks include Steampipe and Powerpipe scheduled snapshots, Flowpipe trigger and pipeline executions, one-time requests (install a mod into a workspace), and recurring system tasks (update the workspace container image and plugins every week). Steampipe **Processes** provide visibility into these activities.
+Many Turbot Pipes APIs perform tasks asynchronously. These tasks include Steampipe and Powerpipe scheduled snapshots, Flowpipe trigger and pipeline executions, one-time requests (install a mod into a workspace), and recurring system tasks (update the workspace container image and plugins every week). **Processes** provide visibility into these activities.
 
 To view the processes for your workspace, navigate to your workspace and then to the **Activity** tab.  From the left-hand menu, select **Processes**.
 
