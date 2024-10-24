@@ -52,6 +52,18 @@ workspace at this time.
 <br />
 
 
+
+## Sleeping, Waking, and Rebooting Workspace
+
+After a workspace has been created, it is in the `enabled` state - the workspace's Steampipe database is running and available and any scheduled snapshots will run.  If no one accesses the database for 4 days, it will be put to sleep and the status changed to `disabled`.  You can wake up (enable) the workspace from the console.  Simply click **Wake Up** in the banner that appears at the top of your sleeping workspace.
+
+![](/images/docs/pipes/pipes_workspace_sleeping_banner.png)
+
+<br />
+
+You can also [wake up, sleep, or reboot](/pipes/docs/using/steampipe#sleeping-waking-and-rebooting-workspace) your workspace from the Steampipe **Advanced** page for your workspace.  
+
+
 ## Deleting Workspaces
 
 You can delete a workspace from its **Advanced** tab. From the **Workspaces**
@@ -61,41 +73,3 @@ from the menu on the left, and click **Delete workspace**. You will be prompted
 to confirm deletion; enter the workspace name and click **Delete**.
 
 
-
-## Workspace Maintenance
-
-Your workspace may be updated and rebooted during the weekly maintenance window,
-Sundays 2:00am - 5:00am EST/EDT. This window is not currently configurable.
-
-During maintenance, your workspaces will be updated to the latest Steampipe
-version and the latest plugin versions. At this time, you cannot opt out of the
-weekly update.
-
-## Sleeping, Waking, and Rebooting Workspaces
-
-After a workspace has been created, it is in the `enabled` state - the workspace database is running and available and any scheduled pipelines will run.  If no one accesses the database for 4 days, the workspace will be put to sleep and the status changed to `disabled`.  You can wake up (enable) the workspace from the console.  Simply click **Wake Up** in the banner that appears at the top of your sleeping workspace.
-
-<img src="/images/docs/pipes/pipes_workspace_sleeping_banner.png" width="400pt"/>
-<br />
-
-You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your workspace from the **Advanced** / **Workspace** page for your workspace.
-
-<img src="/images/docs/pipes/pipes_workspace_settings_advanced.png" width="400pt"/>
-<br />
-
-### Workspace States
-
-| State       | Description
-|-------------|----------------------------
-| `creating`  | The workspace is being created but is not yet available.
-| `enabling`  | The workspace database is being started. Pipelines and datatanks are being enabled to run as scheduled.
-| `enabled`   | The workspace database is running and available in the API and via SQL.  Pipelines and datatanks are running as scheduled.
-| `disabling` | The workspace database is being shut down . All pipelines and datatanks are being disabled.
-| `disabled`  | The workspace database is shut down and users cannot access it. All pipelines and datatanks are disabled.
-| `deleted`   | The workspace has been deleted.
-
-
-<!--
- | `pausing`   | The workspace database is running, but all pipelines and datatanks are being paused.
-| `paused` ?   | [Future??] The workspace database is running, but all pipelines and datatanks are paused.
--->
