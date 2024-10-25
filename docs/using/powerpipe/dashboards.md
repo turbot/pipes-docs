@@ -8,11 +8,11 @@ sidebar_label: Dashboards
 Once you've added a connection and installed one or more mods into your
 workspace, the [Dashboards](https://powerpipe.io/docs/run/dashboard) and
 [Benchmarks](https://powerpipe.io/docs/run/benchmark) will become available for you to run in the
-**Dashboards** tab. You can browse the list, or use the powerful search to
-filter by name / tag etc.
+**Dashboards** tab. You can browse the list or use the powerful search to
+filter by name/tag, etc.
 
 
-Navigate to your workspace, then from the **Pipes** tab choose **Powerpipe**. 
+Navigate to your workspace, then from the **Pipes** tab, choose **Powerpipe**. 
 
 ![](/images/docs/pipes/gs_dashboard_list.png)
 
@@ -38,9 +38,9 @@ has finished loading).
 <img src="/images/docs/pipes/dash_snapshot_header.png" width="400pt"/>
 <br />
 
-Alternately, you can click the **Share** button to take a snapshot and share a
+Alternatively, you can click the **Share** button to take a snapshot and share a
 link with others. You can set the visibility of the snapshot to restrict access
-to only those with access to your workspace, or share it such that anyone on the
+to only those with access to your workspace, or share it so that anyone on the
 internet with the link can view it.
 
 <img src="/images/docs/pipes/dash_snapshot_share.png" width="400pt"/>
@@ -59,10 +59,10 @@ schedule, optionally setting it up with any required inputs and choosing the
 <img src="/images/docs/pipes/dash-snapshot-schedule-dropdown.png" width="400pt"/>
 <br />
 
-From here you can either choose to create a new schedule, or see any existing
+From here, you can either choose to create a new schedule or see any existing
 schedules that are configured for this dashboard.
 
-If you select **New Schedule** you'll be presented with the following screen.
+If you select **New Schedule**, you'll be presented with the following screen.
 
 <img src="/images/docs/pipes/dash-snapshot-schedule-new.png" width="400pt"/>
 <br />
@@ -81,13 +81,13 @@ If you select **New Schedule** you'll be presented with the following screen.
     <td nowrap="true">Frequency</td>
     <td>How often scheduled snapshot should run:  
        <inlineCode>Weekly</inlineCode>, <inlineCode>Daily</inlineCode>, <inlineCode>Hourly</inlineCode>, <inlineCode>Custom</inlineCode><br/>
-      For <inlineCode>Weekly</inlineCode>, <inlineCode>Daily</inlineCode> and <inlineCode>Hourly</inlineCode> frequencies, Turbot Pipes will automatically allocate a random time for these, with <inlineCode>Weekly</inlineCode> schedules being run at that time on a Sunday. For a <inlineCode>Custom</inlineCode> frequency, you can supply a cron schedule (not more than once every 15 minutes).
+ For <inlineCode>Weekly</inlineCode>, <inlineCode>Daily</inlineCode> and <inlineCode>Hourly</inlineCode> frequencies, Turbot Pipes will automatically allocate a random time for these, with <inlineCode>Weekly</inlineCode> schedules being run at that time on a Sunday. For a <inlineCode>Custom</inlineCode> frequency, you can supply a cron schedule (not more than once every 15 minutes).
     </td>
   </tr>
 
   <tr>
     <td nowrap="true">Visibility</td>
-    <td>Optionally choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it such that anyone on the internet with the link can view it.</td>
+    <td>Optionally choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it so that anyone on the internet with the link can view it.</td>
   </tr>
 
   <tr>
@@ -110,4 +110,3 @@ link out to the process logs.
 When the schedule runs, Pipes will upload the snapshot to your workspace as
 the `system` user, rather than attribute the activity to the user creating the
 schedule. 
-

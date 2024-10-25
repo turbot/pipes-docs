@@ -9,7 +9,7 @@ Your workspace includes a hosted [Powerpipe](https://powerpipe.io/) dashboard se
 
 You can manage mods from the **Mods** tab for the Powerpipe service in your workspace.
 
-Navigate to your workspace, then the the **Pipes** tab, and choose **Powerpipe**.  The **Mods** tab will list the mods that you have installed, as well as information about the version or branch that is installed.  You can type a search string or filter in the search box to filter the list.
+Navigate to your workspace, then to the **Pipes** tab, and choose **Powerpipe**.  The **Mods** tab will list the mods that you have installed, as well as information about the version or branch that is installed.  You can type a search string or filter in the search box to filter the list.
 
 ![](/images/docs/pipes/powerpipe/powerpipe_mods_list.png)
 
@@ -28,7 +28,7 @@ in your workspace.
 To install them, choose one or more mods, then click the **Install Mods** button.
 
 Installation should typically only take a few seconds. You can then head over to
-the **Dashboards** tab where you'll see a list of the available dashboards for
+the **Dashboards** tab, where you'll see a list of the available dashboards for
 the mod(s) you installed.
 
 
@@ -42,7 +42,7 @@ You can install custom mods from the **Settings** tab of your workspace. On the 
 
 Choose the **Integration** that hosts the repo for the mod you wish to install, then select the **Mod Repo** from the dropdown list.  
 
-Choose the **Branch or Version Constraint** for the mod.  Unlike recommended mods which are only updated once a day, custom mods from integrations are updated in Pipes whenever the source repository is modified. 
+Choose the **Branch or Version Constraint** for the mod.  Unlike recommended mods, which are only updated once a day, custom mods from integrations are updated in Pipes whenever the source repository is modified. 
 
 When finished, click **Install Mods**.
 
@@ -53,10 +53,10 @@ You can install a mod from *any* public GitHub repo by clicking on **Install fro
 
 - The repo must be publicly hosted on GitHub.
 - There must be at least [one semver tag](https://devhints.io/semver) (not a
-  pre-release) satisfying the provided semver constraint.
+ pre-release) satisfying the provided semver constraint.
 - The tagged version must contain a `mod.pp` or `mod.sp` file at the root of the repo.
 
-Installed mods are updated every day to the latest version satisfied by the
+Installed mods are updated every day to the latest version that is satisfied by the
 semver constraint. The default of `*` means that the latest tagged version will
 be installed daily.
 
@@ -69,7 +69,7 @@ applicable (if left empty, will default to `*`). When finished, click **Install 
 
 
 Installation should typically only take a few seconds. You can then head over to
-the **Dashboards** tab where you'll see a list of the available dashboards for
+the **Dashboards** tab, where you'll see a list of the available dashboards for
 the custom mod you installed.
 
 
@@ -77,7 +77,7 @@ the custom mod you installed.
 
 When you install a mod in a workspace, any [variables](https://powerpipe.io/docs/build/mod-variables) that the mod uses will be visible in Turbot Pipes.
 
-From the Powerpipe **Mods** tab, can click the mod you wish to view/manage the variables for.
+From the Powerpipe **Mods** tab, you can click the mod you wish to view/manage the variables for.
 
 ![](/images/docs/pipes/powerpipe/powerpipe_mod_variables.png)
 
@@ -87,7 +87,7 @@ with a section per variable. You'll see the current value and can edit this and
 **Save** if you are an owner of the workspace.
 
 Depending on the type of the variable, the editor will change, but you'll
-typically see either a text, a number or a text/number list editor that will
+typically see either a text, a number, or a text/number list editor that will
 allow you to easily manage the value.
 
 Once you've saved a mod variable, this should take effect in your workspace
@@ -100,7 +100,7 @@ You can delete a mod from its detail view. From the list of installed mods in th
 
 ![](/images/docs/pipes/powerpipe/powerpipe_mod_settings.png)
 
-On the detail screen, scroll to the bottom and click **Uninstall Mod**. Follow the confirmation instructions in the modal and the mod will be uninstalled from your workspace.
+On the detail screen, scroll to the bottom and click **Uninstall Mod**. Follow the confirmation instructions in the modal, and the mod will be uninstalled from your workspace.
 
-After this has completed, you'll no longer see any dashboards for this mod in
+After this has been completed, you'll no longer see any dashboards for this mod in
 the **Dashboards** tab.

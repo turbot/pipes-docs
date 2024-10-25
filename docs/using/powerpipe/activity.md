@@ -5,7 +5,7 @@ sidebar_label: Activity
 
 # Activity
 
-The Powerpipe **Activity** tab provides visibility into the Powerpipe scheduled snapshot processes.  You can view the status of running and completed processes and view the logs.
+The Powerpipe **Activity** tab provides visibility into the Powerpipe scheduled snapshot processes.  You can view the status of running and completed processes and view their logs.
 
 To view your activity, navigate to your workspace.  From the **Pipes** tab, select **Powerpipe**, then go to the **Activity** tab.
 
