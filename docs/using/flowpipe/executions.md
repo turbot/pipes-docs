@@ -5,7 +5,7 @@ sidebar_label: Executions
 
 # Executions
 
-The  **Executions** tab provides visibility into the Flowpipe pipeline and triggers executions.  You can view the status of running and completed processes and view the logs.
+The  **Executions** tab provides visibility into the Flowpipe pipeline and triggers executions.  You can view the status of running and completed processes and view their logs.
 
 To view your activity, navigate to your workspace.  From the **Pipes** tab, select **Flowpipe**, then go to the **Executions** tab.
 
