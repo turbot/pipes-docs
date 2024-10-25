@@ -9,7 +9,7 @@ The **Activity** tab for your tenant tab provides visibility into the events tha
 
 ## Audit Log
 
-The **Audit Log** provides a log of API activity associated with your tenant including _who_ did _what_ and _when_.
+The **Audit Log** provides a log of API activity associated with your tenant, including _who_ did _what_ and _when_.
 
 To view the audit log for your tenant, navigate to your tenant, then click the double arrow button from the navigation at the top of the page and select **Tenant Settings** from the dropdown.  Go to the **Activity** tab for your tenant and select **Audit Log** from the left-hand menu.
 
@@ -20,7 +20,7 @@ To view the audit log for your tenant, navigate to your tenant, then click the d
 ## Processes
 
 
-Many Turbot Pipes APIs perform tasks asynchronously. These tasks include one-time requests (install a mod into a workspace), and recurring system tasks (update the workspace container image and plugins every week). **Processes** provide visibility into these activities.
+Many Turbot Pipes APIs perform tasks asynchronously. These tasks include one-time requests (install a mod into a workspace) and recurring system tasks (update the workspace container image and plugins every week). **Processes** provide visibility into these activities.
 
 To view the audit log for your tenant, navigate to your tenant, then click the double arrow button from the navigation at the top of the page and select **Tenant Settings** from the dropdown.  Go to the **Activity** tab for your tenant and select **Processes** from the left-hand menu.
 

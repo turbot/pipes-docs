@@ -13,7 +13,7 @@ This option will only be visible in a custom tenant for which you are a [tenant 
 
 ## Trusted Login Domains
 
-Trusted domains allow you to specify a list of email domains that users can be invited or log in from. The restrictions are applied regardless of the [authentication method](#authentication-methods) used.
+Trusted domains allow you to specify a list of email domains from which users can log in and be invited. The restrictions are applied regardless of the [authentication method](#authentication-methods) used.
 
 By default, this is set to an empty list, which means there are no domain restrictions in place. If you wish to restrict access to a specific domain(s), you can add that domain to the list.
 
@@ -30,10 +30,10 @@ The methods available for authentication are:
 
 | Methods     | Description
 |-------------|------------------------------------------------------
-| `Email`     |  The default method for a new tenant. Login is available via magic links sent to the requesting user.
-| `SAML`      |  [SSO via SAML 2.0](#saml). 
-| `GitHub`    |  OAuth via [GitHub](#github). **Please note** the user's *primary* GitHub email address is presented and therefore used when evaluating [trusted login domain](#trusted-login-domains) restrictions.
-| `Google`    |  OAuth via [Google](#google).
+| `Email` |  The default method for a new tenant. Login is available via magic links sent to the requesting user.
+| `SAML` |  [SSO via SAML 2.0](#saml). 
+| `GitHub` |  OAuth via [GitHub](#github). **Please note** the user's *primary* GitHub email address is presented and therefore used when evaluating [trusted login domain](#trusted-login-domains) restrictions.
+| `Google` |  OAuth via [Google](#google).
 
 
 <!--
@@ -60,7 +60,7 @@ If you wish to enable SSO via SAML for your tenant, please follow the steps belo
   - **Attribute Mappings**: Map the following attributes to the corresponding user attributes in your IdP: 
     - `email`: the email address of the user
     - `firstName`: the given / first name of the user
-    - `lastName`: the family / surname of the user
+    - `lastName`: the family/surname of the user
     - `login`: _optional_ unique user login identifier
 - Once you have created the application, you will need to gather and enter the following information from your IdP: 
   - **Identity Provider Issuer ID**: e.g. https://okta.com/eyldobv30u6ndacE15e7
@@ -72,10 +72,10 @@ Once you have entered the required information from the SAML IdP configuration, 
 
 ### GitHub
 
-You can enable GitHub authentication by toggling the radio button.  When Github authentication is enabled, any user that has been authenticated by GitHub whose primary email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
+You can enable GitHub authentication by toggling the radio button.  When GitHub authentication is enabled, any user that has been authenticated by GitHub whose primary email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
 
 **Please note** the user's *primary GitHub email address* is presented and therefore used when evaluating [trusted login domain](#trusted-login-domains) restrictions.
 
 
 ### Google
-You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user that has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
+You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user who has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 

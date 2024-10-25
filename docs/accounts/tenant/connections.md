@@ -9,7 +9,7 @@ sidebar_label: Connections
 
 You can organize connections into **Connection Folders**. This makes it easier to [share](#permissions) groups of connections across workspaces in your tenant.
 
-Connections and folders that are created at the tenant level can be shared with any workspace or organization in the tenant.  You must be assigned the tenant **Owner** role to create, modify and delete tenant connections and folders.
+Connections and folders that are created at the tenant level can be shared with any workspace or organization in the tenant.  You must be assigned the tenant **Owner** role to create, modify, and delete tenant connections and folders.
 
 You can create connections and folders manually, but they may also be created by [integrations](/pipes/docs/integrations/).  For example, the [AWS](/pipes/docs/integrations/aws), [Azure](/pipes/docs/integrations/azure), and [GCP](/pipes/docs/integrations/gcp) integrations create and manage folders and connections automatically to mirror the organizational structure of your cloud provider.  You can manage [permissions](#permissions) to share these connections and folders just like the ones you create manually, but note that folders that are created by integrations are only managed by the integration; you cannot add or remove sub-folders or connections from them.
 
@@ -47,7 +47,7 @@ You can create connections and folders manually, but they may also be created by
 
 ## Deleting Connections
 
-To permanently delete a connection, navigate to the  **Connections** tab for your tenant. Browse the connection tree, and click the gear icon for the connection that you wish to delete.  On the **Settings/Advanced** tab, click  **Delete Connection**.  You will be prompted to confirm deletion. Enter the connection handle then click **Delete Connection**.
+To permanently delete a connection, navigate to the  **Connections** tab for your tenant. Browse the connection tree, and click the gear icon for the connection that you wish to delete.  On the **Settings/Advanced** tab, click  **Delete Connection**.  You will be prompted to confirm deletion. Enter the connection handle, then click **Delete Connection**.
 
 To delete a folder, click the gear icon for the folder that you wish to delete.  On the **Settings** tab, click **Delete Folder**.  You will be prompted to confirm deletion. Enter the folder title, then click **Delete Folder**.
 
@@ -77,4 +77,4 @@ If the folder or connection is a descendant of a folder that has already been sh
 
 Click **Save** to commit the changes.
 
-Note that setting permissions for a connection or folder does not attach its schema to the workspaces, it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/workspaces/connections#adding-schemas).
+Note that setting permissions for a connection or folder does not attach its schema to the workspaces; it merely makes it visible to the workspaces so that [it may be attached](/pipes/docs/workspaces/connections#adding-schemas).

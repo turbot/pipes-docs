@@ -12,9 +12,9 @@ an essential aspect of managing and optimizing your resources effectively. By mo
 
 ## Tenant Usage
 
-You can view your usage from the **Advanced** page for your tenant. Navigate to your tenant, then click the double arrow button from the navigation at the top of the page and select **Tenant Settings** from the dropdown. Go to the **Advanced** tab, and select **Usage** from the lef-hand menu.
+You can view your usage from the **Advanced** page for your tenant. Navigate to your tenant, then click the double arrow button from the navigation at the top of the page and select **Tenant Settings** from the dropdown. Go to the **Advanced** tab, and select **Usage** from the left-hand menu.
 
-The **Usage** page provides visibility into the compute, storage, and user usage for your tenant.  At the top of the page, you can see your estimated month-to-date charges and compute usage.  
+The **Usage** page provides visibility into your tenant's compute, storage, and user usage.  At the top of the page, you can see your estimated month-to-date charges and compute usage.  
 
 <img src="/images/docs/pipes/usage_stats_summary.png" width="400pt"/>
 
@@ -24,7 +24,7 @@ The **Daily Usage** provides a summary of your usage for the last full day, incl
 <img src="/images/docs/pipes/usage_daily_usage.png" width="400pt"/>
 
 
-Charts for the 3 usage dimension appear below.  You can select the date range for these charts.  By default, the **Last 30 days** is shown, but you may instead select a different date range.  The dashed line on each chart represents the included capacity for that metric in your plan.  Hover over any bar in a chart to see the usage breakdown for that day.
+Charts for the 3 usage dimensions appear below.  You can select the date range for these charts.  By default, the **Last 30 days** is shown, but you may instead select a different date range.  The dashed line on each chart represents the included capacity for that metric in your plan.  Hover over any bar in a chart to see the usage breakdown for that day.
 
 <br />
 
@@ -48,12 +48,12 @@ The **Storage (GB)** chart details your total in-use storage capacity per day, b
 <br />
 <img src="/images/docs/pipes/usage_org_users.png" width="400pt"/>
 
-The **Users** charts shows the total number of users in your tenant as of each day.
+The **Users** chart shows the total number of users in your tenant as of each day.
 
 
 ## Usage Thresholds
 
-Pipes **Usage Thresholds** enable you to set usage limits and control what happens when those limits are reached. You can see summary of your usage thresholds at the top of the **Usage** page. Click **Manage** to view and set usage thresholds for your tenant.
+Pipes **Usage Thresholds** enable you to set usage limits and control what happens when those limits are reached. You can see a summary of your usage thresholds at the top of the **Usage** page. Click **Manage** to view and set usage thresholds for your tenant.
 
 
 <img src="/images/docs/pipes/pipes_identity_usage_thresholds.png" width="400pt"/>
@@ -68,6 +68,6 @@ Notifications are sent to the Organization owners via email. You will receive a 
 
 
 The **Cap and warn** behavior varies by dimension:
-- When **Cap and warn** is set and the compute limit is reached, all workspaces will sleep and pipelines will be suspended.
+- When **Cap and warn** is set and the compute limit is reached, all workspaces will sleep, and pipelines will be suspended.
 - When **Cap and warn** is set and the storage limit is reached, snapshots will no longer be written, and you will not be able to spin up any new workspaces.
 - When **Cap and warn** is set and the user limit is reached, you will not be able to invite any more users to the Organization.

@@ -23,5 +23,3 @@ To create an organization, click the **New Organization** button. Select a uniqu
 ## Deleting an Organization
 
 You can [delete an organization](/pipes/docs/accounts/org/advanced#deleting-an-organization) from the **Advanced** settings for the organization.  To delete an organization, select the double arrow button from the navigation at the top of the page and select the organization. Go to the **Advanced** tab and click **Org Profile**. Click **Delete Organization**. You will be prompted to confirm deletion. Enter the organization handle and click **Delete**.
-
-

@@ -20,9 +20,9 @@ You can manage integrations from the **Integrations** tab for your tenant.
 ![](/images/docs/pipes/tenant_integrations.png)
 
 
-To create a new integration, click the **New Integration** button.  You will be prompted to select the integration, then fill the required information for that specific [integration](/pipes/docs/integrations/).
+To create a new integration, click the **New Integration** button.  You will be prompted to select the integration and then fill in the required information for that specific [integration](/pipes/docs/integrations/).
 
-To edit an integration you can click the handle or the gear icon that corresponds to the integration you want to modify.  Each integration type will have its own settings.
+To edit an integration, you can click the handle or the gear icon that corresponds to the integration you want to modify.  Each integration type will have its own settings.
 
 To delete an integration,  click the handle or the gear icon that corresponds to the integration you want to modify.  Go to the **Advanced** page and click the **Delete Integration** button. 
 

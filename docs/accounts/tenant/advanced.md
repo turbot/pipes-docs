@@ -15,7 +15,7 @@ You can modify your tenant's **Avatar**.  On the **Advanced** tab for your tenan
 
 ## Authentication
 
-Pipes Enterprise supports multiple authentication methods, including Email, [SAML](/pipes/docs/accounts/tenant/authentication#saml), [GitHub](/pipes/docs/accounts/tenant/authentication#github), and [Google](/pipes/docs/accounts/tenant/authentication#google).   The [Authentication](/pipes/docs/accounts/tenant/authentication) page allows you toenable, disable, and configure authentication methods, [trusted domains](/pipes/docs/accounts/tenant/authentication#trusted-login-domains) and other options.
+Pipes Enterprise supports multiple authentication methods, including Email, [SAML](/pipes/docs/accounts/tenant/authentication#saml), [GitHub](/pipes/docs/accounts/tenant/authentication#github), and [Google](/pipes/docs/accounts/tenant/authentication#google).   The [Authentication](/pipes/docs/accounts/tenant/authentication) page allows you to enable, disable, and configure authentication methods, [trusted domains](/pipes/docs/accounts/tenant/authentication#trusted-login-domains), and other options.
 
 To manage the authentication settings for your tenant, On the **Advanced** tab for your tenant, click **Authentication** from the left-hand menu.
 
@@ -27,8 +27,7 @@ On the **Advanced** tab for your tenant, click **Usage** from the
 left-hand menu to view [usage information](/pipes/docs/accounts/tenant/usage) for your tenant.
 
 ## Billing 
-The **Billing** page provides visibility into the current state of billing for your tenant. 
+The **Billing** page provides visibility into your tenant's current billing state. 
 
 On the **Advanced** tab for your tenant, click **Billing** from the
 left-hand menu to view [billing information](/pipes/docs/accounts/tenant/billing) for your tenant.
-
