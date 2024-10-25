@@ -17,6 +17,6 @@ You can filter the list of processes using a query filter.  Click the **Query** 
 ![](/images/docs/pipes/powerpipe/powerpipe_activity_filtered.png)
 
 
-Click on a process to view the detail. The process detail displays the status, which user initiated it the full detailed logs, with expandable and copyable data where available.
+Click on a process to view the process detail page. The process detail page displays the status, which user initiated it, and the full detailed logs with expandable and copyable data where available.
 
 ![](/images/docs/pipes/powerpipe/powerpipe_process_log.png)

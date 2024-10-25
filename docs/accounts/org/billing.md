@@ -7,7 +7,7 @@ sidebar_label: Billing
 
 The **Billing** page provides visibility into the current state of billing for your organization. 
 
-To manage billing, go to the **Advanced** page for your organization and click **Billing** from the left hand menu.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your bill from the [tenant billing page](/pipes/docs/accounts/tenant/billing).
+To manage billing, go to the **Advanced** page for your organization and click **Billing** from the left-hand menu.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your bill from the [tenant billing page](/pipes/docs/accounts/tenant/billing).
 
 <img src="/images/docs/pipes/pipes_billing.png" width="400pt"/>
  

@@ -24,7 +24,7 @@ At the top of the page, you can see your **Daily usage**, including the current 
 Charts for the workspace usage dimensions appear below.  You can select the date range for these charts.  By default, the **Last 30 days** is shown, but you may instead select a different date range.  Hover over any bar in a chart to see the usage breakdown for that day.
 
 The **Compute (mins)** chart shows you your cumulative compute usage as well as your compute usage for each day in the specified date range, broken down by type:
-- **Database Compute** includes time spent running the workspace database instance.  This includes any time running queries, as well as the 5 minute idle timeout.
+- **Database Compute** includes time spent running the workspace database instance.  This includes any time spent running queries, as well as the 5-minute idle timeout.
 - **Process Compute** includes time running all pipeline processes such as scheduled snapshots, Flowpipe pipelines & triggers, and Datatank updates.
 
 The **Storage (GB)** chart details your total in-use storage capacity per day, broken down by type:

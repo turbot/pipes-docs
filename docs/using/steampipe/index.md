@@ -28,7 +28,7 @@ By default, Pipes builds the search path as follows:
 
 Usually, this is the desired order, however you can set a default [search path prefix](https://steampipe.io/docs/guides/search-path#search-path-prefix) if you want to customize the search path
 
-You can set the prefix from the Steampipe **Advanced** / **Status** page for your workspace.  Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left hand menu.
+You can set the prefix from the Steampipe **Advanced** / **Status** page for your workspace.  Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left-hand menu.
 
 ![](/images/docs/pipes/steampipe/steampipe_settings_advanced.png)
 
@@ -53,7 +53,7 @@ After a workspace has been created, it is in the `enabled` state - the workspace
 
 <br />
 
-You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your workspace from the Steampipe **Advanced** page for your workspace.  You can set the prefix from the Steampipe **Advanced** / **Status** page for your workspace.  Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left hand menu.
+You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your workspace from the Steampipe **Advanced** page for your workspace.  You can set the prefix from the Steampipe **Advanced** / **Status** page for your workspace.  Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left-hand menu.
 
 
 ![](/images/docs/pipes/steampipe/steampipe_advanced_status.png)
@@ -76,6 +76,6 @@ You can also **Wake Up** (enable), **Sleep** (disable) or **Reboot** your worksp
 ## Query Log
 
 Turbot Pipes provides a log of the queries that have been run against your
-Steampipe workspace database. You can view the query logs from the Steampipe **Advanced** tab for your workspace.  Navigate to your workspace, and from the **Pipes** tab select **Steampipe**.  From the Steampipe **Advanced** tab, select **Query Log** from the left hand menu.
+Steampipe workspace database. You can view the query logs from the Steampipe **Advanced** tab for your workspace.  Navigate to your workspace, and from the **Pipes** tab select **Steampipe**.  From the Steampipe **Advanced** tab, select **Query Log** from the left-hand menu.
 
 ![](/images/docs/pipes/steampipe/steampipe_query_log.png)

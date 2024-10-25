@@ -8,7 +8,7 @@ sidebar_label: Notifiers
 
 Pipelines may need to send notification messages or requests for input.  You may want to route these notifications to multiple users, groups, or channels, perhaps via more than one delivery mechanism. For instance, you may want to request approval via [Slack](/pipes/docs/integrations/slack) and email.  Mods can send these messages to a **notifier**, which provides a way for the mod to send the message in a standard way, without needing to be aware of the details of the particular delivery channels or destinations.
 
-The [notifier](https://flowpipe.io/docs/reference/config-files/notifier) allows you to define a list of [integrations](/pipes/docs/integrations/) to send notifications to.  Each notifier contains a list of integrations and related settings used to send and receive data to one or more integration.
+The [notifier](https://flowpipe.io/docs/reference/config-files/notifier) allows you to define a list of [integrations](/pipes/docs/integrations/) to send notifications to.  Each notifier contains a list of integrations and related settings used to send and receive data to one or more integrations.
 
 You can manages your workspace's notifiers from the **Notifiers** tab on your workspace.
 

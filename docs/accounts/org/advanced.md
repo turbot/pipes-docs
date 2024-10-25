@@ -9,7 +9,7 @@ To manage your organization's advanced settings, click the double arrow button f
 
 ## Org Profile
 
-On the **Advanced** tab for your organization, click **Org Profile** from the left hand menu to manage your profile data. You can modify your organization's **Avatar**, **Display Name** or **Handle**.
+On the **Advanced** tab for your organization, click **Org Profile** from the left-hand menu to manage your profile data. You can modify your organization's **Avatar**, **Display Name** or **Handle**.
 
 ### Updating Your Avatar
 You can modify your organizations's Avatar at any time. Click the avatar image to change it. You can click **Reset** to change back to the default generated image.
@@ -29,14 +29,14 @@ You can update your organization handle at any time. Note, however, that your wo
 Pipes provides **Usage** information to help you view and understand your workspace usage, including used storage, compute time, and the number of users in your organization. 
 
 On the **Advanced** tab for your organization, click **Usage** from the
-left hand menu to view [usage information](/pipes/docs/accounts/org/usage) for your organization.
+left-hand menu to view [usage information](/pipes/docs/accounts/org/usage) for your organization.
 
 ## Billing 
 
 The **Billing** page provides visibility into the current state of billing for your organization. 
 
 On the **Advanced** tab for your organization, click **Billing** from the
-left hand menu to view [billing information](/pipes/docs/accounts/org/billing) for your organization.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).
+left-hand menu to view [billing information](/pipes/docs/accounts/org/billing) for your organization.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).
 
 
 
@@ -45,7 +45,7 @@ left hand menu to view [billing information](/pipes/docs/accounts/org/billing) f
 Once users have been added to your organization, they will be able to
 authenticate against it according to the permissions they were granted. They can authenticate using either temporary tokens issued via console or [CLI login](https://steampipe.io/docs/reference/cli/login#steampipe-login), or with [tokens](/pipes/docs/accounts/developer/advanced#tokens) managed via their user profile settings.
 
-If you wish to reset authentication in your organization for any currently issued tokens, you can do so by going to the **Advanced** page for your organization, then clicking **Authentication** from the left hand menu.  Click the
+If you wish to reset authentication in your organization for any currently issued tokens, you can do so by going to the **Advanced** page for your organization, then clicking **Authentication** from the left-hand menu.  Click the
 `Reset authentication` button to reset authentication for all existing
 temporary and user tokens.
 

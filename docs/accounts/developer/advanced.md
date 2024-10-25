@@ -5,17 +5,11 @@ sidebar_label: Advanced
 
 # Developer Account Advanced Settings
 
-You can manage your user profile, credentials, usage, and billing from the **Advanced** tab for
-your developer account. Click your avatar in the top right and select **Your Profile**
-from the menu, or click the double arrow button from the navigation at the top
-of the page, select your developer account from the dropdown, and then go to the
-**Advanced** tab.
+You can manage your user profile, credentials, usage, and billing from the **Advanced** tab for your developer account.  Click your avatar in the top right and select **Your Profile** from the menu, or click the double arrow button from the navigation at the top of the page, select your developer account from the dropdown, and then go to the **Advanced** tab.
 
 ## User Profile
 
-On the **Advanced** page for your developer account, click **User Profile** from the left
-hand menu to manage your profile data. You can modify your **Display Name**,
-**Avatar URL**, or **Handle**. 
+On the **Advanced** page for your developer account, click **User Profile** from the left-hand menu to manage your profile data. You can modify your **Display Name**, **Avatar URL**, or **Handle**. 
 
 ### Updating Your Avatar
 You can modify your tenant's Avatar at any time. Click the avatar image to change it. You can click **Reset** to change back to the default generated image.
@@ -23,13 +17,11 @@ You can modify your tenant's Avatar at any time. Click the avatar image to chang
 
 ### Changing your Display Name
 
-You can modify display name from the **User Profile** section.  Enter your preferred name and click **Save**
+You can modify your display name from the **User Profile** section.  Enter your preferred name and click **Save**
 
 ### Updating Your User Handle
 
-You can update your user handle at any time. Note, however, that your workspace
-DNS names all contain your user handle; changing it will result in changing the
-DNS name for ALL of your workspaces.
+You can update your user handle at any time. Note, however, that your workspace DNS names all contain your user handle; changing it will result in changing the DNS name for ALL of your workspaces.
 
 Enter your new handle and click **Save**.
 
@@ -38,7 +30,7 @@ Enter your new handle and click **Save**.
 
 If you wish, you can permanently remove your developer account and all of its contents from the Steampipe platform. (We hate to see you go!) ***This action is not reversible***, so please continue with caution.
 
-On the **User Profile** page for your user click **Delete developer account**. You will be prompted to confirm deletion; enter your user handle and click **Delete**.
+On the **User Profile** page for your user, click **Delete developer account**. You will be prompted to confirm deletion; enter your user handle and click **Delete**.
 
 
 ## Usage 
@@ -46,16 +38,16 @@ On the **User Profile** page for your user click **Delete developer account**. Y
 Pipes provides **Usage** information to help you view and understand your workspace usage, including used storage and compute time across your workspaces. 
 
 On the **Advanced** tab for your developer account, click **Usage** from the
-left hand menu to view [usage information](/pipes/docs/accounts/developer/usage) for your account.
+left-hand menu to view [usage information](/pipes/docs/accounts/developer/usage) for your account.
 
 
 
 ## Billing 
 
-The **Billing** page provides visibility into the current state of billing for your account. 
+The **Billing** page provides visibility into your account's current billing state. 
 
 On the **Advanced** tab for your account, click **Billing** from the
-left hand menu to view [billing information](/pipes/docs/accounts/developer/billing) for your account.  The billing page will not be available  if your developer account is part of a [tenant](/pipes/docs/accounts/tenant).
+left-hand menu to view [billing information](/pipes/docs/accounts/developer/billing) for your account.  The billing page will not be available if your developer account is part of a [tenant](/pipes/docs/accounts/tenant).
 
 
 
@@ -70,8 +62,8 @@ You can create non-expiring API tokens for your user account.  You can use these
 workspaces from the Steampipe CLI. You can have up to 2 tokens at a time.
 
 Click **New Token** to create a new API token. The token will be masked, but you
-can reveal it by clicking the eye icon, or hover over it and click the clipboard
-icon to copy it. Make a secure note of the token as you will not be able to
+can reveal it by clicking the eye icon or hovering over it and clicking the clipboard
+icon to copy it. Make a secure note of the token, as you will not be able to
 retrieve it again.
 
 You can deactivate or delete a token from the list by clicking the options menu
@@ -107,11 +99,11 @@ that stage. You will also need to re-generate any
 
 ## Notifications
 
-Click the **Notifications** from the left hand menu to manage your Turbot Pipes notification preferences. Choose what type of emails you wish to receive from Turbot Pipes:
+Click the **Notifications** from the left-hand menu to manage your Turbot Pipes notification preferences. Choose what type of emails you wish to receive from Turbot Pipes:
 
 | Type                  | Description                                                                                                   |
 | --------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Community Updates** | Get notified of community information and events you may be interested in.                                    |
-| **Product Updates**   | Get notified of product updates as they are released.                                                         |
-| **Tips & Tricks**     | Get useful tips & tricks on using Turbot Pipes.                                                               |
-| **System**            | Important system notifications related to your Turbot Pipes account. System notifications cannot be disabled. |
+| **Product Updates** | Get notified of product updates as they are released.                                                         |
+| **Tips & Tricks** | Get useful tips & tricks on using Turbot Pipes.                                                               |
+| **System** | Important system notifications related to your Turbot Pipes account. System notifications cannot be disabled. |
