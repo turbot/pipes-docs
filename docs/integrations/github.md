@@ -52,7 +52,7 @@ Select the GitHub user or organization that you would like to share with Turbot 
 ![](/images/docs/pipes/integrations_github_choose_repos.png)
 
 
-After you complete the GitHub setup, you will be redirected to the **Integrations** page.  You should see your new integration in the list.  If the state is **Enabled** then the setup is complete and Pipes will begin discovering the mods in your repositories.
+After you complete the GitHub setup, you will be redirected to the **Integrations** page.  You should see your new integration in the list.  If the state is **Enabled**, then the setup is complete, and Pipes will begin discovering the mods in your repositories.
 
 
 ![](/images/docs/pipes/integrations_list_github_enabled.png)
@@ -84,4 +84,3 @@ Navigate to the **Integrations** page for the appropriate resource:
 - To configure a GitHub integration for your **Developer Account**, click the double arrow button from the navigation at the top of the page, select your account from the dropdown, and then select **Settings** from the menu on the left.  On the organization settings page, select **Integrations**.
 
 Go to the **Advanced** page and click the **Delete Integration** button. You will be asked to enter the handle to confirm deletion.  If you wish to *permanently delete the integration and all of its resources*, click **Delete**.
-

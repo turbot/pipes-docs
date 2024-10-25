@@ -20,8 +20,8 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 
 
 First, navigate to the **Integrations** page for the appropriate resource:
-- To configure an GCP integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
-- To configure an GCP integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
+- To configure a GCP integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure a GCP integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
 ![](/images/docs/pipes/org-integrations-tab.png)
@@ -52,7 +52,7 @@ Configure the **Connection settings**.
 
 ![](/images/docs/pipes/org-integrations-gcp-connection.png)
 
-Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
+Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes or to ensure the uniqueness of the generated connection handles.
 
 If desired, you can click **Advanced Options** to set default settings for the imported connections.  All connections created by the integration will inherit these settings, though you can override them later for each connection if you want.
 
@@ -64,7 +64,7 @@ Finally, select the [Permissions](/pipes/docs/accounts/tenant/connections#permis
 
 ![](/images/docs/pipes/org-integrations-perms.png)
 
-The permissions on this screen apply to the top-level folders and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
+The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
 Note also that **All Workspaces** will not only add permissions for the existing organization workspaces but will also allow access for any new workspaces that are created.
 
@@ -85,7 +85,7 @@ To modify the integration, navigate to the **Integrations** page for the appropr
 
 In the list of integrations, click the gear icon next to the integration that you want to modify.
 
-You can change the **Credentials**, **Handle Prefix** or **Advanced Settings** from the **Config** tab. 
+You can change the **Credentials**, **Handle Prefix**, or **Advanced Settings** from the **Config** tab. 
 
 ![](/images/docs/pipes/org-integrations-gcp-settings-config.png)
 

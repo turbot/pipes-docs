@@ -23,8 +23,8 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 
 
 First, navigate to the **Integrations** page for the appropriate resource:
-- To configure an GCP integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
-- To configure an GCP integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
+- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure a Slack integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
 ![](/images/docs/pipes/org-integrations-tab.png)
@@ -39,7 +39,7 @@ Select **Slack** and click **Next**.
 
 Provide a **Handle** for the integration.  This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).  Click **Create Integration**.
 
-You will be prompted to grant permissions to access the Slack workspace.  If you are a member of multiple workspaces, you can select a Slack workspace from the select box at the top right of the screen.  After selecting the workspace, select a default **channel** for the integration.  Review the permissions and click **Allow**.
+You will be prompted to grant permission to access the Slack workspace.  If you are a member of multiple workspaces, you can select a Slack workspace from the select box at the top right of the screen.  After selecting the workspace, select a default **channel** for the integration.  Review the permissions and click **Allow**.
 
 
 ![](/images/docs/pipes/slack_oauth_perms.png)

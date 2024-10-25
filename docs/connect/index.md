@@ -15,7 +15,7 @@ You can get the Postgres connection string and other database information from t
 
 ![](/images/docs/pipes/query-info-connect.png)
 
-The **Database** tab will provide general database connection details - the **Connection String**, **Host**, **Port**, **Database**, **Username** and **Password**.  Click on any field to copy it to your clipboard.  Note that the password is masked on the screen, but clicking it will add the un-redacted text to your clipboard so that you can paste it into your tool's configuration screen.  Individual users can access the database with their credentials, and the information in this view is specific to the logged in user, enabling secure, personalized access.
+The **Database** tab will provide general database connection details - the **Connection String**, **Host**, **Port**, **Database**, **Username** and **Password**.  Click on any field to copy it to your clipboard.  Note that the password is masked on the screen, but clicking it will add the un-redacted text to your clipboard so that you can paste it into your tool's configuration screen.  Individual users can access the database with their credentials, and the information in this view is specific to the logged-in user, enabling secure, personalized access.
 
 You can also get specific [Steampipe](https://steampipe.io/) commands from the **Steampipe CLI** tab:
 
@@ -28,7 +28,7 @@ Or retrieve the [psql](/pipes/docs/connect/psql) and [pgcli](/pipes/docs/connect
 
 
 
-## Examples of Postgres-Compatable Clients
+## Examples of Postgres-Compatible Clients
 Our community leverages a diverse range of PostgreSQL clients to connect to Turbot Pipes. This flexibility accommodates different workflows, whether you prefer traditional SQL IDEs for database management, BI tools for data analysis and visualization, or [programming languages and SDKs](https://turbot.com/pipes/blog/2024/01/turbot-pipes-as-software-component) for custom integrations.
 
 ### SQL IDEs
@@ -36,7 +36,7 @@ Our community leverages a diverse range of PostgreSQL clients to connect to Turb
 | Tool | Description |
 |------|-------------|
 | [Azure Data Studio](https://turbot.com/pipes/docs/connect/azuredatastudio) | Azure Data Studio is a cross-platform database tool for data professionals. |
-| [DataGrip](https://turbot.com/pipes/docs/connect/datagrip) | DataGrip is a professional SQL IDE by JetBrains, designed for database developers. |
+| [DataGrip](https://turbot.com/pipes/docs/connect/datagrip) | DataGrip is a professional SQL IDE by JetBrains designed for database developers. |
 | [DBeaver](https://turbot.com/pipes/docs/connect/dbeaver) | DBeaver is a free, multi-platform database tool for developers and database administrators. |
 | [dbt](https://turbot.com/pipes/docs/connect/dbt) | dbt is a transformation tool that enables data analysts and engineers to transform data in their warehouses. |
 | [Deepnote](https://turbot.com/pipes/docs/connect/deepnote) | Deepnote is a data science notebook for collaborative projects. |

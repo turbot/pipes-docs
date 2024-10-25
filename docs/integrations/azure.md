@@ -53,7 +53,7 @@ Enter the **Azure Credentials**.  Pipes requires a Client ID and Client secret w
 
 Enter the **Tenant ID**, **Client ID**, and **Client Secret**.
 
-Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes, or to ensure the uniqueness of the generated connection handles.
+Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes or to ensure the uniqueness of the generated connection handles.
 
 Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
 
@@ -61,7 +61,7 @@ Finally, select the [Permissions](/pipes/docs/accounts/tenant/connections#permis
 
 ![](/images/docs/pipes/org-integrations-perms.png)
 
-The permissions on this screen apply to the top-level folders and therefore to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
+The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
 Note also that **All Workspaces** will not only add permissions for the existing organization workspaces but will also allow access for any new workspaces that are created.
 
@@ -75,7 +75,7 @@ After you have created an integration, you can change its **Handle**, **Handle P
 *Modifying the integration after it has been created will potentially impact any workspaces that use its connections!*
 - Changing the **Handle Prefix** will change the handles of all of its connections.
 This means that the schema names will change in any workspace to which they are attached.  The schema names, in turn, impact the search path and aggregators that use wildcards.
-- Discovery of subscriptions and management groups occurs using the supplied **Credentials**.  If changing the credentials affects access to these subscriptions and management groups that will be reflected in the folders and connections. For example, if the new credentials do not have access to some management groups or subscriptions that were visible to the previous credentials, then the corresponding folders and connections will be deleted and removed from any workspaces where they are attached.
+- Discovery of subscriptions and management groups occurs using the supplied **Credentials**.  If changing the credentials affects access to these subscriptions and management groups, that will be reflected in the folders and connections. For example, if the new credentials do not have access to some management groups or subscriptions that were visible to the previous credentials, then the corresponding folders and connections will be deleted and removed from any workspaces where they are attached.
 
 To modify the integration, navigate to the **Integrations** page for the appropriate resource:
 - To configure an Azure integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
