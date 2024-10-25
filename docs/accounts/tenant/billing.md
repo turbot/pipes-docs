@@ -70,7 +70,7 @@ To do so:
 
 This will close out any existing debit/credit card subscription you have and generate a final invoice based on additional usage in the current billing cycle.
 
-Once complete you will be taken back to your dashboard. If you were previously in a tenant or organization trial, after a short while the monthly subscription fee will be added to your AWS Marketplace subscription. If you were already on a paid plan you will not be metered for the AWS Marketplace subscription until the date at which your existing debit/credit card plan would have rolled to the next billing cycle.
+Once complete you will be taken back to your dashboard. If you were previously in a tenant or organization trial, the monthly subscription fee will be added to your AWS Marketplace subscription after a short while. If you were already on a paid plan you will not be metered for the AWS Marketplace subscription until the date at which your existing debit/credit card plan would have rolled to the next billing cycle.
 
 All additional usage will be metered to AWS Marketplace on a daily basis and added to your monthly AWS bill.
 

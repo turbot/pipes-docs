@@ -24,10 +24,8 @@ The team plan includes 3 users, 2,000 compute minutes, and 20GB storage capacity
 ## Creating Organizations
 
 To create an organization, select the double arrow button from the navigation at
-the top of the page, and select **Create Organization** from the menu. Select a
+the top of the page and select **Create Organization** from the menu. Select a
 unique handle for your organization. This handle must be a unique name across
 all developer accounts and organizations. Optionally, expand the **Profile** and set
 a **Logo URL** (publicly accessible URL for the organization's logo) and **URL**
 (publicly accessible URL for the organization). Click **Create Organization**.
-
-

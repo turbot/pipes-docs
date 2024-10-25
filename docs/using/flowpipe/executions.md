@@ -17,6 +17,6 @@ You can filter the list of processes using a query filter.  Click the **Query** 
 ![](/images/docs/pipes/flowpipe/flowpipe_executions_filtered.png)
 
 
-Click on a process to view the process detail page. The process detail page displays the status, which user initiated it, and the full detailed logs with expandable and copyable data where available.
+Click on a process to view the process detail page. The process detail page displays the status, the user that initiated it, and the full detailed logs with expandable and copyable data where available.
 
 ![](/images/docs/pipes/flowpipe/flowpipe_executions_detail.png)

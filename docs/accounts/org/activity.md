@@ -9,7 +9,7 @@ The **Activity** tab for your organization tab provides visibility into the even
 
 ## Audit Log
 
-The **Audit Log** provides a log of API activity associated with your organization including _who_ did _what_ and _when_.
+The **Audit Log** provides a log of API activity associated with your organization, including _who_ did _what_ and _when_.
 
 To view the audit log for your organization, navigate to your organization and then to the **Activity** tab.  From the left-hand menu, select **Audit Log**.
 
@@ -20,7 +20,7 @@ To view the audit log for your organization, navigate to your organization and t
 ## Processes
 
 
-Many Turbot Pipes APIs perform tasks asynchronously. These tasks include one-time requests (install a mod into a workspace), and recurring system tasks (update the workspace container image and plugins every week). **Processes** provide visibility into these activities.
+Many Turbot Pipes APIs perform tasks asynchronously. These tasks include one-time requests (install a mod into a workspace) and recurring system tasks (update the workspace container image and plugins every week). **Processes** provide visibility into these activities.
 
 To view the processes for your organization, navigate to your organization and then to the **Activity** tab.  From the left-hand menu, select **Processes**.
 
@@ -35,7 +35,7 @@ You can filter the list of processes using a query filter.  Click the **Query** 
 ![](/images/docs/pipes/org_process_list_filtered.png)
 
 
-Click on a process to view the process detail page. The process detail page displays the status, which user initiated it, and the full detailed logs with expandable and copyable data where available.
+Click on a process to view the process detail page. The process detail page displays the status, the user that initiated it, and the full detailed logs with expandable and copyable data where available.
 
 <!--
 ![](/images/docs/pipes/process_detail.png)

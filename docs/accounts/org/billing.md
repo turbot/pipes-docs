@@ -7,16 +7,16 @@ sidebar_label: Billing
 
 The **Billing** page provides visibility into the current state of billing for your organization. 
 
-To manage billing, go to the **Advanced** page for your organization and click **Billing** from the left-hand menu.  The billing page will only available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your bill from the [tenant billing page](/pipes/docs/accounts/tenant/billing).
+To manage billing, go to the **Advanced** page for your organization and click **Billing** from the left-hand menu.  The billing page will only be available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your bill from the [tenant billing page](/pipes/docs/accounts/tenant/billing).
 
 <img src="/images/docs/pipes/pipes_billing.png" width="400pt"/>
  
 
 ## Free Trial
 
-When you first enroll in the [Team Plan](/pipes/docs/accounts/org#team-plan) and create an [organization](/pipes/docs/accounts/org), you will be signed up to a 14-day free trial. 
+When you first enroll in the [Team Plan](/pipes/docs/accounts/org#team-plan) and create an [organization](/pipes/docs/accounts/org), you will be signed up for a 14-day free trial. 
 
-During this period, you will have access to all the features of the plan, with 1/2 of the normal included monthly compute minutes.
+During this period, you will have access to all the features of the plan, with 1/2 of the normal monthly compute minutes included.
 
 After or during the trial period, you will need to upgrade to a paid plan to continue using the service. Failure to do so will result in your workspaces being suspended.
 
@@ -30,16 +30,16 @@ If you wish to pay for Pipes using a debit or credit card, you must first enter 
 
 This will create a secure connection between your browser and our payment provider. **Please note**: We *never* store your card details on our servers.
 
-At the top of the page you will see a summary of your billing information:
+At the top of the page, you will see a summary of your billing information:
 
 - The billing [plan](/pipes/pricing) for this account.
-- The dates of the current billing cycle.  Billing cycles vary by organization, and may not coincide with a calendar month.
+- The dates of the current billing cycle.  Billing cycles vary by organization and may not coincide with a calendar month.
 - The amount of the last invoice, along with its payment status
 - The amount of the next invoice
 
 ### Invoices
 
-The invoices table provides a list of previous invoices, including the invoice date, the amount, and the payment status. You can download any of these invoices by clicking the options menu (three vertical dots) at the end of the line and selection **Download** from the popup menu.
+The invoices table provides a list of previous invoices, including the invoice date, the amount, and the payment status. You can download any of these invoices by clicking the options menu (three vertical dots) at the end of the line and selecting **Download** from the popup menu.
 
 ### Cards
 
@@ -47,7 +47,7 @@ The cards section lists your active debit/credit cards. One of these cards must 
 
 ### Manage Subscription
 
-You can cancel the subscription by clicking the **Cancel Subscription** button. The cancellation will occur at the end of the free trial, or the current billing period. Once cancelled this will result in the suspension of all your workspaces.
+You can cancel the subscription by clicking the **Cancel Subscription** button. The cancellation will occur at the end of the free trial or the current billing period. Once canceled, all your workspaces will be suspended.
 
 ## AWS Marketplace Subscription
 
@@ -62,14 +62,14 @@ To do so:
 - Review the pricing and terms, then click **View purchase options**.
 - Click the **Subscribe** button.
 - Click the **Set up your account** button.
-- You will be taken to a Turbot Pipes landing page - you may be asked to sign-in again.
-- From there, you will be presented with a list of tenants or organizations that you are an [owner](/pipes/docs/people) of.
+- You will be taken to a Turbot Pipes landing page, and you may be asked to sign in again.
+- From there, you will be presented with a list of tenants or organizations of which you are an [owner](/pipes/docs/people).
 - Select the tenant or organization that you wish to subscribe to via AWS Marketplace.
 - Click **Set up**.
 
 This will close out any existing debit/credit card subscription you have and generate a final invoice based on additional usage in the current billing cycle.
 
-Once complete you will be taken back to your dashboard. If you were previously in a tenant or organization trial, after a short while the monthly subscription fee will be added to your AWS Marketplace subscription. If you were already on a paid plan you will not be metered for the AWS Marketplace subscription until the date at which your existing debit/credit card plan would have rolled to the next billing cycle.
+Once complete, you will be taken back to your dashboard. If you were previously in a tenant or organization trial, the monthly subscription fee will be added to your AWS Marketplace subscription after a short while. If you were already on a paid plan you will not be metered for the AWS Marketplace subscription until the date at which your existing debit/credit card plan would have rolled to the next billing cycle.
 
 All additional usage will be metered to AWS Marketplace on a daily basis and added to your monthly AWS bill.
 
@@ -77,7 +77,7 @@ When subscribed via AWS Marketplace, Pipes has no access to the invoices or paym
 
 ### Cancellation
 
-If you wish to cancel your subscription: you can do so at any time by clicking the **Manage Subscription** button on the **Billing** page.
+If you wish to cancel your subscription, you can do so at any time by clicking the **Manage Subscription** button on the **Billing** page.
 
 This will take you to your AWS Marketplace subscriptions page. From there:
 
@@ -85,4 +85,4 @@ This will take you to your AWS Marketplace subscriptions page. From there:
 - Click **Manage**
 - Under `Actions`, select **Cancel Subscription**.
 
-This will initiate the cancellation flow and close out the subscription in Pipes. Once that has completed your workspaces will be suspended.
+This will initiate the cancellation flow and close out the subscription in Pipes. Once that has been completed, your workspaces will be suspended.
