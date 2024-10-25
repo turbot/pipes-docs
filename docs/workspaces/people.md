@@ -21,9 +21,9 @@ address or the user handle of an existing user and select a role for the user:
 
 | Role         | Description                                                                                                                       |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| **Reader**   | Has full read access to the workspace.                                                                                            |
+| **Reader** | Has full read access to the workspace.                                                                                            |
 | **Operator** | Has full read access to the workspace and can manage snapshots.                                                                   |
-| **Owner**    | Has full administrative access to the workspace, aside from adding connections to the workspace which is reserved for org owners. |
+| **Owner** | Has full administrative access to the workspace, aside from adding connections to the workspace, which is reserved for org owners. |
 
 Click **Add**. The user will receive an email invitation to join the
 organization.

@@ -8,11 +8,11 @@ sidebar_label: Usage
 Pipes provides **Usage** information to help you view and understand your workspace usage, including used storage and compute time. 
 
 Because Pipes is billed based on your usage, understanding usage is
-an essential aspect of managing and optimizing your resources effectively. By monitoring these metrics, you can ensure that your workspace operates efficiently ands cost-effectively.
+an essential aspect of managing and optimizing your resources effectively. By monitoring these metrics, you can ensure that your workspace operates efficiently and cost-effectively.
 
 
 
-## Viewing Worskpace Usage
+## Viewing Workspace Usage
 
 You can view your usage from the **Advanced** tab of your workspace. 
 

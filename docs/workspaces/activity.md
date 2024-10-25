@@ -9,7 +9,7 @@ The **Activity** tab for your workspace tab provides visibility into all events 
 
 ## Audit Log
 
-The **Audit Log** provides a log of API activity associated with your workspace including _who_ did _what_ and _when_.
+The **Audit Log** provides a log of API activity associated with your workspace, including _who_ did _what_ and _when_.
 
 To view the audit log for your workspace, navigate to your workspace and then to the **Activity** tab.  From the left-hand menu, select **Audit Log**.
 
