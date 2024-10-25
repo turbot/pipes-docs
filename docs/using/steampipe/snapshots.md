@@ -29,7 +29,7 @@ Click on a snapshot title to [view or edit it](#editing-snapshots).
 ## Sharing Snapshots
 
 
-When taking a snapshot, you can choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it such that anyone on the internet with the link can view it.
+When taking a snapshot, you can choose the visibility of the snapshot generated. By default, visibility is restricted to only those with access to your workspace, but you can choose to share it so that anyone on the internet with the link can view it.
 
 You can subsequently change the visibility in Pipes in multiple places:
 - From the Steampipe **Snapshots** tab for your workspace, click the sharing icon for the snapshot you wish to modify. 
@@ -51,7 +51,7 @@ To restrict access to workspace members only, click **Delete Shared Link**.
 
 ## Editing Snapshots
 
-You can edit a snapshots **Title**, **Tags**, and **Visibility** from the snapshot's properties panel.  To view the properties panel:
+You can edit a snapshot's **Title**, **Tags**, and **Visibility** from the snapshot's properties panel.  To view the properties panel:
 - From the Steampipe **Snapshots** tab for your workspace, click the gear icon for the snapshot you wish to modify; or
 - From a snapshot, click the gear icon at the top right.
 
@@ -67,7 +67,7 @@ You can also **download** or **delete** the snapshot from the properties panel.
 ## Deleting Snapshots
 To delete a snapshot, click the trash can icon for the snapshot you wish to delete. 
 
-You can also delete the snapshot directly from the snapshot itself.  Click the gear icon at the top right to show the the properties panel, then click **Delete Snapshot**.  
+You can also delete the snapshot directly from the snapshot itself.  Click the gear icon at the top right to show the properties panel, then click **Delete Snapshot**.  
 
 You will be prompted to confirm deletion.
 
@@ -79,7 +79,7 @@ You will be prompted to confirm deletion.
 
 To view a list of snapshot schedules, navigate to your workspace.  From the **Pipes** tab, select **Steampipe**, then go to the **Snapshots** tab.  
 
-Click the **Scheduled** sub-tab to view a list of all the query snapshot schedules in the workspace, including the schedule title, the next run time, last run time, and tags.
+Click the **Scheduled** sub-tab to view a list of all the query snapshot schedules in the workspace, including the schedule title, the next run time, the last run time, and tags.
 
 ![](/images/docs/pipes/steampipe/steampipe_snapshot_schedule_list.png)
 
@@ -89,8 +89,8 @@ Click on a schedule title to view or manage the schedule.
 ![](/images/docs/pipes/steampipe/steampipe_snapshot_schedule_detail.png)
 ...
 
-From this page, you can edit the schedule **Title**, **Frequency** and **Notifications**, as well as the **Title**, **Tags**, and **Visibility** for the snapshots that it will generate.  Click the pencil icon next to the relevant field to edit it.
+From this page, you can edit the schedule **Title**, **Frequency**, and **Notifications**, as well as the **Title**, **Tags**, and **Visibility** for the snapshots that it will generate.  Click the pencil icon next to the relevant field to edit it.
 
-The status of the last run appears at the top of the page, but you can link to the previous executions as well by clicking **All Runs**. This will take you to the **Activity** page, filtered to show only the process related to this query snapshot schedule.
+The status of the last run appears at the top of the page, but you can link to the previous executions as well by clicking **All Runs**. This will take you to the **Activity** page, which is filtered to show only the process related to this query snapshot schedule.
 
-If you want to delete the schedule, click **Delete Delete Scheduled Query**.  You will be prompted to confirm deletion.  alternatively, can delete the schedule from the list on the **Scheduled** sub-tab by clicking the trashcan icon for the schedule you wish to delete.
+If you want to delete the schedule, click **Delete Delete Scheduled Query**.  You will be prompted to confirm deletion. Alternatively, can delete the schedule from the list on the **Scheduled** sub-tab by clicking the trashcan icon for the schedule you wish to delete.

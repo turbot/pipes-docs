@@ -8,14 +8,14 @@ sidebar_label: Aggregators
 An **[Aggregator](https://steampipe.io/docs/managing/connections#using-aggregators)** allows you to query data from *multiple* connections as if they are a single connection. For example, using aggregators, you can query multiple AWS accounts from a single table.  Unlike connections, aggregators cannot be defined at the identity level or shared across workspaces - they can only be created at the workspace level.
 
 
-Pipes will automatically create aggregators whenever you have 2 or more connections of a given plugin type.  These system-generated aggregators are configured to include all connections for the plugin, and they are placed before the connections in the default [search_path](https://steampipe.io/docs/guides/search-path).  This means that unqualified queries will use the aggregator, so your default view includes data from all connections.  The system-generated aggregators are named `all_{plugin}` (e.g. `all_aws`) and you cannot modify or delete them.
+Pipes will automatically create aggregators whenever you have two or more connections of a given plugin type.  These system-generated aggregators are configured to include all connections for the plugin, and they are placed before the connections in the default [search_path](https://steampipe.io/docs/guides/search-path).  This means that unqualified queries will use the aggregator, so your default view includes data from all connections.  The system-generated aggregators are named `all_{plugin}` (e.g. `all_aws`), and you cannot modify or delete them.
 
-You can also create your own aggregators, with your own matching rules.
+You can also create your own aggregators with your own matching rules.
 
 
 ## Adding & Removing Aggregators
 
-To manage the aggregators for your workspace, navigate to your workspace, then select Steampipe from the **Pipes** tab, then select the **Aggregators** tab.
+To manage the aggregators for your workspace, navigate to your workspace, select Steampipe from the **Pipes** tab, then select the **Aggregators** tab.
 
 ![](/images/docs/pipes/steampipe/steampipe_aggregators_list.png)
 
