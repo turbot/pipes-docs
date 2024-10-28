@@ -68,8 +68,7 @@
             "items": [
               "using/powerpipe/dashboards",
               "using/powerpipe/snapshots",
-              "using/powerpipe/mods",
-              "using/powerpipe/activity"
+              "using/powerpipe/mods"
             ]
           },
           {
