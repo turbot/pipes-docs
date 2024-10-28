@@ -8,7 +8,7 @@ sidebar_label: Query API
 ## Authentication
 
 To use the [Turbot Pipes API](/pipes/docs/reference/api), you must connect with an
-[API token](/pipes/docs/da-settings#tokens). The examples in this section assume
+[API token](/pipes/docs/accounts/developer/advanced#tokens). The examples in this section assume
 that you have set the
 [`PIPES_TOKEN`](https://steampipe.io/docs/reference/env-vars/PIPES_TOKEN) to a valid
 API token:
@@ -19,21 +19,21 @@ export PIPES_TOKEN=tpt_c6rnjt8afakemj4gha10_svpnmxqfaketokenad431k
 
 ## Query Your Data
 
-The Turbot Pipes API makes it easy query your data and integrate it into your
+The Turbot Pipes API makes it easy to query your data and integrate it into your
 scripts and applications!
 
 You can issue a simple query with a GET request:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query?sql=select+*+from+aws_s3_bucket
+ https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query?sql=select+*+from+aws_s3_bucket
 ```
 
-If you POST you can avoid encoding the SQL:
+If you POST, you can avoid encoding the SQL:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  -d 'sql=select name,arn from aws_s3_bucket' \
+ -d 'sql=select name,arn from aws_s3_bucket' \
   https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query
 ```
 
@@ -43,7 +43,7 @@ results in CSV:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  -d sql'=select name,arn from aws_s3_bucket' \
+ -d sql'=select name,arn from aws_s3_bucket' \
   https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query/my-file.csv
 ```
 
@@ -51,7 +51,7 @@ Or markdown:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  -d sql'=select name,arn from aws_s3_bucket' \
+ -d sql'=select name,arn from aws_s3_bucket' \
   https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query/my-file.md
 ```
 
@@ -60,7 +60,7 @@ parameter:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  -d sql'=select name,arn from aws_s3_bucket' \
+ -d sql'=select name,arn from aws_s3_bucket' \
   https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query?content_type=csv
 ```
 
@@ -68,7 +68,7 @@ Or via HTTP headers:
 
 ```bash
 curl -H "Authorization: Bearer ${PIPES_TOKEN}" \
-  -H "Accept: text/csv" \
+ -H "Accept: text/csv" \
   -X POST -d sql='select name,arn from aws_s3_bucket' \
-  https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query
+ https://pipes.turbot.com/api/latest/user/foo/workspace/bar/query
 ```

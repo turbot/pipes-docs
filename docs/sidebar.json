@@ -12,42 +12,74 @@
         "id": "using",
         "link": "using",
         "items": [
-          "dashboards",
-          "queries",
           {
             "type": "category",
-            "id": "connect",
-            "link": "connect",
+            "id": "using_steampipe",
+            "link": "using/steampipe",
             "items": [
-              "connect/apachesuperset",
-              "connect/azuredatastudio",
-              "connect/cli",
-              "connect/datagrip",
-              "connect/dbeaver",
-              "connect/dbt",
-              "connect/deepnote",
-              "connect/duckdb",
-              "connect/gitpod",
-              "connect/golang",
-              "connect/grafana",
-              "connect/heidisql",
-              "connect/javascript",
-              "connect/jupyter",
-              "connect/looker",
-              "connect/metabase",
-              "connect/navicat",
-              "connect/pgadmin",
-              "connect/pgcli",
-              "connect/powerbi",
-              "connect/psql",
-              "connect/python",
-              "connect/r",
-              "connect/razorsql",
-              "connect/rstudio",
-              "connect/sigma",
-              "connect/tableau",
-              "connect/tableplus",
-              "connect/vscode"
+              "using/steampipe/query",
+              "using/steampipe/snapshots",
+              "using/steampipe/connections",
+              "using/steampipe/aggregators",
+              "using/steampipe/datatank",
+              
+              {
+                "type": "category",
+                "id": "connect",
+                "link": "connect",
+                "items": [
+                  "connect/apachesuperset",
+                  "connect/azuredatastudio",
+                  "connect/cli",
+                  "connect/datagrip",
+                  "connect/dbeaver",
+                  "connect/dbt",
+                  "connect/deepnote",
+                  "connect/duckdb",
+                  "connect/gitpod",
+                  "connect/golang",
+                  "connect/grafana",
+                  "connect/heidisql",
+                  "connect/javascript",
+                  "connect/jupyter",
+                  "connect/looker",
+                  "connect/metabase",
+                  "connect/navicat",
+                  "connect/pgadmin",
+                  "connect/pgcli",
+                  "connect/powerbi",
+                  "connect/psql",
+                  "connect/python",
+                  "connect/r",
+                  "connect/razorsql",
+                  "connect/rstudio",
+                  "connect/sigma",
+                  "connect/tableau",
+                  "connect/tableplus",
+                  "connect/vscode"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "id": "using_powerpipe",
+            "link": "using/powerpipe",
+            "items": [
+              "using/powerpipe/dashboards",
+              "using/powerpipe/snapshots",
+              "using/powerpipe/mods"
+            ]
+          },
+          {
+            "type": "category",
+            "id": "using_flowpipe",
+            "link": "using/flowpipe",
+            "items": [
+              "using/flowpipe/pipelines",
+              "using/flowpipe/triggers",
+              "using/flowpipe/mods",
+              "using/flowpipe/executions"
             ]
           }
         ]
@@ -57,19 +89,13 @@
         "id": "workspaces",
         "link": "workspaces",
         "items": [
-          {
-            "type": "category",
-            "id": "schemas",
-            "link": "schemas",
-            "items": [
-              "connections",
-              "aggregators",
-              "datatank"
-            ]
-          },
-          "mods",
-          "pipelines",
-          "activity"
+          "workspaces/pipes",          
+          "workspaces/people",
+          "workspaces/connections",
+          "workspaces/notifiers",
+          "workspaces/activity",
+          "workspaces/usage"
+          
         ]
       },
 
@@ -81,64 +107,88 @@
           "integrations/aws",
           "integrations/azure",
           "integrations/gcp",
-          "integrations/github"
+          "integrations/github",
+          "integrations/slack"
+
         ]
       },
 
       {
         "type": "category",
-        "id": "developer-account",
-        "link": "developer-account",
+        "id": "accounts",
+        "link": "accounts",
         "items": [
-          "da-workspaces",
-          "da-connections",
-          "da-settings"
-        ]
-      },
-      {
-        "type": "category",
-        "id": "organizations",
-        "link": "organizations",
-        "items": [
-          "org-workspaces",
-          "org-connections",
-          "people",
-          "org-settings"
-        ]
-      },
-      {
-        "type": "category",
-        "id": "tenants",
-        "link": "tenants",
-        "items": [
-          "tenants/developer-account",
-          "tenants/organizations",
-          "tenants/connections",
-          "tenants/people",
-          "tenants/settings",
-          "tenants/authentication"
-        ]
-      },
+          {
+            "type": "category",
+            "id": "developer-account",
+            "link": "accounts/developer",
+            "items": [
+              "accounts/developer/workspaces",
+              "accounts/developer/integrations",
+              "accounts/developer/notifiers",
+              "accounts/developer/activity",
 
-      {
-        "type": "category",
-        "id": "plans",
-        "link": "plans",
-        "items": [
-          "plans/developer",
-          "plans/team",
-          "plans/enterprise"
-        ]
-      },
+              {
+                "type": "category",
+                "id": "developer-account-advanced",
+                "link": "accounts/developer/advanced",
+                "items": [
+                  "accounts/developer/usage",
+                  "accounts/developer/billing"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "id": "organizations",
+            "link": "accounts/org",
+            "items": [
+              "accounts/org/workspaces",
+              "accounts/org/people",
+              "accounts/org/integrations",
+              "accounts/org/connections",
+              "accounts/org/notifiers",
+              "accounts/org/activity",
 
-      {
-        "type": "category",
-        "id": "usage-billing",
-        "link": "usage-billing",
-        "items": [
-          "usage",
-          "usage-thresholds",
-          "billing"
+              {
+                "type": "category",
+                "id": "organizations-advanced",
+                "link": "accounts/org/advanced",
+                "items": [
+                  "accounts/org/usage",
+                  "accounts/org/billing"
+                  
+                ]
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "id": "tenants",
+            "link": "accounts/tenant",
+            "items": [
+              "accounts/tenant/developer-account",
+              "accounts/tenant/organizations",
+              "accounts/tenant/people",
+              "accounts/tenant/integrations",
+              "accounts/tenant/connections",
+              "accounts/tenant/notifiers",
+              "accounts/tenant/activity",
+
+              {
+                "type": "category",
+                "id": "tenant-advanced",
+                "link": "accounts/tenant/advanced",
+                "items": [
+                  "accounts/tenant/authentication",
+                  "accounts/tenant/usage",
+                  "accounts/tenant/billing"
+                  
+                ]
+              }              
+            ]
+          }
         ]
       },
 

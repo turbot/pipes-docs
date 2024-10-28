@@ -21,19 +21,15 @@ The console also supports this query syntax:
 <img src="/images/docs/pipes/api_filter_query_ex1.png" width="600pt"/>
 <br />
 
-Note that the query filter is parsed and processed by the Steampipe API, not
-passed to a backend database - there's no need to worry about SQL injection. In
-fact, the schema of the query reflects the API output, and is entirely
+Note that the query filter is parsed and processed by the Steampipe API and not
+passed to a backend database. There's no need to worry about SQL injection. In
+fact, the schema of the query reflects the API output and is entirely
 abstracted from the backend storage implementation.
 
-Note that this filter capability is not subject to SQL injection attacks, as it
-is parsed and processed by the Steampipe API, not passed to a backend database.
-In fact, the schema of the query reflects the API output, and is entirely
-abstracted from the backend storage implementation.
 
 ## Syntax
 
-The `where` argument syntax supports a subset of the postgres `where` clause
+The `where` argument syntax supports a subset of the Postgres `where` clause
 syntax.
 
 You can do simple equality operations:
@@ -96,13 +92,6 @@ created_at > now() - interval '1 week'
 created_at > now() - interval '1 month'
 ```
 
-<!--
-Boolean
-```sql
-!!! We dont have any Boolean fields currently
-```
-<-->
-
 You can use `in()` to compare against multiple values:
 
 ```sql
@@ -127,7 +116,7 @@ Or not null values:
 inputs is not null
 ```
 
-You can use json arrow operators for json fields, with the usual string,
+You can use JSON arrow operators for JSON fields, with the usual string,
 numeric, and boolean operators:
 
 ```sql
@@ -154,15 +143,14 @@ inputs ->> 'input.vpc_id' = 'vpc-11111111' and dashboard_title = 'AWS VPC Detail
 
 ## Queryable Columns
 
-The queryable columns come from the API results, but not all columns can be used
-in a `where` filter - Each API has specific columns allowed for querying.
+The queryable columns come from the API results, but not all columns can be used in a `where` filter - Each API has specific columns allowed for querying.
 
 For example, the `snapshot` API returns:
 
 ```json
 {
   "items": [
-    {
+ {
       "id": "snap_cbpvpdmv4vji3f000000_3v1gvdufu9eez5cwpjgy8u80k",
       "identity_id": "u_01234567890123456789",
       "workspace_id": "w_01234567890123456789",
@@ -184,10 +172,10 @@ For example, the `snapshot` API returns:
         "version_id": 11,
         "created_at": "2021-11-23T18:20:15Z",
         "updated_at": "2022-08-10T14:06:10Z"
-      },
+ },
       "version_id": 1
-    }
-  ]
+ }
+ ]
 }
 ```
 
