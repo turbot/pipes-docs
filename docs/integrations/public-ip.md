@@ -10,8 +10,8 @@ The following IPs are used by Pipes' load balancers to accept inbound traffic. P
 | **Name**                     | **Static IP Address**     | **Ports**     |
 |------------------------------|---------------------------|---------------|
 | Application Endpoint         | 34.86.218.179/32          | 80, 443       |
-| Steampipe Database Proxy     | 34.145.175.31/32          | 9193          |
-| Powerpipe Dashboard Proxy    | 34.85.232.246/32          | 80, 443       |
+| Steampipe Database           | 34.145.175.31/32          | 9193          |
+| Powerpipe Dashboard          | 34.85.232.246/32          | 80, 443       |
 
 These IPs are static and will not change.
 
