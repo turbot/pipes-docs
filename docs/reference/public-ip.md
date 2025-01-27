@@ -10,8 +10,8 @@ The following IPs are inbound to Pipes to accept traffic. Please ensure these ar
 | **Name**                                                           | **Static IP Address**     | **Ports**     |
 |--------------------------------------------------------------------|---------------------------|---------------|
 | Turbot Pipes UI/API (pipes.turbot.com, *.pipes.turbot.com)             | 34.86.218.179/32          | 80, 443       |
-| Postgres Endpoint                                                  | 34.145.175.31/32          | 9193          |
-| WebSocket Server                                                   | 34.85.232.246/32          | 80, 443       |
+| Workspace Steampipe DB Endpoint                                                  | 34.145.175.31/32          | 9193          |
+| Workspace Powerpipe WebSocket Server                                                   | 34.85.232.246/32          | 80, 443       |
 
 These IPs are static and will not change.
 
