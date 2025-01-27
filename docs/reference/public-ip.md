@@ -1,11 +1,11 @@
 # Public IP Addresses
 
-## **Overview**
+## Overview
 This document provides a list of public IPs used by Pipes for inbound and outbound requests. These IPs are intended for end users to configure whitelisting, firewall rules, and integrations with external services.
 
-## **Public IPs**
-#### **1. Inbound IPs**
-The following IPs are inbound to Pipes' to accept traffic. Please ensure these are whitelisted for access to our services:
+## Public IPs
+### 1. Inbound to Pipes
+The following IPs are inbound to Pipes to accept traffic. Please ensure these are whitelisted for access to our services:
 
 | **Name**                                                           | **Static IP Address**     | **Ports**     |
 |--------------------------------------------------------------------|---------------------------|---------------|
@@ -15,7 +15,7 @@ The following IPs are inbound to Pipes' to accept traffic. Please ensure these a
 
 These IPs are static and will not change.
 
-#### **2. Outbound IPs**
+### 2. Outbound from Pipes
 The following IPs are used for outbound traffic from Pipes to external services:
 
 | **Static IP Address**     |
