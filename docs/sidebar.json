@@ -202,6 +202,7 @@
           "reference/gosdk",
           "reference/plugin",
           "reference/query-filter",
+          "reference/public-ip",
           "reference/terraform"
         ]
       }
