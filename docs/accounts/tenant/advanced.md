@@ -19,6 +19,10 @@ Pipes Enterprise supports multiple authentication methods, including Email, [SAM
 
 To manage the authentication settings for your tenant, On the **Advanced** tab for your tenant, click **Authentication** from the left-hand menu.
 
+## Workspaces
+
+Pipes Enterprise supports configuring the visibility of snapshots across all workspaces of the tenant. To manage the tenant workspace settings, On the **Advanced** tab, click **Workspaces** from the left-hand menu.
+
 ## Usage 
 
 Pipes provides **Usage** information to help you view and understand your workspace usage, including used storage, compute time, and the number of users in your tenant. 
