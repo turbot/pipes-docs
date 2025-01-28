@@ -183,8 +183,8 @@
                 "items": [
                   "accounts/tenant/authentication",
                   "accounts/tenant/usage",
-                  "accounts/tenant/billing"
-                  
+                  "accounts/tenant/billing",
+                  "accounts/tenant/workspace-settings"
                 ]
               }              
             ]
