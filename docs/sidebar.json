@@ -108,6 +108,7 @@
           "integrations/azure",
           "integrations/gcp",
           "integrations/github",
+          "integrations/gitlab",
           "integrations/slack"
 
         ]
@@ -182,9 +183,9 @@
                 "link": "accounts/tenant/advanced",
                 "items": [
                   "accounts/tenant/authentication",
+                  "accounts/tenant/workspace-settings",
                   "accounts/tenant/usage",
-                  "accounts/tenant/billing",
-                  "accounts/tenant/workspace-settings"
+                  "accounts/tenant/billing"
                 ]
               }              
             ]
