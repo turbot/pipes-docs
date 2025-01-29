@@ -1,3 +1,8 @@
+---
+title: Public IP Addresses
+sidebar_label: Public IP Addresses
+---
+
 # Public IP Addresses
 
 ## Overview
