@@ -22,3 +22,5 @@ You must be assigned the tenant or organization **Owner** role to create, modify
 | Azure tenants | [Docs](https://turbot.com/pipes/docs/integrations/azure) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/azure-tenant-sync) |
 | GCP organizations | [Docs](https://turbot.com/pipes/docs/integrations/gcp) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/gcp-org-sync) |
 | GitHub organizations | [Docs](https://turbot.com/pipes/docs/integrations/github) | [Announcement & demo](https://turbot.com/pipes/blog/2024/05/github-custom-mods) |
+| GitLab organizations | [Docs](https://turbot.com/pipes/docs/integrations/gitlab) |  |
+| Slack | [Docs](https://turbot.com/pipes/docs/integrations/slack) |  |

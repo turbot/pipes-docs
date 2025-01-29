@@ -21,7 +21,7 @@ To manage the authentication settings for your tenant, On the **Advanced** tab f
 
 ## Workspaces
 
-Pipes Enterprise supports configuring the visibility of snapshots across all workspaces of the tenant. To manage the tenant workspace settings, On the **Advanced** tab, click **Workspaces** from the left-hand menu.
+Pipes Enterprise supports configuring the [visibility](/pipes/docs/accounts/tenant/workspace-settings#snapshot-visibility) of snapshots across all workspaces of the tenant. To manage the tenant workspace settings, On the **Advanced** tab, click **Workspaces** from the left-hand menu.
 
 ## Usage 
 

@@ -36,19 +36,25 @@ GitLab Integration configuration management form shows up. Enter the following i
 - **Handle** for the integration. This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).
 - **Host** for your GitLab installation which defaults to **gitlab.com**.
 - **Token** to be used by Pipes to discover projects. Please note that the token must be granted `api` access which is required to create and manage webhooks that enables Pipes to keep the mods managed by the integration up-to-date. Pipes supports [user](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html), [group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens.html) or [project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html) access tokens.
-- **Token Scope** is an optional section which allows you to further scope a token down to a GitLab group / project. The following cases might require you to configure this section:
-    - Using a **Personal Access Token** you need to mention the group / project to be used by Pipes to setup the webhook against.
-    - Using a **Group Access Token** and you want to further scope the webhook creation down to a group / project and restrict list of projects accessible to Pipes.
+- **Token Scope** is an optional section which allows you to further scope a token down to a GitLab `group` / `project`. The following cases require you to configure this section:
+    - Using a **Personal Access Token** you need to mention the group / project where Pipes will setup the webhook. 
+        - Enter the group path in the **Group scope** field if you want to track all projects in the group and its sub-groups.
+        - Enter the project path in the **Project** field if you want to track only a single project.
+    - Using a **Group Access Token** and you want to further scope the webhook creation down to a sub-group / project.
+        - Enter the sub-group path in the **Group scope** field if you want to tracj all projects in the sub-group and its descendants.
+        - Enter the project path in the **Project** field if you want to track only a single project.
 
 ![](/images/docs/pipes/integrations_gitlab_config.png)
 
-Click on **Create** after entering the appropriate information. You can also optionally click on **Test** to verify whether your configuration is accurate before creating the integration.
+Click on **Test** to verify whether your configuration is accurate before creating the integration. Click on **Create** after entering the appropriate information.
+
+After clicking on **Create**, Pipes will validate the configuration and setup the necessary webhook at the desired level. You will then be re-directed back to the integration list page with the new GitLab integration setup and ready for usage.
 
 ---------
 
 ## Modifying the GitLab Integration
 
-After you have created a GitLab integration, you are only allowed to change it **Handle** and **Access Token**.
+After you have created a GitLab integration, you are only allowed to change its **Handle** and **Access Token**.
 
 Navigate to the **Integrations** page for the appropriate resource:
 - To configure a GitLab integration for your **Developer Account**, click the double arrow button from the navigation at the top of the page, select your account from the dropdown, and then select the **Integrations** tab to manage integrations for your account.

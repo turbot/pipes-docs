@@ -23,4 +23,6 @@ right of the user and click **Remove**.
 
 ## Last Activity
 
-The **Last Activity** column displays the most recent date on which a user performed any activity within your organization. This includes interactions such as accessing the organization or any associated workspace, running queries or pipelines in a workspace, or engaging with any other resources under the organization. This timestamp helps track the latest user engagement, offering valuable insights into activity trends and system usage within the organization.
+The **Last Activity** column represents the most recent date on which an activity was performed by a user in an organization. This timestamp helps track the latest user engagement, offering valuable insights into activity trends and system usage within the organization. The following actions currently count as user activity for an organization:
+- Authenticated API call to get details of the organization.
+- Any [actions](/pipes/docs/workspaces/people#last-activity) listed under **Last Activity** for a workspace belonging to the organization.
