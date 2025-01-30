@@ -35,6 +35,4 @@ at the workspace level.
 
 ## Last Activity
 
-The **Last Activity** column represents the most recent date on which an activity was performed by a user in a workspace. It serves as a useful indicator of user engagement, providing insights into workspace activity trends. The following actions currently count as user activity for a workspace:
-- Authenticated API call to get details of the workspace.
-- Executing a Steampipe Query in the workspace.
+The **Last Activity** column represents the most recent date on which an activity was performed by a user in a workspace. This includes actions such as accessing the workspace, running Steampipe queries, or interacting with any resources within the workspace. It serves as a useful indicator of user engagement, providing insights into workspace activity trends.

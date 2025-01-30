@@ -21,4 +21,4 @@ The following [snapshot visibility](/pipes/docs/using/steampipe/snapshots#sharin
 
 **Workspace** is the minimum level of visibility required for snapshots and is not allowed to be unset.
 
-Turning off **Anyone with link** will restrict users from sharing snapshots across all workspaces of the tenant. This will also prevent users from accessing snapshots that were shared prior to restricting the same.
+Turning off **Anyone with link** will restrict users from sharing snapshots across all workspaces of the tenant. This will also prevent users from accessing snapshots that were shared prior to restricting **Anyone with link**.

@@ -30,7 +30,4 @@ To invite a new tenant member, navigate to **People** from the **Tenant Settings
 
 ## Last Activity
 
-The **Last Activity** column represents the most recent date on which an activity was performed by a user in the tenant. The column serves as a timestamp to track the latest user engagement within the tenant, providing insights into user activity and system usage trends. The following actions currently count as user activity for a tenant:
-- Any authenticated API call to the tenant.
-- Any [actions](/pipes/docs/accounts/org/people#last-activity) listed under **Last Activity** for an organization belonging to the tenant.
-- Any [actions](/pipes/docs/workspaces/people#last-activity) listed under **Last Activity** for a workspace belonging to an identity of the tenant.
+The **Last Activity** column represents the most recent date on which an activity was performed by a user in the tenant. This includes any interaction or action initiated by a user, such as logging into the tenant, accessing an org / workspace, running a Steampipe query or performing any other activity on any resource under the tenant. The column serves as a timestamp to track the latest user engagement within the tenant, providing insights into user activity and system usage trends.
