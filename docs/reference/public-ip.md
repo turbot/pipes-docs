@@ -5,8 +5,6 @@ sidebar_label: Public IP Addresses
 
 # Public IP Addresses
 
-## Overview
-
 This document lists the public IPs used by Pipes for inbound and outbound requests. You can use these IPs to configure firewall rules, set up access controls, and integrate with external services.
 
 ## Inbound to Pipes
