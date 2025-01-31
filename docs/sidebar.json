@@ -182,9 +182,9 @@
                 "link": "accounts/tenant/advanced",
                 "items": [
                   "accounts/tenant/authentication",
+                  "accounts/tenant/workspace-settings",
                   "accounts/tenant/usage",
                   "accounts/tenant/billing"
-                  
                 ]
               }              
             ]

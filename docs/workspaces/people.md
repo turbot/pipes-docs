@@ -32,3 +32,7 @@ To remove a user from the organization, select the options menu button
 ('three dots' button) to the right of the user and click **Remove**.  Note that **Org Owners** have implicit
 access to all workspaces in the organization, and you cannot revoke their access
 at the workspace level.
+
+## Last Activity
+
+The **Last Activity** column represents the most recent date on which an activity was performed by a user in a workspace. This includes actions such as accessing the workspace, running Steampipe queries, or interacting with any resources within the workspace. It serves as a useful indicator of user engagement, providing insights into workspace activity trends.

@@ -18,7 +18,8 @@ You must be assigned the tenant or organization **Owner** role to create, modify
 ## Related links:
 |        |               |               |
 | ------ | ------------- | ------------- |
-| AWS organizations | [Docs](https://turbot.com/pipes/docs/integrations/aws) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/aws-org-sync) |
-| Azure tenants | [Docs](https://turbot.com/pipes/docs/integrations/azure) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/azure-tenant-sync) |
-| GCP organizations | [Docs](https://turbot.com/pipes/docs/integrations/gcp) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/gcp-org-sync) |
-| GitHub organizations | [Docs](https://turbot.com/pipes/docs/integrations/github) | [Announcement & demo](https://turbot.com/pipes/blog/2024/05/github-custom-mods) |
+| AWS organizations | [Docs](/pipes/docs/integrations/aws) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/aws-org-sync) |
+| Azure tenants | [Docs](/pipes/docs/integrations/azure) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/azure-tenant-sync) |
+| GCP organizations | [Docs](/pipes/docs/integrations/gcp) | [Announcement & demo](https://turbot.com/pipes/blog/2024/07/gcp-org-sync) |
+| GitHub organizations | [Docs](/pipes/docs/integrations/github) | [Announcement & demo](https://turbot.com/pipes/blog/2024/05/github-custom-mods) |
+| Slack | [Docs](/pipes/docs/integrations/slack) |  |

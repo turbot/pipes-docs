@@ -20,3 +20,7 @@ and click **Add**:
 
 To revoke access from a user, select the options menu button ('three dots' button) to the
 right of the user and click **Remove**. 
+
+## Last Activity
+
+The **Last Activity** column represents the most recent date on which an activity was performed by a user in an organization. This includes interactions such as accessing the organization or any associated workspace, running a Steampipe query in a workspace belonging to the organization, or engaging with any other resources under the organization. This timestamp helps track the latest user engagement, offering valuable insights into activity trends and system usage within the organization.
