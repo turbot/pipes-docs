@@ -108,7 +108,6 @@
           "integrations/azure",
           "integrations/gcp",
           "integrations/github",
-          "integrations/gitlab",
           "integrations/slack"
 
         ]
