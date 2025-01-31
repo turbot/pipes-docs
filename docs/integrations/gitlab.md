@@ -35,14 +35,8 @@ Select **GitLab** and click **Next**.
 GitLab Integration configuration management form shows up. Enter the following information:
 - **Handle** for the integration. This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).
 - **Host** for your GitLab installation which defaults to **gitlab.com**.
-- **Token** to be used by Pipes to discover projects. Please note that the token must be granted `api` scope which is required to create and manage webhooks that enables Pipes to keep the mods managed by the integration up-to-date. Pipes supports [user](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html), [group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens.html) or [project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html) access tokens.
-- **Token Scope** is an optional section which allows you to further scope a token down to a GitLab `group` / `project`. The following cases require you to configure this section:
-    - Using a **Personal Access Token** you need to mention the group / project where Pipes will setup the webhook. 
-        - Enter the group path in the **Group scope** field if you want to track all projects in the group and its sub-groups.
-        - Enter the project path in the **Project** field if you want to track only a single project.
-    - Using a **Group Access Token** and you want to further scope the webhook creation down to a sub-group / project.
-        - Enter the sub-group path in the **Group scope** field if you want to tracj all projects in the sub-group and its descendants.
-        - Enter the project path in the **Project** field if you want to track only a single project.
+- **Token** to be used by Pipes to discover projects. Please note that the token must be granted `api scope` which is required to create and manage webhooks that enables Pipes to keep the mods managed by the integration up-to-date. Pipes supports [personal](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html), [group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens.html) or [project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html) access tokens.
+- **Filter path** denotes the path of the `group` / `project` where Pipes will setup the webhook and restrict project searches to. Note that this field is **required** when using a personal access token, optional when using a group token and cannot be set when using a project token.
 
 ![](/images/docs/pipes/integrations_gitlab_config.png)
 
