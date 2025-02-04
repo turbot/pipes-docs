@@ -35,7 +35,7 @@ GitLab Integration configuration management form shows up. Enter the following i
 - **Handle** for the integration. This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).
 - **Host** for your GitLab installation which defaults to **gitlab.com**.
 - **Token** to be used by Pipes to discover projects. Please note that the token must be granted `api scope` which is required to create and manage webhooks that enables Pipes to keep the mods managed by the integration up-to-date. Pipes supports [personal](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html), [group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens.html) or [project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens.html) access tokens.
-- **Filter path** denotes the path of the `group` / `project` where Pipes will setup the webhook and restrict project searches to. Note that this field is **required** when using a personal access token, optional when using a group token and cannot be set when using a project token.
+- **Filter path** denotes the path of the `group` / `project` where Pipes will setup the webhook and restrict project searches to. Note that this field is **required** when using a personal access token and needs to be scoped to a project, optional when using a group token and cannot be set when using a project token.
 
 ![](/images/docs/pipes/integrations_gitlab_config.png)
 
