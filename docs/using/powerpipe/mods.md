@@ -25,7 +25,7 @@ in your workspace.
 ![](/images/docs/pipes/powerpipe/powerpipe_mod_install_recommended.png)
 
 
-To install them, choose one or more mods, then click the **Install Mods** button.
+To install them, choose one or more mods, then click the **Install** button.
 
 Installation should typically only take a few seconds. You can then head over to
 the **Dashboards** tab, where you'll see a list of the available dashboards for
@@ -44,7 +44,7 @@ Choose the **Integration** that hosts the repo for the mod you wish to install, 
 
 Choose the **Branch or Version Constraint** for the mod.  Unlike recommended mods, which are only updated once a day, custom mods from integrations are updated in Pipes whenever the source repository is modified. 
 
-When finished, click **Install Mods**.
+When finished, click **Install**.
 
 
 ## Installing a Mod from a GitHub Link
@@ -65,8 +65,26 @@ be installed daily.
 
 
 Enter your custom mod publicly hosted GitHub URL and a version constraint if
-applicable (if left empty, will default to `*`). When finished, click **Install Mods**.
+applicable (if left empty, will default to `*`). When finished, click **Install**.
 
+
+## Installing an Archived Mod
+
+You can install an archived mod by selecting **Upload a mod archive** option. This will allow you to upload your own archived mod file subject to the following rules:
+
+- The mod archive must be one of the following formats: `.tar.gz`, `.tar`, `.zip`.
+- The archive must contain a `mod.pp` or `mod.sp` file at the root location and it should not be nested inside any folder.
+- Size of the archive should not exceed 20MB.
+
+Best practices to follow when creating an archived mod file:
+
+- Archive the mod file by navigating to the directory containing the `mod.pp` or `mod.sp` file to prevent the mod file from being nested inside any folder.
+- Ignore any hidden / unnecessary files or directories that are not required for the mod. In that essence we recommend using one of the following scripts based on the type of archive you are creating:
+  - `.tar.gz` - `tar -czf "$(basename "$PWD").tar.gz" --exclude=".*" --exclude="*/.*" *`
+  - `.tar` - `tar -cf "$(basename "$PWD").tar" --exclude=".*" --exclude="*/.*" *`
+  - `.zip` - `zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"`
+
+Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
 
 Installation should typically only take a few seconds. You can then head over to
 the **Dashboards** tab, where you'll see a list of the available dashboards for
