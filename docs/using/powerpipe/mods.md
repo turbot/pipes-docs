@@ -87,7 +87,7 @@ $ cd {mod-directory}
 $ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
 ```
 
-![](/images/docs/pipes/powerpipe/mod_install_archive.png)
+![](/images/docs/pipes/powerpipe/powerpipe_mod_install_archive.png)
 
 Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
 

@@ -89,6 +89,8 @@ $ cd {mod-directory}
 $ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
 ```
 
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_archive.png)
+
 Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
 
 After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
