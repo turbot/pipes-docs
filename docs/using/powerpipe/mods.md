@@ -87,6 +87,8 @@ $ cd {mod-directory}
 $ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
 ```
 
+![](/images/docs/pipes/powerpipe/mod_install_archive.png)
+
 Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
 
 Installation should typically only take a few seconds. You can then head over to
