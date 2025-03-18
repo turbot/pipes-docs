@@ -68,21 +68,23 @@ Enter your custom mod publicly hosted GitHub URL and a version constraint if
 applicable (if left empty, will default to `*`). When finished, click **Install**.
 
 
-## Installing an Archived Mod
+## Installing a Mod from an Archive File
 
 You can install an archived mod by selecting **Upload a mod archive** option. This will allow you to upload your own archived mod file subject to the following rules:
 
-- The mod archive must be one of the following formats: `.tar.gz`, `.tar`, `.zip`.
+- The mod archive file must be of `.zip` format.
 - The archive must contain a `mod.pp` or `mod.sp` file at the root location and it should not be nested inside any folder.
-- Size of the archive should not exceed 20MB.
+- Size of the archive file should not exceed 20MB.
 
 Best practices to follow when creating an archived mod file:
 
-- Archive the mod file by navigating to the directory containing the `mod.pp` or `mod.sp` file to prevent the mod file from being nested inside any folder.
-- Ignore any hidden / unnecessary files or directories that are not required for the mod. In that essence we recommend using one of the following scripts based on the type of archive you are creating:
-  - `.tar.gz` - `tar -czf "$(basename "$PWD").tar.gz" --exclude=".*" --exclude="*/.*" *`
-  - `.tar` - `tar -cf "$(basename "$PWD").tar" --exclude=".*" --exclude="*/.*" *`
-  - `.zip` - `zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"`
+- Archive the mod file by navigating to the directory containing the `mod.pp` or `mod.sp` file to prevent it from being nested inside any folder.
+- Ignore any hidden / unnecessary files or directories that are not required for the mod.
+Please follow the below steps to create an archived mod file:
+```
+$ cd {mod-directory}
+$ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
+```
 
 Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
 
