@@ -80,7 +80,8 @@ Best practices to follow when creating an archived mod file:
 
 - Archive the mod file by navigating to the directory containing the `mod.pp` or `mod.sp` file to prevent it from being nested inside any folder.
 - Ignore any hidden / unnecessary files or directories that are not required for the mod.
-Please follow the below steps to create an archived mod file:
+
+Please follow the steps below to create an archived mod file:
 ```
 $ cd {mod-directory}
 $ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
