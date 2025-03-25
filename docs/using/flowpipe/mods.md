@@ -70,6 +70,31 @@ applicable (if left empty, will default to `*`). When finished, click **Install 
 
 After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
 
+## Installing a Mod from an Archive File
+
+You can install an archived mod by selecting **Install from mod archive** option. This will allow you to upload your own archived mod file subject to the following rules:
+
+- The mod archive file must be of `.zip` format.
+- The archive must contain a `mod.fp` file at the root location and it should not be nested inside any folder.
+- Size of the archive file should not exceed 20MB.
+
+Best practices to follow when creating an archived mod file:
+
+- Archive the mod file by navigating to the directory containing the `mod.fp` file to prevent it from being nested inside any folder.
+- Ignore any hidden / unnecessary files or directories that are not required for the mod.
+
+Please follow the steps below to create an archived mod file:
+```
+$ cd {mod-directory}
+$ zip -r "$(basename "$PWD").zip" * -x ".*" -x "*/.*"
+```
+
+![](/images/docs/pipes/flowpipe/flowpipe_mod_install_archive.png)
+
+Drop the archived file or select the file from your local system which is to be uploaded. Click **Install**.
+
+After the mod is installed, you will be prompted to [set its variables](#managing-mod-variables).
+
 ## Managing Mod Variables
 
 When you install a mod in a workspace, any [variables](https://flowpipe.io/docs/build/mod-variables) that the mod uses will be visible in Turbot Pipes.
