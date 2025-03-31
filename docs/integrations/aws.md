@@ -19,7 +19,6 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 | [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) | Selectively share AWS connections and folders with any (or all) organization or workspace in the tenant.
 | [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/accounts/org#team-plan) or [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan)  | Selectively share AWS connections and folders with any (or all) workspace in the organization.
 
-
 ## Step 1: Navigate to the Integrations page
 
 Navigate to the **Integrations** page for the appropriate resource:
@@ -135,6 +134,115 @@ Note also that **All Workspaces** will not only add permissions for the existing
 
 After you have made your selections, click **Create Integration**.  Pipes will begin discovering your accounts and OUs and creating folders and connections.
 
+## Manual Setup Guide
+
+### 1. Create Required IAM Roles
+
+You'll need to create two IAM roles:
+
+1. **Discovery Role** (For example, `turbot_pipes_discovery`): Used to discover AWS accounts and OUs
+2. **Connection Role** (For example, `turbot_pipes_connection`): Used for AWS resource access and queries
+
+#### Role creation CloudFormation Template for Management Account
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TurbotPipesRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ${YOUR_ROLE_NAME}
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - arn:aws:iam::316881668097:root
+            Action:
+              - sts:AssumeRole
+            Condition:
+              StringEquals:
+                sts:ExternalId: ${YOUR_EXTERNAL_ID}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/ReadOnlyAccess
+```
+
+#### Role creation CloudFormation StackSet for Member Accounts
+```yaml
+AWSTemplateFormatVersion: 2010-09-09
+Description: Turbot Pipes AWS integration role setup stack.
+
+Parameters:
+  RoleName:
+    Type: String
+    Default: ${YOUR_ROLE_NAME}
+    Description: The IAM role name to create in each account.
+
+Resources:
+  TurbotPipesRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref RoleName
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - arn:aws:iam::316881668097:root
+            Action:
+              - sts:AssumeRole
+            Condition:
+              StringEquals:
+                sts:ExternalId: ${YOUR_EXTERNAL_ID}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/ReadOnlyAccess
+```
+
+### 2. Create the Integration via API
+
+Make a POST request to create the integration:
+
+**Endpoint:** `https://pipes.turbot.com/api/v0/org/{org_handle}/integration`
+
+**Request Body:**
+```json
+{
+  "type": "aws",
+  "handle": "awsi",
+  "config": {
+    "permitted_external_id_identifiers": [
+      "${YOUR_ORGANIZATION_ID}"
+    ],
+    "discovery_mode": "role",
+    "discovery_role_arn": "${YOUR_DISCOVERY_ROLE_ARN}",
+    "discovery_role_name": "${YOUR_DISCOVERY_ROLE_NAME}",
+    "discovery_external_id": "${YOUR_DISCOVERY_EXTERNAL_ID}",
+    "discovery_access_key": "",
+    "discovery_secret_key": "",
+    "handle_prefix": "",
+    "role_name": "${YOUR_CONNECTION_ROLE_NAME}",
+    "external_id": "${YOUR_CONNECTION_EXTERNAL_ID}",
+    "regions": [
+      "*"
+    ],
+    "permissions": [
+      {
+        "identity_handle": "${YOUR_ORGANIZATION_HANDLE}"
+      }
+    ]
+  }
+}
+```
+
+### Required Configuration Values
+
+- `discovery_role_arn`: The ARN of your discovery IAM role
+- `discovery_role_name`: Name of the discovery role (e.g., `turbot_pipes_discovery`)
+- `discovery_external_id`: Your external ID for discovery role
+- `external_id`: Your external ID for connection role
+- `handle`: Unique identifier for this integration
+- `identity_handle`: Your organization's handle in Pipes
 
 ## Modifying the AWS Integration
 
