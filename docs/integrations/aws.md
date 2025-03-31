@@ -49,6 +49,8 @@ In this step, Pipes uses:
 - **`External ID`** ensures secure access between Pipes and AWS accounts. Refer to AWS documentation on [Access to AWS accounts owned by third parties](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) for further information.
 - **`IAM Role with Cross Account Trust`** allows Turbot Pipes to access resources across accounts. For additional context, see AWS's guide on [Cross-account resource access in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html).
 
+![Cross Account Trust](/images/docs/pipes/integrations/aws-setup-org-access.png)
+
 ### Cross Account Trust
 
 The IAM role must grant cross-account access for the Turbot Pipes main AWS account to assume into your AWS account.
@@ -91,6 +93,8 @@ To create the IAM role:
 ## Step 6: Setup Access to Your Member Accounts
 
 This step follows a similar process as **Step 4**.
+
+![Setup Access to Your Member Accounts](/images/docs/pipes/integrations/aws-setup-member-accounts.png)
 
 ### Create IAM Role in Member Accounts
 
