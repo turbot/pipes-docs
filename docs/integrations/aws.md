@@ -60,7 +60,7 @@ The IAM role must grant cross-account access for the Turbot Pipes main AWS accou
 
 The External ID is a security measure that helps prevent unauthorized access. It consists of two parts:
 - Your organization ID e.g. `o_cugqnt0sb890gkker123` (automatically added)
-- A random 8-character string (you can customize this)
+- A random 8-character alphanumeric string (you can customize this)
 
 This combination ensures that only authorized users can assume the role.
 
