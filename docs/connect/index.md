@@ -11,21 +11,21 @@ Turbot Pipes offers various methods to connect and query your data. Run SQL quer
 
 Your Pipes workspace database is accessible from anywhere, thanks to its public IP address. Connect using the [Steampipe CLI](/pipes/docs/connect/cli) or other standard tools and utilities that support Postgres.
 
-You can get the Postgres connection string and other database information from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
 
-![](/images/docs/pipes/query-info-connect.png)
+You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
 
-The **Database** tab will provide general database connection details - the **Connection String**, **Host**, **Port**, **Database**, **Username** and **Password**.  Click on any field to copy it to your clipboard.  Note that the password is masked on the screen, but clicking it will add the un-redacted text to your clipboard so that you can paste it into your tool's configuration screen.  Individual users can access the database with their credentials, and the information in this view is specific to the logged-in user, enabling secure, personalized access.
-
-You can also get specific [Steampipe](https://steampipe.io/) commands from the **Steampipe CLI** tab:
-
-![](/images/docs/pipes/query-info-connect-steampipe.png)
-
-Or retrieve the [psql](/pipes/docs/connect/psql) and [pgcli](/pipes/docs/connect/pgcli) commands from the **Terminal** tab.
-
-![](/images/docs/pipes/query-info-connect-terminal.png)
+![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 
 
+The **Database** info will provide general database connection details - the **Connection String**, **Host**, **Port**, **Database**, **Username** and **Password**.  Click on any field to copy it to your clipboard.  Note that the password is masked on the screen, but clicking it will add the un-redacted text to your clipboard so that you can paste it into your tool's configuration screen.  Individual users can access the database with their credentials, and the information in this view is specific to the logged-in user, enabling secure, personalized access.
+
+You can also get specific [Steampipe](https://steampipe.io/) commands by clicking the **Steampipe CLI** from the sidebar:
+
+![](/images/docs/pipes/steampipe/pipes_steampipe_developer_steampipe.png)
+
+Or retrieve the [psql](/pipes/docs/connect/psql) and [pgcli](/pipes/docs/connect/pgcli) commands by clicking the **Postgres CLI**.
+
+![](/images/docs/pipes/steampipe/pipes_steampipe_developer_postgres.png)
 
 
 ## Examples of Postgres-Compatible Clients

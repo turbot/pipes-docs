@@ -8,9 +8,9 @@ sidebar_label: R
 Since your Turbot Pipes workspace is just a Postgres database, you can use the
 standard `RPostgres` adapter to query your workspace database from R.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information. 
+You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
 
-![](/images/docs/pipes/query-info-connect.png)
+![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 
 To get started, Install the
 [RPostgres](https://cran.r-project.org/web/packages/RPostgres/index.html)

@@ -5,12 +5,12 @@ sidebar_label: pgcli
 
 # Connect to Turbot Pipes with pgcli
 
-Since your Turbot Pipes workspace is just a PostgreSQL database, you can use
-`pgcli` to query your workspace database.
+Since your Turbot Pipes workspace is just a PostgreSQL database, you can use `pgcli` to query your workspace database.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Query** tab for your workspace.  On the **Query** tab, click the **info** button at the top of the query window to show the connection information.  You can get the `pgcli`  command from the **Terminal** tab:
+You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  On the **Developers** tab, click **Postgres CLI** from the sidebar to show the `pgcli` command to connect to your workspace:
 
-![](/images/docs/pipes/query-info-connect-terminal.png)
+![](/images/docs/pipes/steampipe/pipes_steampipe_developer_postgres.png)
+
 
 Note that the connection string includes your password. It is masked in the web
 console display, but you can hover over the command and click the clipboard icon
