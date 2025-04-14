@@ -8,7 +8,7 @@ sidebar_label: Jupyter Notebook
 Since your Turbot Pipes workspace is just a Postgres database, you can use the
 standard `psycopg2` adapter to query your workspace database from Python.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 

@@ -8,7 +8,7 @@ sidebar_label: Golang
 Since your Turbot Pipes workspace is a Postgres database, you can connect and
 query using Go's database client.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 

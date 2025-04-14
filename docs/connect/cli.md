@@ -13,6 +13,6 @@ to authenticate:
 export PIPES_TOKEN=tpt_c6f5tmpe4mv9appio5rg_3jz0a8fakekeyf8ng72qr646
 ```
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  On the **Developers** tab, click **Steampipe CLI** from the sidebar to show the `steampipe` commands to query your workspace:
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  On the **Developers** tab, click **Steampipe CLI** from the sidebar to show the `steampipe` commands to query your workspace:
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_steampipe.png)

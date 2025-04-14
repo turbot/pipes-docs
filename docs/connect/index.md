@@ -12,7 +12,7 @@ Turbot Pipes offers various methods to connect and query your data. Run SQL quer
 Your Pipes workspace database is accessible from anywhere, thanks to its public IP address. Connect using the [Steampipe CLI](/pipes/docs/connect/cli) or other standard tools and utilities that support Postgres.
 
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 

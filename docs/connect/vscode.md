@@ -13,7 +13,7 @@ Because it's built on Postgres, Steampipe provides an endpoint that any
 Postgres-compatible client -- including VS Code database extensions -- can
 connect to.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_database.png)
 

@@ -8,7 +8,7 @@ sidebar_label: psql
 Since your Turbot Pipes workspace is just a PostgreSQL database, you can use
 `psql` to query your workspace database.
 
-You can get the information needed to connect to your Turbot Pipes database instance from the **Developers** tab on the **Steampipe** page for your workspace.  On the **Developers** tab, click **Postgres CLI** from the sidebar to show the `psql` command to connect to your workspace:
+You can get the information needed to connect to your Turbot Pipes database instance from the **[Developers](/pipes/docs/using/steampipe/developers)** tab on the **Steampipe** page for your workspace.  On the **Developers** tab, click **Postgres CLI** from the sidebar to show the `psql` command to connect to your workspace:
 
 ![](/images/docs/pipes/steampipe/pipes_steampipe_developer_postgres.png)
 
