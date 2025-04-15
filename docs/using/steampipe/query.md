@@ -30,7 +30,8 @@ Clicking on an example query from the tooltip will automatically populate it in 
 
 Hovering over a column shows a tooltip containing its name, data type, and a brief description.
 
-<!--- This needs a screenshot -->
+<img src="/images/docs/pipes/steampipe/pipes_schemas_table_column_tooltip.png" />
+<br />
 
 The schema list supports flexible searching across schemas, tables, and columns. For example, if you search for `hackernews`, you will find matching results displayed for the `hackernews` schema and its tables.
 
@@ -96,7 +97,7 @@ From here, you can either choose to create a new schedule or view all scheduled 
 
 If you select **New Schedule**, you'll be presented with the following screen.
 
-<img src="/images/docs/pipes/steampipe/pipes_query_new_schedule_snapshot.png" width="200pt"/>
+<img src="/images/docs/pipes/steampipe/pipes_query_new_schedule_snapshot.png"/>
 <br />
 
 <table>
