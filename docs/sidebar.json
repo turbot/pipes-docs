@@ -22,6 +22,7 @@
               "using/steampipe/connections",
               "using/steampipe/aggregators",
               "using/steampipe/datatank",
+              "using/steampipe/developers",
               
               {
                 "type": "category",
