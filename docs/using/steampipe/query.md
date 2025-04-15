@@ -28,7 +28,7 @@ Clicking on an example query from the tooltip will automatically populate it in 
 <img src="/images/docs/pipes/steampipe/pipes_schemas_execute_example.png" />
 <br />
 
-Executing the example query above set the search path prefix on the top right to `hackernews`. We also display the search path prefix used for the data in the results pane. Note that the prefix is set to the default workspace search path and applies to the current query only. You can also set your own search path prefix using the dropdown.
+Executing the example query above sets the search path prefix (visible in the top-right corner) to `hackernews`. The results pane also indicates the search path prefix used for fetching the data. Note that this prefix is set prior to the default workspace search path and applies only to the current query. You can also choose a different search path prefix using the dropdown menu.
 
 <img src="/images/docs/pipes/steampipe/pipes_schemas_search_path_prefix.png" />
 <br />
