@@ -35,6 +35,9 @@ You can set the prefix from the Steampipe **Advanced** / **Status** page for you
 
 The active default search path is displayed.  To add or change the prefix, click **edit**, select the schemas from the list in the order you would like them to appear, then click **Save**.
 
+Setting a search path prefix above will update the search path for the entire workspace and will apply to all users with access to it.
+To set a prefix for an individual query instead, use the query editor: go to the Query tab and click the search path prefix selector icon next to the `Format` button. This allows you to define a prefix specific to the current query.
+For more details, see [Exploring Schemas](pipes/docs/using/steampipe/query#exploring-schemas).
 
 ## Workspace Maintenance
 
