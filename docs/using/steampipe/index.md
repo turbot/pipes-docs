@@ -37,8 +37,7 @@ The active default search path is displayed.  To add or change the prefix, click
 
 Setting a search path prefix above will update the search path for the entire workspace and will apply to all users with access to it.
 To set a prefix for an individual query instead, use the query editor: go to the Query tab and click the search path prefix selector icon next to the `Format` button. This allows you to define a prefix specific to the current query.
-For more details, see [Exploring Schemas](pipes/docs/using/steampipe/query#exploring-schemas).
-
+For more details, see [Exploring Schemas](/pipes/docs/using/steampipe/query#exploring-schemas).
 ## Workspace Maintenance
 
 Your workspace may be updated and rebooted during the weekly maintenance window,
