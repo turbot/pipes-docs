@@ -3,15 +3,11 @@ title: GitHub Integration
 sidebar_label: GitHub
 ---
 
-
 # GitHub Integration
 
 The GitHub Integration allows Turbot Pipes access to your GitHub repositories to be able to search and install custom mods from private and public repositories.
 
 Once a GitHub integration has been added, you will be able to browse and install both private and public mods from the associated repositories and constrain them by either a semantic version constraint or branch.  Pipes will detect changes to the source repository and automatically synchronize these changes to your workspaces!
-
-![](/images/docs/pipes/mod_install_custom_with_github_integration.png)
-
 
 ## Creating the GitHub Integration
 
