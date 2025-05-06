@@ -29,110 +29,99 @@ Navigate to the **Integrations** page for the appropriate resource:
 
 ## Step 2: Create a new AWS integration
 
-Next, click the **New Integration** button. You will be asked to select an integration to create.
+Click the **New Integration** button to create a new integration.
 
 ![](/images/docs/pipes/org-integrations-new-aws.png)
 
+In the integration selection screen, you'll see several integration options:
+- AWS - Discover your AWS organization and automatically create aggregators and connections
+- Azure - Discover your Azure tenant and automatically create aggregators and connections
+- GCP - Discover your GCP organization and automatically create aggregators and connections
+- GitHub - Access to your private/public GitHub repositories to find and install custom mods
+- GitLab - Access to your private/public GitLab projects to find and install custom mods
+- Slack - Access to your Slack workspace and send notifications to specified channels
+
 Select **AWS** and click **Next**.
 
-Provide a **Handle** for the integration.  
+## Step 3: Choose a handle
+
+Provide a unique handle for the integration. This handle must be unique for all integrations in the tenant (including any org-level integrations).
 
 ![](/images/docs/pipes/org-integrations-aws-handle.png)
 
-This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).  Click **Next**.
+Enter a handle in the input field (for example, "aws-integration") and click **Next**.
 
-## Step 3: Setup Access to Your Organization Management Account
+## Step 4: Setup access to your organization
 
-In this step, Pipes uses:
+Pipes needs read-only access to your AWS Organization so it can enumerate all accounts and OUs under your management (or delegated) account. In this step, you'll create an IAM role in your AWS Organization management account.
 
-- **`External ID`** ensures secure access between Pipes and AWS accounts. Refer to AWS documentation on [Access to AWS accounts owned by third parties](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html) for further information.
-- **`IAM Role with Cross Account Trust`** allows Turbot Pipes to access resources across accounts. For additional context, see AWS's guide on [Cross-account resource access in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html).
+![Setup Access to Your Organization](/images/docs/pipes/integrations/aws-setup-org-access.png)
 
-![Cross Account Trust](/images/docs/pipes/integrations/aws-setup-org-access.png)
+Pipes uses the following security measures:
 
-### Cross Account Trust
+1. **Role Name**: Enter a name for the IAM role that will be created in your AWS Organization management account (default: `turbot_pipes`).
 
-The IAM role must grant cross-account access for the Turbot Pipes main AWS account to assume into your AWS account.
-
-- Turbot Pipes customers, you must allow the Turbot Pipes AWS Account ID: `316881668097`
-
-### External ID Considerations
-
-The External ID is a security measure that helps prevent unauthorized access. It consists of two parts:
-- Your organization ID e.g. `o_cugqnt0sb890gkker123` (automatically added)
-- A random 8-character alphanumeric string (you can customize this)
+2. **External ID**: A security measure that helps prevent unauthorized access. It consists of two parts:
+   - Your organization ID (automatically added)
+   - A random 8-character string (you can customize this)
 
 This combination ensures that only authorized users can assume the role.
 
-### Required Permissions to Grant
+### Deploy the Role
 
-The IAM role needs the following permissions:
+You have two options to create the IAM role:
 
-- `arn:aws:iam::aws:policy/ReadOnlyAccess`
+- **Terraform Plan**: Download and run the Terraform plan to create the IAM role
+- **CloudFormation Template**: Download and run the CloudFormation template to create the IAM role
 
-Now as next steps:
+Alternatively, you can create the role manually with your preferred settings by following the [manual setup guide](#manual-setup-guide).
+After creating the role, enter the full ARN of the newly created role in the **Role ARN** field, and click **Next**.
 
-- Enter the IAM Role Name.
-- Provide External ID.
+## Step 5: Setup access to your member accounts
 
-## Step 4: Create IAM Role in Management Account or Delegated Account
-
-You can create the IAM role beforehand or during the importing process in the Pipes integration UI. However, it is recommended to create the IAM roles prior to initiating the import process. This ensures that the required IAM role is ready as part of the prerequisites.
-
-To create the IAM role:
-
-- Download the CloudFormation template file, which will be updated with the two values you provided (i.e., Role Name and External ID) in previous [Step 3](#step-3-setup-access-to-your-organization-management-account).
-
-## Step 5: Enter the IAM Role ARN
-
-- Enter the IAM Role ARN obtained after the Role is created.
-- Click the Test Connection button to verify that the credentials are configured correctly.
-- Click **Next**.
-
-## Step 6: Setup Access to Your Member Accounts
-
-This step follows a similar process as **Step 4**.
+Pipes requires an IAM role in each AWS account under your organization so it can perform the integration tasks you've enabled.
 
 ![Setup Access to Your Member Accounts](/images/docs/pipes/integrations/aws-setup-member-accounts.png)
 
-### Create IAM Role in Member Accounts
+### Create Roles
 
-You can create the required IAM role beforehand or during the importing process in the Pipes integration UI. However, it is recommended to create the IAM roles **prior to initiating the import process** to ensure the required IAM role is ready.
+Download and run the CloudFormation StackSet to create the IAM role in the member accounts:
 
-To create the IAM role:
+1. Click the **CloudFormation StackSet** button to download the template
+2. Use this template to create the required IAM role across all member accounts
 
-**Download the CloudFormation Template**:
-   The template will be pre-configured with the values you provided (i.e., `Role Name` and `External ID`).
+Alternatively, you can create the role manually in the accounts with your preferred settings by following the [manual setup guide](#manual-setup-guide).
 
-**Execute the CloudFormation Template**:
-   Use [CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create-self-managed.html#stacksets-getting-started-create-self-managed-console) in the AWS management or delegated account to deploy the template across member accounts. This creates the required IAM role in each member account.
+## Step 6: Configure connection settings
 
-## Step 7: Configure the Connection Settings
+In this step, you'll configure settings for the connections that will be created by this integration.
 
-Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes or to ensure the uniqueness of the generated connection handles.
+![Connection Settings](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
 
-Choose the **Regions** that you would like configured in the child connections.  
+1. **Handle Prefix** (Optional): This will be prepended to connections/aggregators created from this integration. Helps avoid conflicting handles.
 
-If desired, you can set advanced options for the child connections.  
+2. **Choose your regions**: Select the AWS regions you want to configure in the child connections.
+   - By default, "(All regions)" is selected
+   - Select specific regions for better performance
 
-![](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
+3. **Advanced options** (Optional): Click to configure additional connection settings that will be inherited by all connections imported by the integration.
 
-These options will be inherited by all connections imported by the integration.  You can also set or change these options on a per-connection basis after the connections have been imported.
+After configuring the settings, click **Test Connection** to verify the credentials are configured correctly, then click **Next**.
 
+## Step 7: Set permissions
 
-Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
+Choose workspaces that should have permissions to the root connection folder(s) created from this AWS integration.
 
+![Set Permissions](/images/docs/pipes/org-integrations-perms.png)
 
-Finally, select the [Permissions](/pipes/docs/accounts/tenant/connections#permissions).  
+You have three options:
+- **All workspaces**: Grant access to all current and future workspaces
+- **Specific workspaces**: Select individual workspaces to grant access
+- **No permissions**: Don't set any permissions at this level (you can configure them later)
 
-![](/images/docs/pipes/org-integrations-perms.png)
+The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration. If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
 
-
-The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
-
-Note also that **All Workspaces** will not only add permissions for the existing organization workspaces but will also allow access for any new workspaces that are created.
-
-After you have made your selections, click **Create Integration**.  Pipes will begin discovering your accounts and OUs and creating folders and connections.
+After making your selections, click **Create Integration**. Pipes will begin discovering your accounts and OUs and creating folders and connections.
 
 ## Manual Setup Guide
 
