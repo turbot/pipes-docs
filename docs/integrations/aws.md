@@ -19,79 +19,218 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 | [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) | Selectively share AWS connections and folders with any (or all) organization or workspace in the tenant.
 | [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/accounts/org#team-plan) or [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan)  | Selectively share AWS connections and folders with any (or all) workspace in the organization.
 
+## Navigate to the Integrations page
 
-First, navigate to the **Integrations** page for the appropriate resource:
+Navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure an AWS integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
-
-
 ![](/images/docs/pipes/org-integrations-tab.png)
 
-Next, click the **New Integration** button. You will be asked to select an integration to create.
+## Choose AWS integration type
+
+Click the **New Integration** button to create a new integration.
 
 ![](/images/docs/pipes/org-integrations-new-aws.png)
 
+In the integration selection screen, you'll see several integration options:
+- AWS - Discover your AWS organization and automatically create aggregators and connections
+- Azure - Discover your Azure tenant and automatically create aggregators and connections
+- GCP - Discover your GCP organization and automatically create aggregators and connections
+- GitHub - Access to your private/public GitHub repositories to find and install custom mods
+- GitLab - Access to your private/public GitLab projects to find and install custom mods
+- Slack - Access to your Slack workspace and send notifications to specified channels
+
 Select **AWS** and click **Next**.
 
-Provide a **Handle** for the integration.  
+## Choose a handle
+
+Provide a unique handle for the integration. This handle must be unique for all integrations in the tenant (including any org-level integrations).
 
 ![](/images/docs/pipes/org-integrations-aws-handle.png)
 
-This handle should be meaningful and must be unique for all integrations in the tenant (including any org-level integrations).  Click **Next**.
+Enter a handle in the input field (for example, "aws-integration") and click **Next**.
 
+## Configure discovery settings
 
-Configure the **Discovery Settings**, including the credentials that Pipes should use *to discover the organization's resources*.  
+Pipes needs read-only access to your AWS Organization so it can enumerate all accounts and OUs under your management (or delegated) account. In this step, you'll create an IAM role in your AWS Organization management account.
 
-![](/images/docs/pipes/org-integrations-aws-discovery.png)
+![Setup Access to Your Organization](/images/docs/pipes/integrations/aws-setup-discovery-settings.png)
 
+Pipes uses the following security measures:
 
-These credentials need permission to read the organization data in the AWS Organizations master account.  You may either authenticate using a cross-account role (recommended) or an access key pair.
+1. **Role Name**: Enter a name for the IAM role that will be created in your AWS Organization management account (default: `turbot_pipes`).
 
-- To use a cross-account role, select **Cross-Account Role** from the **Access Mode** dropdown.  You will need to create a role in the account that has the correct trust policy and permissions.  You can do this manually, or Pipes can generate a Terraform or CloudFormation template for you to download and run.  Depending on your preference, follow the **Automatic Setup** or **Manual Setup** instructions, then enter the **Role ARN** and **External ID**.  Click the **Test Discovery** button to verify that the credentials are configured correctly.
+2. **External ID**: A security measure that helps prevent unauthorized access. It consists of two parts:
+   - Your organization ID (automatically added)
+   - A random 8-character alphanumeric string (you can customize this)
 
-- To use a key pair, select **Access Key** from the **Access Mode** dropdown. Enter the **Access Key** and **Secret Key**.
+This combination ensures that only authorized users can assume the role.
 
-Click **Next**.
+### Deploy the Role
 
-Configure the **Connection settings**.
+You have two options to create the IAM role:
 
-![](/images/docs/pipes/org-integrations-aws-setup.png)
+- **Terraform Plan**: Download and run the Terraform plan to create the IAM role
+- **CloudFormation Template**: Download and run the CloudFormation template to create the IAM role
 
+Alternatively, you can create the role manually with your preferred settings by following the [manual setup guide](#manual-setup-guide).
+After creating the role, enter the full ARN of the newly created role in the **Role ARN** field, and click **Next**.
 
-Optionally, provide a **Handle Prefix** to be pre-pended to the names of connections created from this integration. This is optional but may be useful for organizational purposes or to ensure the uniqueness of the generated connection handles.
+## Configure connection settings
 
-Next, set up the trust relationship for the discovered accounts.  In order for Pipes to access the discovered accounts, a cross-account role must be created in each discovered account.  You can set these roles up manually, or Pipes can generate a CloudFormation StackSet to help automate the process. Depending on your preference, follow the **Automatic Setup** or **Manual Setup** instructions, then enter the **Role Name** and **External ID**.  Pipes will dynamically generate the **Role ARN** for each discovered account based on its ID and the provided **Role Name**.  Choose the **Regions** that you would like configured in the child connections.  
+In this step, you'll configure settings for the connections that will be created by this integration.
 
-If desired, you can set advanced options for the child connections.  
+### Setup access to your member accounts
 
-![](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
+Pipes requires an IAM role in each AWS account under your organization so it can perform the integration tasks you've enabled.
 
-These options will be inherited by all connections imported by the integration.  You can also set or change these options on a per-connection basis after the connections have been imported.
+![Setup Access to Your Member Accounts](/images/docs/pipes/integrations/aws-setup-connection-settings.png)
 
-<!--  this is redundant with the screenshot now...
-- **Default region**: This region will be used for calls to global APIs. Defaults to us-east-1 for commercial accounts, the closest region to Turbot Pipes, and us-gov-west-1 for GovCloud accounts.
-- **Max retry attempts**: The maximum number of attempts (including the initial call) that Turbot Pipes will make for failing API calls. Defaults to 9 and must be greater than or equal to 1.
-- **Min error retry delay**: The minimum retry delay in milliseconds, after which retries will be performed. Defaults to 25ms and must be greater than or equal to 1ms.
-- **Ignore error codes**: List of AWS error codes to ignore for all queries. By default, common not found error codes are ignored and will still be ignored even if this option is not set.
--->
+#### Create Roles
 
+Download and run the CloudFormation StackSet to create the IAM role in the member accounts:
 
+1. Click the **CloudFormation StackSet** button to download the template
+2. Use this template to create the required IAM role across all member accounts
 
-Click the **Test Connection** button to verify that the credentials are configured correctly, then click **Next**.
+Alternatively, you can create the role manually in the accounts with your preferred settings by following the [manual setup guide](#manual-setup-guide).
 
+1. **Handle Prefix** (Optional): This will be prepended to connections/aggregators created from this integration. Helps avoid conflicting handles.
 
-Finally, select the [Permissions](/pipes/docs/accounts/tenant/connections#permissions).  
+2. **Choose your regions**: Select the AWS regions you want to configure in the child connections.
+   - By default, "(All regions)" is selected
+   - Select specific regions for better performance
 
-![](/images/docs/pipes/org-integrations-perms.png)
+3. **Advanced options** (Optional): Click to configure additional connection settings that will be inherited by all connections imported by the integration.
+![Connection Settings](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
 
+After configuring the settings, click **Test Connection** to verify the credentials are configured correctly, then click **Next**.
 
-The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration.  If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
+## Set permissions
 
-Note also that **All Workspaces** will not only add permissions for the existing organization workspaces but will also allow access for any new workspaces that are created.
+Choose workspaces that should have permissions to the root connection folder(s) created from this AWS integration.
 
-After you have made your selections, click **Create Integration**.  Pipes will begin discovering your accounts and OUs and creating folders and connections.
+![Set Permissions](/images/docs/pipes/org-integrations-perms.png)
 
+You have three options:
+- **All workspaces**: Grant access to all current and future workspaces
+- **Specific workspaces**: Select individual workspaces to grant access
+- **No permissions**: Don't set any permissions at this level (you can configure them later)
+
+The permissions on this screen apply to the top-level folders and, therefore, to *all connections and folders* discovered by this integration. If you want to assign permissions more granularly, on a per-subfolder or per-connection basis, select **No Permissions** at this time, and then manage the permissions on the connections and folders once they have been discovered.
+
+After making your selections, click **Create Integration**. Pipes will begin discovering your accounts and OUs and creating folders and connections.
+
+## Manual Setup Guide
+
+### 1. Create Required IAM Roles
+
+You'll need to create two IAM roles:
+
+1. **Discovery Role** (For example, `turbot_pipes_discovery`): Used to discover AWS accounts and OUs
+2. **Connection Role** (For example, `turbot_pipes_connection`): Used for AWS resource access and queries
+
+#### Role creation CloudFormation Template for Management Account
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TurbotPipesRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ${YOUR_ROLE_NAME}
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - arn:aws:iam::316881668097:root
+            Action:
+              - sts:AssumeRole
+            Condition:
+              StringEquals:
+                sts:ExternalId: ${YOUR_EXTERNAL_ID}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/ReadOnlyAccess
+```
+
+#### Role creation CloudFormation StackSet for Member Accounts
+```yaml
+AWSTemplateFormatVersion: 2010-09-09
+Description: Turbot Pipes AWS integration role setup stack.
+
+Parameters:
+  RoleName:
+    Type: String
+    Default: ${YOUR_ROLE_NAME}
+    Description: The IAM role name to create in each account.
+
+Resources:
+  TurbotPipesRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Ref RoleName
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - arn:aws:iam::316881668097:root
+            Action:
+              - sts:AssumeRole
+            Condition:
+              StringEquals:
+                sts:ExternalId: ${YOUR_EXTERNAL_ID}
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/ReadOnlyAccess
+```
+
+### 2. Create the Integration via API
+
+Make a POST request to create the integration:
+
+**Endpoint:** `https://pipes.turbot.com/api/v0/org/{org_handle}/integration`
+
+**Request Body:**
+```json
+{
+  "type": "aws",
+  "handle": "awsi",
+  "config": {
+    "permitted_external_id_identifiers": [
+      "${YOUR_ORGANIZATION_ID}"
+    ],
+    "discovery_mode": "role",
+    "discovery_role_arn": "${YOUR_DISCOVERY_ROLE_ARN}",
+    "discovery_role_name": "${YOUR_DISCOVERY_ROLE_NAME}",
+    "discovery_external_id": "${YOUR_DISCOVERY_EXTERNAL_ID}",
+    "discovery_access_key": "",
+    "discovery_secret_key": "",
+    "handle_prefix": "",
+    "role_name": "${YOUR_CONNECTION_ROLE_NAME}",
+    "external_id": "${YOUR_CONNECTION_EXTERNAL_ID}",
+    "regions": [
+      "*"
+    ],
+    "permissions": [
+      {
+        "identity_handle": "${YOUR_ORGANIZATION_HANDLE}"
+      }
+    ]
+  }
+}
+```
+
+### Required Configuration Values
+
+- `discovery_role_arn`: The ARN of your discovery IAM role
+- `discovery_role_name`: Name of the discovery role (e.g., `turbot_pipes_discovery`)
+- `discovery_external_id`: Your external ID for discovery role
+- `external_id`: Your external ID for connection role
+- `handle`: Unique identifier for this integration
+- `identity_handle`: Your organization's handle in Pipes
 
 ## Modifying the AWS Integration
 
