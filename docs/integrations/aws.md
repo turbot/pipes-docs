@@ -19,7 +19,7 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 | [Tenant](/pipes/docs/accounts/tenant) | [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) | Selectively share AWS connections and folders with any (or all) organization or workspace in the tenant.
 | [Org](/pipes/docs/accounts/org) | [Team](/pipes/docs/accounts/org#team-plan) or [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan)  | Selectively share AWS connections and folders with any (or all) workspace in the organization.
 
-## Step 1: Navigate to the Integrations page
+## Navigate to the Integrations page
 
 Navigate to the **Integrations** page for the appropriate resource:
 - To configure an AWS integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
@@ -27,7 +27,7 @@ Navigate to the **Integrations** page for the appropriate resource:
 
 ![](/images/docs/pipes/org-integrations-tab.png)
 
-## Step 2: Create a new AWS integration
+## Choose AWS integration type
 
 Click the **New Integration** button to create a new integration.
 
@@ -43,7 +43,7 @@ In the integration selection screen, you'll see several integration options:
 
 Select **AWS** and click **Next**.
 
-## Step 3: Choose a handle
+## Choose a handle
 
 Provide a unique handle for the integration. This handle must be unique for all integrations in the tenant (including any org-level integrations).
 
@@ -51,11 +51,11 @@ Provide a unique handle for the integration. This handle must be unique for all 
 
 Enter a handle in the input field (for example, "aws-integration") and click **Next**.
 
-## Step 4: Setup access to your organization
+## Configure discovery settings
 
 Pipes needs read-only access to your AWS Organization so it can enumerate all accounts and OUs under your management (or delegated) account. In this step, you'll create an IAM role in your AWS Organization management account.
 
-![Setup Access to Your Organization](/images/docs/pipes/integrations/aws-setup-org-access.png)
+![Setup Access to Your Organization](/images/docs/pipes/integrations/aws-setup-discovery-settings.png)
 
 Pipes uses the following security measures:
 
@@ -63,7 +63,7 @@ Pipes uses the following security measures:
 
 2. **External ID**: A security measure that helps prevent unauthorized access. It consists of two parts:
    - Your organization ID (automatically added)
-   - A random 8-character string (you can customize this)
+   - A random 8-character alphanumeric string (you can customize this)
 
 This combination ensures that only authorized users can assume the role.
 
@@ -77,13 +77,17 @@ You have two options to create the IAM role:
 Alternatively, you can create the role manually with your preferred settings by following the [manual setup guide](#manual-setup-guide).
 After creating the role, enter the full ARN of the newly created role in the **Role ARN** field, and click **Next**.
 
-## Step 5: Setup access to your member accounts
+## Configure connection settings
+
+In this step, you'll configure settings for the connections that will be created by this integration.
+
+### Setup access to your member accounts
 
 Pipes requires an IAM role in each AWS account under your organization so it can perform the integration tasks you've enabled.
 
-![Setup Access to Your Member Accounts](/images/docs/pipes/integrations/aws-setup-member-accounts.png)
+![Setup Access to Your Member Accounts](/images/docs/pipes/integrations/aws-setup-connection-settings.png)
 
-### Create Roles
+#### Create Roles
 
 Download and run the CloudFormation StackSet to create the IAM role in the member accounts:
 
@@ -92,12 +96,6 @@ Download and run the CloudFormation StackSet to create the IAM role in the membe
 
 Alternatively, you can create the role manually in the accounts with your preferred settings by following the [manual setup guide](#manual-setup-guide).
 
-## Step 6: Configure connection settings
-
-In this step, you'll configure settings for the connections that will be created by this integration.
-
-![Connection Settings](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
-
 1. **Handle Prefix** (Optional): This will be prepended to connections/aggregators created from this integration. Helps avoid conflicting handles.
 
 2. **Choose your regions**: Select the AWS regions you want to configure in the child connections.
@@ -105,10 +103,11 @@ In this step, you'll configure settings for the connections that will be created
    - Select specific regions for better performance
 
 3. **Advanced options** (Optional): Click to configure additional connection settings that will be inherited by all connections imported by the integration.
+![Connection Settings](/images/docs/pipes/org-integrations-aws-setup-advanced.png)
 
 After configuring the settings, click **Test Connection** to verify the credentials are configured correctly, then click **Next**.
 
-## Step 7: Set permissions
+## Set permissions
 
 Choose workspaces that should have permissions to the root connection folder(s) created from this AWS integration.
 
