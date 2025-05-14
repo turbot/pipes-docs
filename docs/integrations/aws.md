@@ -61,11 +61,18 @@ Pipes uses the following security measures:
 
 1. **Role Name**: Enter a name for the IAM role that will be created in your AWS Organization management account (default: `turbot_pipes`).
 
-2. **External ID**: A security measure that helps prevent unauthorized access. It consists of two parts:
-   - Your organization ID (automatically added)
-   - A random 8-character alphanumeric string (you can customize this)
+2. **External ID**: A security measure that helps prevent unauthorized access. The External ID must be in the format: `{identifier}:{random_string}` where:
 
-This combination ensures that only authorized users can assume the role.
+   - `{identifier}` can be:
+     - For tenant-level integrations: Either your tenant ID or organization ID
+     - For org-level integrations: Your organization ID
+   - `{random_string}`: An 8-character alphanumeric string (you can customize this)
+
+   Example:
+   - Tenant-level integration: `t_123abc:xyz789` (using tenant ID) or `o_456def:xyz789` (using org ID)
+   - Org-level integration: `o_456def:xyz789` (using org ID)
+
+   This combination ensures that only authorized users can assume the role.
 
 ### Deploy the Role
 
