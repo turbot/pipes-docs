@@ -187,36 +187,62 @@ Resources:
         - arn:aws:iam::aws:policy/ReadOnlyAccess
 ```
 
-### 2. Create the Integration via API
+### 2. Create the Integration via Terraform
 
-Make a POST request to create the integration:
+You can create the integration using Terraform resources. Choose the appropriate resource based on whether you're creating the integration at the organization or tenant level:
 
-**Endpoint:** `https://pipes.turbot.com/api/v0/org/{org_handle}/integration`
-
-**Request Body:**
-```json
-{
-  "type": "aws",
-  "handle": "awsi",
-  "config": {
-    "permitted_external_id_identifiers": [
+#### Organization Integration
+```hcl
+resource "pipes_organization_integration" "aws" {
+  org_handle = "your-org-handle"
+  type       = "aws"
+  handle     = "awsi"
+  config = {
+    permitted_external_id_identifiers = [
       "${YOUR_ORGANIZATION_ID}"
-    ],
-    "discovery_mode": "role",
-    "discovery_role_arn": "${YOUR_DISCOVERY_ROLE_ARN}",
-    "discovery_role_name": "${YOUR_DISCOVERY_ROLE_NAME}",
-    "discovery_external_id": "${YOUR_DISCOVERY_EXTERNAL_ID}",
-    "discovery_access_key": "",
-    "discovery_secret_key": "",
-    "handle_prefix": "",
-    "role_name": "${YOUR_CONNECTION_ROLE_NAME}",
-    "external_id": "${YOUR_CONNECTION_EXTERNAL_ID}",
-    "regions": [
-      "*"
-    ],
-    "permissions": [
+    ]
+    discovery_mode        = "role"
+    discovery_role_arn    = "${YOUR_DISCOVERY_ROLE_ARN}"
+    discovery_role_name   = "${YOUR_DISCOVERY_ROLE_NAME}"
+    discovery_external_id = "${YOUR_DISCOVERY_EXTERNAL_ID}"
+    discovery_access_key  = ""
+    discovery_secret_key  = ""
+    handle_prefix         = ""
+    role_name            = "${YOUR_CONNECTION_ROLE_NAME}"
+    external_id          = "${YOUR_CONNECTION_EXTERNAL_ID}"
+    regions              = ["*"]
+    permissions = [
       {
-        "identity_handle": "${YOUR_ORGANIZATION_HANDLE}"
+        identity_handle = "${YOUR_ORGANIZATION_HANDLE}"
+      }
+    ]
+  }
+}
+```
+
+#### Tenant Integration
+```hcl
+resource "pipes_tenant_integration" "aws" {
+  tenant_handle = "your-tenant-handle"
+  type         = "aws"
+  handle       = "awsi"
+  config = {
+    permitted_external_id_identifiers = [
+      "${YOUR_ORGANIZATION_ID}"
+    ]
+    discovery_mode        = "role"
+    discovery_role_arn    = "${YOUR_DISCOVERY_ROLE_ARN}"
+    discovery_role_name   = "${YOUR_DISCOVERY_ROLE_NAME}"
+    discovery_external_id = "${YOUR_DISCOVERY_EXTERNAL_ID}"
+    discovery_access_key  = ""
+    discovery_secret_key  = ""
+    handle_prefix         = ""
+    role_name            = "${YOUR_CONNECTION_ROLE_NAME}"
+    external_id          = "${YOUR_CONNECTION_EXTERNAL_ID}"
+    regions              = ["*"]
+    permissions = [
+      {
+        identity_handle = "${YOUR_ORGANIZATION_HANDLE}"
       }
     ]
   }
