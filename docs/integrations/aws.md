@@ -42,7 +42,7 @@ Enter a handle in the input field (for example, "aws-integration") and click **N
 
 Pipes needs read-only access to your AWS Organization so it can enumerate all accounts and OUs under your management (or delegated) account. In this step, you'll create an IAM role in your AWS Organization management account.
 
-![](/images/docs/pipes/integrations/aws-setup-discovery-settings.png)
+![](/images/docs/pipes/integrations/aws-setup-discovery-settings1.png)
 
 1. Enter a **Role Name** for the IAM roles that will be created and used to access your AWS accounts.  A role with this name will be created in your AWS Organization management account that will be used to discover your AWS OUs and Accounts.  In a subsequent step, you will create roles with the same name in the discovered accounts.  The roles will be configured for cross-account trust from the Pipes account.
 
