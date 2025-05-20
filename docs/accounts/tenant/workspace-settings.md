@@ -22,3 +22,7 @@ The following [snapshot visibility](/pipes/docs/using/steampipe/snapshots#sharin
 **Workspace** is the minimum level of visibility required for snapshots and is not allowed to be unset.
 
 Turning off **Anyone with link** will restrict users from sharing snapshots across all workspaces of the tenant. This will also prevent users from accessing snapshots that were shared prior to restricting **Anyone with link**.
+
+## Workspace Configuration
+
+**Workspace Configuration** section allows you to control the permitted workspace configuration options across all workspaces in your tenant. The **Personal Workspaces** checkbox allows you to enable or disable the ability for users to create personal workspaces. Disabling this option will prevent users from creating personal workspaces. New tenants have this option disabled by default.
