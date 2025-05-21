@@ -260,11 +260,11 @@ To modify the integration, navigate to the **Integrations** page for the appropr
 In the list of integrations, click the gear icon next to the integration that you want to modify.
 
 You can change credentials used for discovery in the **Discovery Settings** section of the **Config** tab.
-![](/images/docs/pipes/org-integrations-aws-settings-config-discovery.png)
+![](/images/docs/pipes/integrations/modify-aws-discovery-settings.png)
 
 You can also change the **Connection Settings** from the **Config** tab, including the **Handle Prefix**, **Regions**, the connection credentials, and the **Advanced Options**,
 
-![](/images/docs/pipes/org-integrations-aws-settings-config-connection.png)
+![](/images/docs/pipes/integrations/modify-aws-connection-settings.png)
 
 Make the desired changes and click **Save**.
 
