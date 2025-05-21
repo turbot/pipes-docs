@@ -25,4 +25,4 @@ Turning off **Anyone with link** will restrict users from sharing snapshots acro
 
 ## Workspace Configuration
 
-**Workspace Configuration** section allows you to control the permitted workspace configuration options across all workspaces in your tenant. The **Personal Workspaces** checkbox allows you to enable or disable the ability for users to create personal workspaces. Disabling this option will prevent users from creating personal workspaces. New tenants have this option disabled by default.
+The **Workspace Configuration** section allows you to control the permitted workspace configuration options across all workspaces in your tenant. The **Personal Workspaces** checkbox allows you to enable or disable the ability for users to create personal workspaces. Disabling this option will prevent users from creating personal workspaces. New tenants have this option disabled by default.
