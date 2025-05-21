@@ -21,7 +21,7 @@ organization. From the **Workspaces** tab, click **New Workspace**. Note that if
 the **New Workspace** button is disabled, you have likely reached a limit for
 your plan.
 
-<img src="/images/docs/pipes/pipes_workspace_create_2.png" width="400pt"/>
+<img src="/images/docs/pipes/pipes_workspace_create_2.png"/>
 <br />
 
 If you are on a paid plan, you may select the **instance type** for your workspace.  Select the instance type that meets your capacity, performance, capability, and cost requirements.
@@ -41,14 +41,14 @@ You will be prompted to add a connection to the workspace that you just created.
 Select the connection that you wish to add and click **Add to Workspace** if you would like to add a connection to your
 workspace at this time.
 
-<img src="/images/docs/pipes/pipes_workspace_add_connection.png" width="400pt"/>
+<img src="/images/docs/pipes/pipes_workspace_add_connection.png"/>
 <br />
 
 If the connection you added has mods associated with it, you will be prompted to add mods to the workspace that you just created.
 Select the mods you wish to install and click **Install Mods** if you would like to add mods to your
 workspace at this time.
 
-<img src="/images/docs/pipes/pipes_workspace_install_mods.png" width="400pt"/>
+<img src="/images/docs/pipes/pipes_workspace_install_mods.png"/>
 <br />
 
 
@@ -62,6 +62,18 @@ After a workspace has been created, it is in the `enabled` state - the workspace
 <br />
 
 You can also [wake up, sleep, or reboot](/pipes/docs/using/steampipe#sleeping-waking-and-rebooting-workspace) your workspace from the Steampipe **Advanced** page for your workspace.  
+
+## Managing Instance Type Configuration
+
+Navigate to the **Advanced** tab for your workspace and click on the **Workspace** menu on the left. You can see the current instance type for your workspace selected in the radio button options.
+
+<img src="/images/docs/pipes/pipes_workspace_advanced_instance_type.png"/>
+<br />
+
+You can change the instance type for your workspace by selecting a different instance type. For instance types that support persistent storage, you also have the option to set the desired storage size. Note that you are currently only able to upgrade the storage size, so make sure to select a size that meets your needs. Click **Update** to save your changes.
+
+<img src="/images/docs/pipes/pipes_workspace_advanced_instance_type_switch.png"/>
+<br />
 
 
 ## Deleting Workspaces
