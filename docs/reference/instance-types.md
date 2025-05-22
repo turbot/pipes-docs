@@ -5,7 +5,7 @@ sidebar_label: Instance Types
 
 # Instance Types
 
-Pipes offers flexible compute resources through different instance types designed to match your workload requirements and budget. Each instance type is optimized for specific use cases, with compute instances handling pipeline execution and database instances running Steampipe databases. The pricing model scales with resource consumption, using cost multipliers to ensure you pay proportionally for the compute power you use.
+Pipes offers flexible compute resources through different instance types designed to match your workload requirements and budget. Each instance type is optimized for specific use cases, with compute instances handling pipeline execution and database instances running Steampipe databases. The [pricing model](/pipes/pricing) scales with resource consumption, using cost multipliers to ensure you pay proportionally for the compute power you use.
 
 | Instance Type   | CPU | Memory  | Persistent? | Cost Multiplier
 |-----------------|-----|---------|-------------|-----------------
