@@ -199,6 +199,7 @@
         "id": "cloud-reference",
         "link": "reference",
         "items": [
+          "reference/instance-types",
           "develop/query-api",
           "reference/api",
           "reference/gosdk",
