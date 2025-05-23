@@ -31,7 +31,7 @@ Turbot Pipes creates a system pipeline for each part to refresh it according to 
 
 Datatanks are a type of workspace-level schema. To create one, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab. Click the **New Datatank** button.
 
-> Note:  Because the datatank is meant to be persistent, you may only create a datatank on persistent workspace instance types - you cannot create a datatank on a `shared` instance type.
+> Note:  Because the datatank is meant to be persistent, you may only create a datatank on persistent workspace [instance types](/pipes/docs/reference/instance-types) - you cannot create a datatank on a `shared` instance type.
 
 ![](/images/docs/pipes/steampipe/steampipe_datatanks_list.png)
 

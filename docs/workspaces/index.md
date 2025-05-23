@@ -24,7 +24,7 @@ your plan.
 <img src="/images/docs/pipes/pipes_workspace_create_2.png"/>
 <br />
 
-If you are on a paid plan, you may select the **instance type** for your workspace.  Select the instance type that meets your capacity, performance, capability, and cost requirements.
+If you are on a paid plan, you may select the [instance type](/pipes/docs/reference/instance-types) for your workspace.  Select the instance type that meets your capacity, performance, capability, and cost requirements.
 
 Each workspace must have a **handle**. The workspace handle is a friendly
 identifier for your workspace and must be unique across your workspaces. You
@@ -65,7 +65,7 @@ You can also [wake up, sleep, or reboot](/pipes/docs/using/steampipe#sleeping-wa
 
 ## Managing Instance Type Configuration
 
-Navigate to the **Advanced** tab for your workspace and click on the **Workspace** menu on the left. You can see the current instance type for your workspace selected in the radio button options.
+Navigate to the **Advanced** tab for your workspace and click on the **Workspace** menu on the left. You can see the current [instance type](/pipes/docs/reference/instance-types) for your workspace selected in the radio button options.
 
 <img src="/images/docs/pipes/pipes_workspace_advanced_instance_type.png"/>
 <br />
