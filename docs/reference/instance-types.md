@@ -11,8 +11,8 @@ Pipes offers flexible compute resources through different instance types designe
 |-----------------|-----|---------|-------------|-----------------
 | c1.shared       |   2 |     4GB | No          | 1x
 | db1.shared      |   2 |     4GB | No          | 1x
-| db1.small       |   4 |     4GB | Yes         | 2x
-| db1.medium      |   8 |     4GB | Yes         | 4x
+| db1.small       |   4 |     8GB | Yes         | 2x
+| db1.medium      |   8 |    16GB | Yes         | 4x
 
 
 ## Instance Classes
