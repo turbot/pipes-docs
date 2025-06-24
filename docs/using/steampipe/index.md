@@ -47,7 +47,7 @@ During maintenance, your workspaces will be updated to the latest Steampipe
 version and the latest plugin versions. At this time, you cannot opt out of the
 weekly update.
 
-## Sleeping, Waking, and Rebooting Workspace
+## Sleeping, Waking, Upgrading and Rebooting Workspace
 
 After a workspace has been created, it is in the `enabled` state - the workspace's Steampipe database is running and available, and any scheduled snapshots will run.  If no one accesses the database for 4 days, it will be put to sleep, and the status will be changed to `disabled.`  You can wake up (enable) the workspace from the console.  Simply click **Wake Up** in the banner that appears at the top of your sleeping workspace.
 
@@ -55,8 +55,9 @@ After a workspace has been created, it is in the `enabled` state - the workspace
 
 <br />
 
-You can also **Wake Up** (enable), **Sleep** (disable), or **Reboot** your workspace from the Steampipe **Advanced** page for your workspace.  You can set the prefix from the Steampipe **Advanced** / **Status** page for your workspace.  Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left-hand menu.
+You can also **Wake Up** (enable), **Sleep** (disable), **Upgrade** or **Reboot** your workspace from the Steampipe **Advanced** page for your workspace. Navigate to your workspace, and from the **Pipes** tab, select **Steampipe**.  From the Steampipe **Advanced** tab, select **Status** from the left-hand menu.
 
+> Note: Upgrading your workspace will cause it to be rebooted, and all pipelines and datatanks will be disabled while the upgrade is in progress. The upgrade process may take several minutes to complete.
 
 ![](/images/docs/pipes/steampipe/steampipe_advanced_status.png)
 
