@@ -6,9 +6,9 @@ sidebar_label: Organizations
 # Organizations
 
 Turbot Pipes users can create their own connections and workspace, but they are
-not shared with other users. Steampipe **Organizations**, on the other hand,
+not shared with other users. **Organizations**, on the other hand,
 include multiple users and are intended for organizations to collaborate and
-share workspaces and connections. 
+share workspaces and connections.
 
 Organizations are available on the [Team](#team-plan) and [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) plans.
 
