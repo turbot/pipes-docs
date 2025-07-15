@@ -35,3 +35,16 @@ The **Billing** page provides visibility into your tenant's current billing stat
 
 On the **Advanced** tab for your tenant, click **Billing** from the
 left-hand menu to view [billing information](/pipes/docs/accounts/tenant/billing) for your tenant.
+
+## Reset Authentication
+
+Once users have been added to your tenant, they will be able to authenticate against it according to the permissions they were granted. 
+They can authenticate using either temporary tokens issued via console or [CLI login](https://steampipe.io/docs/reference/cli/login#steampipe-login), or with [tokens](/pipes/docs/accounts/developer/advanced#tokens) managed via their user profile settings.
+
+If you wish to reset authentication in your organization for any currently issued tokens, you can do so by going to the **Advanced** page for your tenant and then clicking **Authentication** from the left-hand menu.  Click the
+`Reset authentication` button to reset authentication for all existing temporary and user tokens.
+
+This will immediately remove console access to the tenant for all users, prompting them to log in again. Any users who wish to access your tenant via the API will also be required to generate a new user [token](/pipes/docs/accounts/developer/advanced#tokens).
+
+<img src="/images/docs/pipes/cloud-organization-reset-authentication.png" width="400pt"/>
+<br />
