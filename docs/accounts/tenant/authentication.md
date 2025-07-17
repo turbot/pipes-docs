@@ -79,3 +79,25 @@ You can enable GitHub authentication by toggling the radio button.  When GitHub 
 
 ### Google
 You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user who has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
+
+## User Session Timeout
+
+You can configure the maximum duration of a user session in your tenant, after which the user will be required to log in again. 
+
+To set the user session timeout, select the desired duration or select custom (hours) for the **User Session Timeout** field and click **Save**. The default value is `30 Days`.
+
+<img src="/images/docs/pipes/cloud-tenant-user-session-timeout.png" width="400pt"/>
+<br />
+
+## Reset Authentication
+
+Once users have been added to your tenant, they will be able to authenticate against it according to the permissions they were granted.
+They can authenticate using either temporary tokens issued via console or [CLI login](https://steampipe.io/docs/reference/cli/login#steampipe-login), or with [tokens](/pipes/docs/accounts/developer/advanced#tokens) managed via their user profile settings.
+
+If you wish to reset authentication in your organization for any currently issued tokens, you can do so by going to the **Advanced** page for your tenant and then clicking **Authentication** from the left-hand menu.  Click the
+`Reset authentication` button to reset authentication for all existing temporary and user tokens.
+
+This will immediately remove console access to the tenant for all users, prompting them to log in again. Any users who wish to access your tenant via the API will also be required to generate a new user [token](/pipes/docs/accounts/developer/advanced#tokens).
+
+<img src="/images/docs/pipes/cloud-tenant-reset-authentication.png" width="400pt"/>
+<br />
