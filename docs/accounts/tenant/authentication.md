@@ -89,6 +89,8 @@ To set the user session timeout, select the desired duration or select custom (h
 <img src="/images/docs/pipes/cloud-tenant-user-session-timeout.png" width="400pt"/>
 <br />
 
+> Note: This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
+
 ## Reset Authentication
 
 Once users have been added to your tenant, they will be able to authenticate against it according to the permissions they were granted.
