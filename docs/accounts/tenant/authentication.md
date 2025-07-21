@@ -80,13 +80,13 @@ You can enable GitHub authentication by toggling the radio button.  When GitHub 
 ### Google
 You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user who has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
 
-## User Session Timeout
+## Session Timeout
 
-You can configure the maximum duration of a user session in your tenant, after which the user will be required to log in again. 
+You can configure the maximum duration of Console (browser) and CLI sessions in your tenant, after which the user will be required to log in again. 
 
-To set the user session timeout, select the desired duration or select custom (hours) for the **User Session Timeout** field and click **Save**. The default value is `30 Days`.
+To set the session timeout, select the desired duration or select custom (hours) for the **Console Session Timeout** or **CLI Session Timeout** and click **Save**. The default value is `30 Days`.
 
-<img src="/images/docs/pipes/cloud-tenant-user-session-timeout.png" width="400pt"/>
+<img src="/images/docs/pipes/cloud-tenant-session-timeout.png" width="400pt"/>
 <br />
 
 > Note: This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
