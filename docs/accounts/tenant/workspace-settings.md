@@ -25,4 +25,11 @@ Turning off **Anyone with link** will restrict users from sharing snapshots acro
 
 ## Workspace Configuration
 
-The **Workspace Configuration** section allows you to control the permitted workspace configuration options across all workspaces in your tenant. The **Personal Workspaces** checkbox allows you to enable or disable the ability for users to create personal workspaces. Disabling this option will prevent users from creating personal workspaces. New tenants have this option disabled by default.
+The **Workspace Configuration** section allows you to control the permitted workspace configuration options across all workspaces in your tenant. 
+
+<img src="/images/docs/pipes/cloud-tenant-workspace-configuration.png" width="400pt"/>
+<br />
+
+The **Personal Workspaces** checkbox allows you to enable or disable the ability for users to create personal workspaces. Disabling this option will prevent users from creating personal workspaces. New tenants have this option _disabled_ by default.
+
+The **Steampipe PostgreSQL connectivity** checkbox allows you to enable or disable the ability for users to connect to the Steampipe PostgreSQL endpoint. Disabling this option will prevent users from connecting directly to the Steampipe PostgreSQL endpoint. Additionally, all UI elements containing database endpoint connection information will be removed. New tenants have this option _enabled_ by default.

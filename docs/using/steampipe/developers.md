@@ -8,6 +8,7 @@ sidebar_label: Developers
 
 Your Pipes workspace database is accessible from anywhere, thanks to its public IP address.  The **Developers** tab provides the information needed to connect to your Turbot Pipes database instance from the [Steampipe CLI](/pipes/docs/connect/cli), Postgres CLI's like [psql](/pipes/docs/connect/psql) and [pgcli](/pipes/docs/connect/pgcli), or any other [3rd party tools and utilities](/pipes/docs/connect) that support Postgres.
 
+Note: If you're on an [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) with a custom [Tenant](/pipes/docs/accounts/tenant), these features may not be available to you if disabled by your tenant administrator.
 
 ## Database
 

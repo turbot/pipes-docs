@@ -78,6 +78,8 @@ page. This may take a couple of minutes to propagate to all of your workspaces.
 Note that existing connections will not be terminated when you rotate your
 password.
 
+Note: If you're on an [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) with a custom [Tenant](/pipes/docs/accounts/tenant), this feature may not be available to you if disabled by your tenant administrator.
+
 ### Reset Authentication
 
 You will be able to authenticate against your account using either temporary
