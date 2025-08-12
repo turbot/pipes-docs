@@ -80,16 +80,30 @@ You can enable GitHub authentication by toggling the radio button.  When GitHub 
 ### Google
 You can enable Google authentication by toggling the radio button.  When Google authentication is enabled, any user who has been authenticated by Google whose email address is from a [trusted login domain](#trusted-login-domains) will be able to log in to your tenant - they do not need to be invited.  A user will be created the first time they log in to Pipes, and they will be assigned the [Member role](/pipes/docs/accounts/tenant/people#tenant-roles) in the tenant. 
 
+## Maximum Token Expiration
+
+You can configure the maximum duration of tokens issued to users in your tenant. This setting applies to both temporary tokens issued via the console (browser) or CLI and user access tokens managed via their profile settings.
+
+The default value is `Never`. This allows tokens to be issued without expiration.
+
+<img src="/images/docs/pipes/cloud-tenant-max-token-expiration.png" width="400pt"/>
+<br />
+
+
+> [!NOTE]
+> You cannot set this value to be less than the [session timeout](#session-timeout) values. Changing this setting will not affect existing tokens which are valid until they expire or [authentication is reset](#reset-authentication).
+
 ## Session Timeout
 
 You can configure the maximum duration of Console (browser) and CLI sessions in your tenant, after which the user will be required to log in again. 
 
-To set the session timeout, select the desired duration or select custom (hours) for the **Console Session Timeout** or **CLI Session Timeout** and click **Save**. The default value is `30 Days`.
+To set the session timeout, select the desired duration or select custom to provide your own for the **Console Session Timeout** or **CLI Session Timeout** and click **Save**. The default value is `30 Days`.
 
 <img src="/images/docs/pipes/cloud-tenant-session-timeout.png" width="400pt"/>
 <br />
 
-> Note: This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
+> [!NOTE]
+> This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
 
 ## Reset Authentication
 

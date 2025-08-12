@@ -57,14 +57,19 @@ You can manage your API tokens, rotate your database password, and reset authent
 
 ### Tokens
 
-You can create non-expiring API tokens for your user account.  You can use these tokens to access the
+You can create API tokens for your user account. You can use these tokens to access the
 [Turbot Pipes API](/pipes/docs/develop/query-api), or to connect to Turbot Pipes
-workspaces from the Steampipe CLI. You can have up to 2 tokens at a time.
+workspaces from the Steampipe CLI. You can have up to 5 tokens at a time.
 
-Click **New Token** to create a new API token. The token will be masked, but you
-can reveal it by clicking the eye icon or hovering over it and clicking the clipboard
-icon to copy it. Make a secure note of the token, as you will not be able to
-retrieve it again.
+Click **New Token** to create a new API token. You will be prompted to enter an optional `Title` and select an `Expiration` date for the token. The expiration can be set to a specific duration or to `Never`, which means the token will not expire.
+
+<img src="/images/docs/pipes/cloud-user-create-token.png" width="200pt"/>
+<br />
+
+> [!NOTE]
+> If you're on an [Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan) with a custom [Tenant](/pipes/docs/accounts/tenant), the [Maximum Token Expiration](/pipes/docs/accounts/tenant/authentication#maximum-token-expiration) setting will apply to the token expiration.
+ 
+The token will be masked, but you can reveal it by clicking the eye icon or hovering over it and clicking the clipboard icon to copy it. Make a secure note of the token, as you will not be able to retrieve it again.
 
 You can deactivate or delete a token from the list by clicking the options menu
 button ('three dots' button) and selecting **Deactivate** or **Delete** from the menu.
