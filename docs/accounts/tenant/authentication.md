@@ -84,13 +84,14 @@ You can enable Google authentication by toggling the radio button.  When Google 
 
 You can configure the maximum duration of tokens issued to users in your tenant. This setting applies to both temporary tokens issued via the console (browser) or CLI and user access tokens managed via their profile settings.
 
-The default value is `Never` this allows tokens to be issued without expiration.
+The default value is `Never`. This allows tokens to be issued without expiration.
 
 <img src="/images/docs/pipes/cloud-tenant-max-token-expiration.png" width="400pt"/>
 <br />
 
 
-> Note: You cannot set this value to be less than the [session timeout](#session-timeout) values. Changing this setting will not affect existing tokens which are valid until they expire or [authentication is reset](#reset-authentication).
+> [!NOTE]
+> You cannot set this value to be less than the [session timeout](#session-timeout) values. Changing this setting will not affect existing tokens which are valid until they expire or [authentication is reset](#reset-authentication).
 
 ## Session Timeout
 
@@ -101,7 +102,8 @@ To set the session timeout, select the desired duration or select custom to prov
 <img src="/images/docs/pipes/cloud-tenant-session-timeout.png" width="400pt"/>
 <br />
 
-> Note: This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
+> [!NOTE]
+> This setting will only apply to new user sessions. Existing user sessions will not be affected until they expire, the user logs out or [authentication is reset](#reset-authentication).
 
 ## Reset Authentication
 

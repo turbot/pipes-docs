@@ -66,7 +66,8 @@ Click **New Token** to create a new API token. You will be prompted to enter an 
 <img src="/images/docs/pipes/cloud-user-create-token.png" width="200pt"/>
 <br />
 
->Note: If you're on an [Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan) with a custom [Tenant](/pipes/docs/accounts/tenant), the [Maximum Token Expiration](/pipes/docs/accounts/tenant/authentication#maximum-token-expiration) setting will apply to the token expiration.
+> [!NOTE]
+> If you're on an [Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan) with a custom [Tenant](/pipes/docs/accounts/tenant), the [Maximum Token Expiration](/pipes/docs/accounts/tenant/authentication#maximum-token-expiration) setting will apply to the token expiration.
  
 The token will be masked, but you can reveal it by clicking the eye icon or hovering over it and clicking the clipboard icon to copy it. Make a secure note of the token, as you will not be able to retrieve it again.
 
