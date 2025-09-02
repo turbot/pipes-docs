@@ -24,4 +24,6 @@ Service accounts have the following limitations:
   - If created in a tenant, they can be assigned permissions across all organizations and workspaces within the tenant.
 - Cannot modify themselves or other service accounts.
 
+## Billing Considerations
 
+Each Service Account contributes to your user count on your [Team](/pipes/docs/accounts/org#team-plan) or [Enterprise](/pipes/docs/accounts/tenant#enterprise-plan) plan, as such you should consider service account usage when planning your subscription capacity.
