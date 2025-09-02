@@ -6,7 +6,7 @@ sidebar_label: People
 # People
 
 You can add and remove users from the **People** tab on your organization page.
-To invite a user to your organization, click **Invite User**. Enter an email
+To invite a user to your organization, click **Invite Member**. Enter an email
 address or the user handle of an existing user, select a role for the user,
 and click **Add**:
 
@@ -20,6 +20,14 @@ and click **Add**:
 
 To revoke access from a user, select the options menu button ('three dots' button) to the
 right of the user and click **Remove**. 
+
+## Manage Service Accounts
+
+If you are on a [Team Plan](/pipes/docs/accounts/org#team-plan) you can create or delete [service accounts](/pipes/docs/accounts/service) from this page.
+
+To create a service account, click the arrow on the **Invite Member** button and select **Create Service Account**, enter a title and if desired, an _optional_ description for the service account and click **Create**.  
+
+The service account will be created with the **Member** role by default.  You can change the role to **Owner** if desired, and you can also invite and assign permissions to the service account in individual workspaces as needed as you would a regular user.
 
 ## Last Activity
 

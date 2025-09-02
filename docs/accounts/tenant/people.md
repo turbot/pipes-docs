@@ -28,6 +28,12 @@ To invite a new tenant member, navigate to **People** from the **Tenant Settings
 
 <img src="/images/docs/pipes/pipes-enterprise-people-invite-member.png" width="400pt"/>
 
+## Manage Service Accounts
+
+To create a [service account](/pipes/docs/accounts/service), click the arrow on the **Invite Member** button and select **Create Service Account**, enter a title and if desired, an _optional_ description for the service account and click **Create**.
+
+The service account will be created with the **Member** role by default.  You can change the role to **Owner** if desired, and you can also invite and assign permissions to the service account in individual organizations as needed as you would a regular user.
+
 ## Last Activity
 
 The **Last Activity** column represents the most recent date on which an activity was performed by a user in the tenant. This includes any interaction or action initiated by a user, such as logging into the tenant, accessing an org / workspace, running a Steampipe query or performing any other activity on any resource under the tenant. The column serves as a timestamp to track the latest user engagement within the tenant, providing insights into user activity and system usage trends.
