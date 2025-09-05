@@ -33,7 +33,7 @@ You can `deactivate` or `delete` a token from the list by clicking the options m
 
 The **Audit Log** tab provides a log of API activity associated with your service account including _who_ did _what_ and _when_.
 
-<!-- TODO: #graza insert image -->
+<img src="/images/docs/pipes/pipes-service-account-audit.png" width="400pt"/><br />
 
 ## Settings
 
