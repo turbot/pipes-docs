@@ -147,7 +147,14 @@
             "link": "accounts/org",
             "items": [
               "accounts/org/workspaces",
-              "accounts/org/members",
+               {
+                "type": "category",
+                "id": "org/members",
+                "link": "accounts/org/members",
+                "items": [
+                  "accounts/org/members/service-accounts"
+                ]
+              },
               "accounts/org/integrations",
               "accounts/org/connections",
               "accounts/org/notifiers",
@@ -172,7 +179,14 @@
             "items": [
               "accounts/tenant/developer-account",
               "accounts/tenant/organizations",
-              "accounts/tenant/members",
+               {
+                "type": "category",
+                "id": "tenant/members",
+                "link": "accounts/tenant/members",
+                "items": [
+                  "accounts/tenant/members/service-accounts"
+                ]
+              },
               "accounts/tenant/integrations",
               "accounts/tenant/connections",
               "accounts/tenant/notifiers",
@@ -190,15 +204,8 @@
                 ]
               }              
             ]
-          },
-          {
-            "type": "category",
-            "id": "service",
-            "link": "accounts/service",
-            "items": [
-              "accounts/service/manage"
-            ]
           }
+         
         ]
       },
 
