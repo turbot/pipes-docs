@@ -167,14 +167,6 @@
           },
           {
             "type": "category",
-            "id": "service",
-            "link": "accounts/service",
-            "items": [
-              "accounts/service/manage"
-            ]
-          },
-          {
-            "type": "category",
             "id": "tenants",
             "link": "accounts/tenant",
             "items": [
@@ -197,6 +189,14 @@
                   "accounts/tenant/billing"
                 ]
               }              
+            ]
+          },
+          {
+            "type": "category",
+            "id": "service",
+            "link": "accounts/service",
+            "items": [
+              "accounts/service/manage"
             ]
           }
         ]
