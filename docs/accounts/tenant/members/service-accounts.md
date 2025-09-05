@@ -5,7 +5,7 @@ sidebar_label: Service Accounts
 
 # Service Accounts
 
-Service Accounts are a specialized type of user designed for programmatic access to Turbot Pipes.
+Service accounts are a specialized type of user designed for programmatic access to Turbot Pipes.
 
 The primary use case for service accounts is to enable automation and integration scenarios, where a non-human user needs to interact with the Pipes platform. 
 Service accounts can be used in CI/CD pipelines, automated scripts, or other systems that require access to Pipes resources without human intervention.
@@ -30,11 +30,9 @@ Service accounts are billed like any other user. They will count against the inc
 
 ## Creating Service Accounts
 
-**Service Accounts** are a specialized type of user designed for programmatic access to Turbot Pipes.
-
 To create a service account, navigate to **Members** from the **Tenant Settings** section. Click the **Add Member** button and select **Create Service Account** from the dropdown options, enter a title and if desired, an _optional_ description for the service account, and click **Create**.
 
-<img src="/images/docs/pipes/pipes-service-account-create.png" width="300pt"/><br />
+<img src="/images/docs/pipes/pipes-service-account-create.png" width="400pt"/><br />
 
 The service account will be created with the **Member** role by default. You can change the role if desired via the **Change Role** action on the options menu button ('three dots' button). 
 

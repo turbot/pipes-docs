@@ -19,7 +19,7 @@ You can grant and revoke access to users and service accounts from the **Members
 
 
 ## Adding Organization Members [Enterprise plan]
-If you are on an [Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan), you can grant access to your organization to any users and [service accounts](/pipes/docs/accounts/tenant/members/service-accounts) in your tenant.  You cannot invite users or create services at the organization level - they must be members of the tenant. 
+If you are on an [Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan), you can grant access to your organization to any users and [service accounts](/pipes/docs/accounts/tenant/members/service-accounts) in your tenant.  You cannot invite users or create service accounts at the organization level - they must be members of the tenant. 
 
 To add a user to your workspace, click **Add Member**. Enter an email address or user handle of an existing user or service account and select a [role](#organization-roles) for the user
 

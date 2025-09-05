@@ -5,7 +5,7 @@ sidebar_label: Service Accounts
 
 # Service Accounts
 
-Service Accounts are a specialized type of user designed for programmatic access to Turbot Pipes.
+Service accounts are a specialized type of user designed for programmatic access to Turbot Pipes.
 
 The primary use case for service accounts is to enable automation and integration scenarios, where a non-human user needs to interact with the Pipes platform. 
 Service accounts can be used in CI/CD pipelines, automated scripts, or other systems that require access to Pipes resources without human intervention.
