@@ -30,9 +30,9 @@ To create a service account, click the **Add Member** button and select **Create
 
 <img src="/images/docs/pipes/pipes-service-account-create.png" width="200pt"/><br />
 
-The service account will be created with the **Member** role by default. You can change the role to **Owner** if desired.
+The service account will be created with the **Member** role by default. You can change the role if desired via the **Change Role** action on the options menu button ('three dots' button).
 
-You can then [manage](/pipes/docs/accounts/service/manage) via the cog, this will allow access to various settings such as amending the title or managing the service accounts access tokens.
+You can then [manage](/pipes/docs/accounts/service/manage) the service account via the cog, this will allow access to various settings such as amending the title or managing the service accounts access tokens.
 
 <img src="/images/docs/pipes/pipes-service-account-member.png" width="400pt"/><br />
 
