@@ -19,7 +19,7 @@ You can manage your workspace's notifiers from the **Notifiers** tab on your wor
 
 Many [mods use the default notifier](https://flowpipe.io/docs/reference/config-files/notifier#using-notifiers-in-mods) by default, but allow you to override it via a [variable](https://flowpipe.io/docs/flowpipe-hcl/variable) or [param](https://flowpipe.io/docs/flowpipe-hcl/pipeline#parameters). 
 
-Pipes includes a built-in notifier named `workspace_admins` that is configured to send email to the [Workspace Owners](/pipes/docs/workspaces/people).  This notifier is configured as the default notifier so that it works out of the box, and no configuration is necessary.
+Pipes includes a built-in notifier named `workspace_admins` that is configured to send email to the [Workspace Owners](/pipes/docs/workspaces/members).  This notifier is configured as the default notifier so that it works out of the box, and no configuration is necessary.
 
 If you would prefer to use a different default notifier in your workspace, you can do so;
 Pipes allows you to mark *any* notifier as the default for your workspace.  Navigate to the **Settings** page for the notifier that you would like to use.  From the **Workspace precedence** section, click  **Set Default**.

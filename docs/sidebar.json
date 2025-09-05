@@ -91,7 +91,7 @@
         "link": "workspaces",
         "items": [
           "workspaces/pipes",          
-          "workspaces/people",
+          "workspaces/members",
           "workspaces/connections",
           "workspaces/notifiers",
           "workspaces/activity",
@@ -147,7 +147,7 @@
             "link": "accounts/org",
             "items": [
               "accounts/org/workspaces",
-              "accounts/org/people",
+              "accounts/org/members",
               "accounts/org/integrations",
               "accounts/org/connections",
               "accounts/org/notifiers",
@@ -167,12 +167,20 @@
           },
           {
             "type": "category",
+            "id": "service",
+            "link": "accounts/service",
+            "items": [
+              "accounts/service/manage"
+            ]
+          },
+          {
+            "type": "category",
             "id": "tenants",
             "link": "accounts/tenant",
             "items": [
               "accounts/tenant/developer-account",
               "accounts/tenant/organizations",
-              "accounts/tenant/people",
+              "accounts/tenant/members",
               "accounts/tenant/integrations",
               "accounts/tenant/connections",
               "accounts/tenant/notifiers",
