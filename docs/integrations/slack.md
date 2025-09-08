@@ -23,7 +23,7 @@ You can create an integration for a [tenant](/pipes/docs/accounts/tenant/) or an
 
 
 First, navigate to the **Integrations** page for the appropriate resource:
-- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure a Slack integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 
 
@@ -53,7 +53,7 @@ You will be prompted to grant permission to access the Slack workspace.  If you 
 After you have created an integration, you can change its **Handle**.
 
 Navigate to the **Integrations** page for the appropriate resource:
-- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure a Slack integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 - To configure a Slack integration for your **Developer Account**, click the double arrow button from the navigation at the top of the page, select your account from the dropdown, and then select **Settings** from the menu on the left.  On the organization settings page, select **Integrations**.
 
@@ -66,7 +66,7 @@ You can modify the **Handle** from the **Advanced** tab.  Enter the new handle a
 You can delete an integration from its **Advanced** page.
 
 Navigate to the **Integrations** page for the appropriate resource:
-- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
+- To configure a Slack integration for your **Tenant**, click the double arrow button from the tenant switcher at the top of the Pipes console, select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles).  Once you've selected your tenant, go to the **Integrations** tab to manage the integrations for the tenant.
 - To configure a Slack integration for your **Organization**, click the double arrow button from the organization switcher at the top of the page and select the organization from the dropdown.  Once you've selected your organization, go to the **Integrations** tab to manage the integrations for the organization.
 - To configure a Slack integration for your **Developer Account**, click the double arrow button from the navigation at the top of the page, select your account from the dropdown, and then select **Settings** from the menu on the left.  On the organization settings page, select **Integrations**.
 

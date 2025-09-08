@@ -1,16 +1,17 @@
 ---
-title: People
-sidebar_label: People
+title: Members
+sidebar_label: Members
 ---
 
-# People
+# Members
 
-Workspaces in an organization can be shared with other members of your
-organization. If your workspace is part of an organization, you can manage access from the **People** tab for your workspace. 
+Workspaces in an organization can be shared with other members of your organization. 
+If your workspace is part of an organization, you can manage access from the **Members** tab for your workspace. 
 
-To be granted workspace access, the user must first be [added to your organization](/pipes/docs/accounts/org/people).  Once the user has been added to the organization, then you can grant them access to workspaces.
+To be granted workspace access, the user must first be [added to your organization](/pipes/docs/accounts/org/members). 
+Once the user has been added to the organization, then you can grant them access to workspaces.
 
-You can add and remove workspace users from the **People** tab on your workspace
+You can add and remove workspace users from the **Members** tab on your workspace
 page. To add a user to your workspace, click **Add Member**. 
 
 <img src="/images/docs/pipes/pipes_workspace_add_user.png" width="400pt"/>

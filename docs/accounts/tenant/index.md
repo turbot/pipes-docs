@@ -30,6 +30,6 @@ The creation process can vary in time and may take up to 5 minutes. You don't ha
 
 ## Initial login
 
-The initial login to a new tenant can only be performed via email. The Pipes user that created the tenant will be added as a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles) in the new tenant and will have full control of the tenant after they log in.
+The initial login to a new tenant can only be performed via email. The Pipes user that created the tenant will be added as a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles) in the new tenant and will have full control of the tenant after they log in.
 
 Once you have logged in, you can set up other [authentication methods](/pipes/docs/accounts/tenant/advanced#authentication-methods), or you can invite other users to the tenant.

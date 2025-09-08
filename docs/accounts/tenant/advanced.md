@@ -5,7 +5,7 @@ sidebar_label: Advanced
 
 # Advanced Settings
 
-To manage your tenant's advanced settings, navigate to your tenant, then click the double arrow button from the navigation at the top of the page, select **Tenant Settings** from the dropdown, and then go to the **Advanced** tab.  This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles). 
+To manage your tenant's advanced settings, navigate to your tenant, then click the double arrow button from the navigation at the top of the page, select **Tenant Settings** from the dropdown, and then go to the **Advanced** tab.  This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles). 
 
 
 ## Tenant Profile

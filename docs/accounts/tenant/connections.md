@@ -16,7 +16,7 @@ You can create connections and folders manually, but they may also be created by
 
 ## Managing Connections
 
-You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/people#tenant-roles).  
+You can manage your tenant's connections and folders from the **Connections** tab.  Navigate to your tenant by clicking the double arrow button from the tenant switcher at the top of the Pipes console.  Select your tenant, and then select **Tenant Settings**. This option will only be visible in a custom tenant for which you are a [tenant owner](/pipes/docs/accounts/tenant/members#tenant-roles).  
 
 The **Connections** tab will show all the tenant-level connections and folders.
 
