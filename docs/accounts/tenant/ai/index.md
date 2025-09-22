@@ -16,6 +16,6 @@ By default, [AI features](/pipes/docs/using/chat) are enabled in your tenant.  I
 
 Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT5-Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  
 
-Enter your OpenAI and/Anthropic key, click the **Test Key** button to verify that it's working, then click **Save** to begin using the key in your tenant.  
+Enter your OpenAI and/or Anthropic key, click the **Test Key** button to verify that it's working, then click **Save** to begin using the key in your tenant.  
 
 Once your key has been set, you will be able to [select from additional models](/pipes/docs/using/chat/conversation#selecting-a-model) when starting a conversation.  Note that once you have added an AI API key, only your key will be used; the free `GPT-5 Mini` key will no longer be available.

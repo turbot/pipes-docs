@@ -8,7 +8,7 @@ Your chat conversations are automatically saved and organized in the sidebar. Th
 
 Click any conversation to continue where you left off.
 
-You can delete or change the title for a conversation from the popup menu. Hover over the chat you wish to modify or delete, then click the context button (3 vertical dots) to show the popup menu.
+You can delete or change the title for a conversation from the pop-up menu. Hover over the chat you wish to modify or delete, then click the context button (3 vertical dots) to show the pop-up menu.
 
 
-![AI Chat Canvas - conversation popup](./pipes_ai_chat_rename_delete.png)
+![AI Chat Canvas - conversation pop-up](./pipes_ai_chat_rename_delete.png)

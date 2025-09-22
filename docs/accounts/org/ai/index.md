@@ -15,6 +15,6 @@ To configure your AI API keys, go to the **Advanced** page for your developer ac
 
 ![](./pipes_ai_org_settings.png)
 
-Enter your OpenAI and/Anthropic key, click the **Test Key** button to verify that it's working, then click **Save** to begin using the key in your organization.  
+Enter your OpenAI and/or Anthropic key, click the **Test Key** button to verify that it's working, then click **Save** to begin using the key in your organization.  
 
 Once your key has been set, you will be able to [select from additional models](/pipes/docs/using/chat/conversation#selecting-a-model) when starting a conversation.  Note that once you have added an AI API key, only your key will be used; the free `GPT-5 Mini` key will no longer be available.

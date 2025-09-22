@@ -14,11 +14,11 @@ The screen will update as the model is thinking and working on a response.
 
 ![AI Chat Running](./pipes_ai_chat_running.png)
 
-When its done thinking, the results are displayed.
+When it's done thinking, the results are displayed.
 
 ![AI Chat Response](./pipes_ai_chat_response_1.png)
 
-If you want, you can continue the asking questions and the context will be maintained for the duration of the conversation.
+If you want, you can continue asking questions. The context will be maintained for the duration of the conversation.
 
 ![AI Chat Response](./pipes_ai_chat_response_2.png)
 
@@ -41,7 +41,7 @@ Pipes includes a small amount of monthly AI usage for each user. This free tier 
 
 ## Viewing Detailed Thinking
 
-Every time you send a new prompt in the conversation, the AI agent will perform thinking steps.  By default, the visibility of the thinking is minimized.  You can, however, view the full details of the thinking.  To view the thinking for a give step, click the node in the chat stream to expand it; it will say **Thinking** will it is in progress, or **Thought for {duration}** once it is complete.
+Every time you send a new prompt in the conversation, the AI agent will perform thinking steps.  By default, the visibility of the thinking is minimized.  You can, however, view the full details of the thinking.  To view the thinking for a step, click the node in the chat stream to expand it; it will say **Thinking** while it is in progress, or **Thought for {duration}** once it is complete.
 
 ![AI Chat Canvas - Thinking](./pipes_ai_chat_thinking.png)
 

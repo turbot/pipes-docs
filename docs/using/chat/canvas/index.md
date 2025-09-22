@@ -21,7 +21,7 @@ Click the **Copy** button to copy or download the results or the query.
 
 <img alt="AI Chat Canvas - Copy" src="./pipes_ai_chat_canvas_table_copy_menu.png" width="300pt" />
 
-Hovering over a table header will provide a popup menu that allows you to copy, filter, download, or view details of the results.
+Hovering over a table header will provide a pop-up menu that allows you to copy, filter, download, or view details of the results.
 <!--
 ![AI Chat Canvas - popup](./pipes_ai_chat_canvas_table_table_actions.png)
 -->
@@ -29,7 +29,7 @@ Hovering over a table header will provide a popup menu that allows you to copy, 
 <img alt="AI Chat Canvas - popup" src="./pipes_ai_chat_canvas_table_table_actions.png" width="300pt" />
 
 
-Hovering over a table call will provide a popup menu that allows you to copy, filter, exclude, or view details of the cell.
+Hovering over a table call will provide a pop-up menu that allows you to copy, filter, exclude, or view details of the cell.
 <!--
 ![AI Chat Canvas - popup](./pipes_ai_chat_canvas_table_cell_actions.png)
 -->
