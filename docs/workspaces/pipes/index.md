@@ -9,4 +9,4 @@ The Turbot Pipes platform provides hosted services for [Steampipe](/pipes/docs/u
 
 To manage a service for your workspace, go to the **Pipes** tab for your workspace and click the service that you would like to manage.
 
-![](/images/docs/pipes/workspace_pipes_home.png)
+![](./workspace_pipes_home.png)
