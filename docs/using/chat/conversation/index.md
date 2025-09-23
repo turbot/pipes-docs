@@ -32,7 +32,7 @@ If you have configured an AI API key, you may use the model selector at the bott
 
 
 
-Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT5-Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  Where to configure the key depends on your [plan](https://turbot.com/pipes/pricing):
+Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT-5 Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  Where to configure the key depends on your [plan](https://turbot.com/pipes/pricing):
   - Enterprise customers may [configure their keys on their tenant](/pipes/docs/accounts/tenant/ai).
   - Team plan customers may [configure their keys on their organization](/pipes/docs/accounts/org/ai).
   - Developer tier users may [configure their keys on their personal developer account](/pipes/docs/accounts/developer/ai).

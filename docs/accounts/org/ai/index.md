@@ -8,7 +8,7 @@ sidebar_label: AI
 
 Turbot Pipes includes an integrated AI chat assistant that helps you query, analyze, and understand your cloud infrastructure data. The AI chat feature provides intelligent assistance for running Steampipe queries, generating reports, and exploring your connected resources.
 
-Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT5-Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  
+Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT-5 Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  
 
 To configure your AI API keys, go to the **Advanced** page for your developer account and click **AI** from the left-hand menu.  The AI settings page will only be available if your organization was purchased on the [Team Plan](/pipes/docs/accounts/org#team-plan).  If your organization is part of a [tenant](/pipes/docs/accounts/tenant), you can view your AI settings from the [tenant AI settings page](/pipes/docs/accounts/tenant/ai).
 

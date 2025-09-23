@@ -14,7 +14,7 @@ You can view and manage AI settings from the **Advanced** page for your tenant. 
 
 By default, [AI features](/pipes/docs/using/chat) are enabled in your tenant.  If you wish to disable the AI features, deselect **Enable AI features** and click **Save**.
 
-Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT5-Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  
+Pipes includes a small amount of monthly AI usage for each user. This free tier is limited to the GPT-5 Mini model.  You may instead configure Pipes to use your own OpenAI or Anthropic API key.  
 
 Enter your OpenAI and/or Anthropic key, click the **Test Key** button to verify that it's working, then click **Save** to begin using the key in your tenant.  
 
