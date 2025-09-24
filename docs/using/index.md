@@ -7,6 +7,20 @@ sidebar_label: Using Pipes
 
 Turbot Pipes is a platform built for DevOps that provides intelligence, automation, and security for cloud infrastructure built on [Steampipe](/pipes/docs/using/steampipe/), [Powerpipe](/pipes/docs/using/powerpipe/), and [Flowpipe](/pipes/docs/using/flowpipe/).
 
+|                                         | 
+|-----------------------------------------|---------------------------------
+| [Chat](/pipes/docs/using/chat)          |  Query, analyze, and understand your cloud infrastructure data using natural language.
+| [Steampipe](/pipes/docs/using/steampipe) | Dynamically query APIs, code and more with SQL. Zero-ETL from 140 data sources.
+| [Powerpipe](/pipes/docs/using/powerpipe)| Assess security posture against popular benchmarks. Visualize cloud configurations. Bring your own custom dashboards.
+| [Flowpipe](/pipes/docs/using/flowpipe)  | Automate cloud operations. Coordinate people and pipelines. Build workflows as code.
+
+
+
+<!--
+<br />  <br />
+
+
+<a href="/pipes/docs/using/chat/"> <img src="https://pipes.turbot.com/images/pipes-logo.svg" alt="Chat"  width="200pt"/></a> Query, analyze, and understand your cloud infrastructure data using natural language.
 
 <br />  <br />
 
@@ -21,3 +35,5 @@ Turbot Pipes is a platform built for DevOps that provides intelligence, automati
 
 
 <a href="/pipes/docs/using/flowpipe/"> <img src="/images/docs/pipes/flowpipe_wordmark.png" alt="Flowpipe"  width="170pt"/></a> Automate cloud operations. Coordinate people and pipelines. Build workflows as code.
+
+-->

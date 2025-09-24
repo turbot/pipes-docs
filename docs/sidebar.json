@@ -14,6 +14,17 @@
         "items": [
           {
             "type": "category",
+            "id": "using_chat",
+            "link": "using/chat",
+            "items": [
+              "using/chat/conversation",
+              "using/chat/canvas",
+              "using/chat/history"
+            ]
+          },
+
+          {
+            "type": "category",
             "id": "using_steampipe",
             "link": "using/steampipe",
             "items": [
@@ -90,6 +101,7 @@
         "id": "workspaces",
         "link": "workspaces",
         "items": [
+          "workspaces/chat",          
           "workspaces/pipes",          
           "workspaces/members",
           "workspaces/connections",
@@ -135,6 +147,7 @@
                 "id": "developer-account-advanced",
                 "link": "accounts/developer/advanced",
                 "items": [
+                  "accounts/developer/ai",
                   "accounts/developer/usage",
                   "accounts/developer/billing"
                 ]
@@ -165,6 +178,7 @@
                 "id": "organizations-advanced",
                 "link": "accounts/org/advanced",
                 "items": [
+                  "accounts/org/ai",
                   "accounts/org/usage",
                   "accounts/org/billing"
                   
@@ -199,6 +213,7 @@
                 "items": [
                   "accounts/tenant/authentication",
                   "accounts/tenant/workspace-settings",
+                  "accounts/tenant/ai",
                   "accounts/tenant/usage",
                   "accounts/tenant/billing"
                 ]
