@@ -45,7 +45,11 @@ Next, you will be prompted to add a table to your Datatank.
 ![](/images/docs/pipes/steampipe/pipes_datatank_new_table2.png)
 
 
-You can click **Skip** if you don't want to add any tables at this time; otherwise, choose a table to sync, the refresh frequency and if you wish to skip the initial refresh and then click **Create Table**. If you chose not to skip the initial refresh it will be initiated, you will then be returned to the table status page for the datatank.
+You can click **Skip** if you don't want to add any tables at this time; otherwise, choose a table to sync, the refresh frequency, and whether you want to skip the initial refresh, and then click **Create Table**.
+
+The refresh cycle will always be scheduled according to the frequency you choose. If you skip the initial refresh, the data will only start populating when the first scheduled run occurs. If you don’t skip, all parts will be refreshed **immediately**.
+
+You will then be returned to the table status page for the datatank.
 
 ![](/images/docs/pipes/steampipe/pipes_datatank_table_added.png)
 
