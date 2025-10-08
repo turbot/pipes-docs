@@ -23,15 +23,15 @@ A datatank contains **tables**. Each table is populated via system pipelines tha
 
 A datatank table is composed of one or more **parts**. A part represents a set of data that is refreshed and updated as a single atomic unit. When you *add a table* to the datatank, Turbot Pipes will create a part for each `connection` in the source schema. 
 
-Turbot Pipes creates a system pipeline for each part to refresh it according to the interval or schedule specified for the parent table. You do not need to manage this pipeline - Turbot Pipes will add and remove parts as connections are added and removed from the source aggregator. When the refresh pipeline runs, Pipes will move the connection associated with the part to the front of the `search_path` before running the update query, thereby scoping the update to the relevant connection. Updates to each part either occur in their entirety or not at all. 
-
+Turbot Pipes creates a system pipeline for each part to refresh it according to the interval or schedule specified for the parent table. You do not need to manage this pipeline - Turbot Pipes will add and remove parts as connections are added and removed from the source aggregator. When the refresh pipeline runs, Pipes will move the connection associated with the part to the front of the `search_path` before running the update query, thereby scoping the update to the relevant connection. Updates to each part either occur in their entirety or not at all.
 
 ---
+
 ## Creating a Datatank
 
 Datatanks are a type of workspace-level schema. To create one, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab. Click the **New Datatank** button.
 
-> Note:  Because the datatank is meant to be persistent, you may only create a datatank on persistent workspace [instance types](/pipes/docs/reference/instance-types) - you cannot create a datatank on a `shared` instance type.
+> Note: Because the datatank is meant to be persistent, you may only create a datatank on persistent workspace [instance types](/pipes/docs/reference/instance-types) - you cannot create a datatank on a `shared` instance type.
 
 ![](/images/docs/pipes/steampipe/steampipe_datatanks_list.png)
 
@@ -42,17 +42,18 @@ Enter a handle for your datatank. This handle will also be used as the Postgres 
 
 Next, you will be prompted to add a table to your Datatank.
 
-![](/images/docs/pipes/steampipe/pipes_datatank_new_table.png)
+![](/images/docs/pipes/steampipe/pipes_datatank_new_table2.png)
 
 
-You can click **Skip** if you don't want to add any tables at this time; otherwise, choose a table to sync and the refresh frequency and then click **Create Table**. The initial refresh will be initiated and you will be returned to the table status page for the datatank.
+You can click **Skip** if you don't want to add any tables at this time; otherwise, choose a table to sync, the refresh frequency, and whether you want to skip the initial refresh, and then click **Create Table**.
 
+The refresh cycle will always be scheduled according to the frequency you choose. If you skip the initial refresh, the data will only start populating when the first scheduled run occurs. If you don’t skip, all parts will be refreshed **immediately**.
+
+You will then be returned to the table status page for the datatank.
 
 ![](/images/docs/pipes/steampipe/pipes_datatank_table_added.png)
 
 ---
-
-
 
 ## Deleting a Datatank
 
@@ -69,6 +70,7 @@ Click **Delete Datatank**. You will be prompted to confirm the deletion; enter t
 <br />
 
 ---
+
 ## Creating a Table
 
 You can add a table from the datatank page. To get to the datatank page, navigate to your workspace.  From the **Pipes** tab, select Steampipe.  Then go to the **Datatanks** tab. From the list of datatanks, click the datatank that you want to add a table to.
@@ -113,6 +115,7 @@ Make sure you consider the refresh model when writing your source query.
 When finished, click **Add Table**. You will be returned to the datatank page, and your new table will appear in the list.  When a table is created, Pipes will kick off an initial pipeline refresh immediately, regardless of the schedule/interval, and data will begin syncing immediately.
 
 ----
+
 ## Deleting a Table
 
 You can permanently delete a datatank table and all of its data.
@@ -129,6 +132,7 @@ To permanently delete this datatank table and all of its data, click **Delete Ta
 <br />
 
 ---
+
 ## Modifying a Table
 You can modify a table after it has been created. After changing the table settings, a refresh will begin for all parts in the table.
 
@@ -164,6 +168,7 @@ Use the buttons in the **Status** section to change the state:
 
 
 ---
+
 ## Managing Parts 
 You can view the status of your tables from the datatank page. To get to the datatank page, navigate to the **Pipes** page for your workspace and select Steamipe, then go to the **Datatanks** tab. Click the Datatank you want to manage.
 
@@ -209,6 +214,7 @@ Each part has its own state, but it is also affected by the state of the parent 
 
 
 ---
+
 ## Tips / Tricks / Best Practices
 
 - Only add the tables that you want to accelerate. Steampipe's architecture and built-in caching allow it to scale remarkably well. Datatank is another tool to increase query performance, but it comes with tradeoffs - more compute time, more operational overhead, and less up-to-date results.
