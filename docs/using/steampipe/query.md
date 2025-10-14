@@ -145,7 +145,7 @@ After scheduling a snapshot, you will be taken to the schedule detail page, whic
 
 When the schedule runs, Pipes will upload the snapshot to your workspace as the `system` user rather than attribute the activity to the user creating the schedule.
 
-## Stopping an in-progress query
+## Stopping an In-Progress Query
 
 If you have a long-running query, you can stop it by clicking the **Cancel** button at the top right corner of the query results pane.
 
