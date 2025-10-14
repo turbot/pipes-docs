@@ -144,3 +144,13 @@ If you select **New Schedule**, you'll be presented with the following screen.
 After scheduling a snapshot, you will be taken to the schedule detail page, which shows you editable details of the schedule, information on its next run and last run status, and a link to the process logs.
 
 When the schedule runs, Pipes will upload the snapshot to your workspace as the `system` user rather than attribute the activity to the user creating the schedule.
+
+## Stopping an in-progress query
+
+If you have a long-running query, you can stop it by clicking the **Cancel** button at the top right corner of the query results pane.
+
+![](/images/docs/pipes/steampipe/pipes_query_cancel_button.png)
+
+This will cancel the query and free up any resources it was using.
+
+![](/images/docs/pipes/steampipe/pipes_query_cancelled.png)
