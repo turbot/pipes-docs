@@ -54,4 +54,4 @@ You can filter the list of archives using a query filter.  Click the **Query** d
 
 Click on the download icon to download an existing archive.
 
-You can remove archives which are no longer required by selecting the **Delete** action on the options menu button ('three dots' button), you must confirm deletion via the modal dialog that appears.
+You can remove archives which are no longer required by selecting the **Delete** action on the options menu button ('three dots' button). You must confirm deletion via the modal dialog that appears.
