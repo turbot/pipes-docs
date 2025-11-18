@@ -8,7 +8,7 @@ sidebar_label: Log Archives
 The **Log Archives** page allows you to control which log types (if any) are archived to storage on a daily basis.
 
 - **Audit Logs** pertain to administrative actions undertaken within the Tenant, such as role assignments and resource creation.
-- **Database Logs** are logs of queries performed against a workspaces Steampipe database within the tenant.
+- **Database Logs** are logs of queries performed against a workspace's Steampipe database within the tenant.
 
 > [!IMPORTANT] Log archives will be metered towards your Tenants storage allowance and any overages will be billed as per our [pricing](https://turbot.com/pipes/pricing#how-are-storage-costs-calculated).
 
