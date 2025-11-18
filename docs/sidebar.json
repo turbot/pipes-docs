@@ -215,7 +215,8 @@
                   "accounts/tenant/workspace-settings",
                   "accounts/tenant/ai",
                   "accounts/tenant/usage",
-                  "accounts/tenant/billing"
+                  "accounts/tenant/billing",
+                  "accounts/tenant/log-archives"
                 ]
               }              
             ]
