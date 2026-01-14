@@ -5,10 +5,17 @@ on:
     branches:
       - main
   workflow_dispatch:
+
 jobs:
   trigger-vercel-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Vercel deploy
+      - name: Deploy to Vercel with DOCS_UPDATE
         run: |
-          curl -X POST "${{ secrets.VERCEL_DEPLOY_LINK_PROD }}&buildEnv[DOCS_UPDATE]=pipes"
+          npx vercel deploy --prod --yes \
+            --build-env DOCS_UPDATE=pipes \
+            --token ${{ secrets.VERCEL_TOKEN }} \
+            --scope ${{ secrets.VERCEL_ORG_ID }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
