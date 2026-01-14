@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger suite.turbot.com deployment
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GH_PAT }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/turbot/suite.turbot.com/dispatches \
-            -d '{"event_type": "deploy-docs-production", "client_payload": {"docs_update": "pipes"}}'
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GH_PAT }}
+          repository: turbot/suite.turbot.com
+          event-type: deploy-docs-production
+          client-payload: '{"docs_update": "pipes"}'
