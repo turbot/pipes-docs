@@ -10,12 +10,10 @@ jobs:
   trigger-vercel-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Vercel with DOCS_UPDATE
+      - name: Trigger suite.turbot.com deployment
         run: |
-          npx vercel deploy --prod --yes \
-            --build-env DOCS_UPDATE=pipes \
-            --token ${{ secrets.VERCEL_TOKEN }} \
-            --scope ${{ secrets.VERCEL_ORG_ID }}
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GH_PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/turbot/suite.turbot.com/dispatches \
+            -d '{"event_type": "deploy-docs-production", "client_payload": {"docs_update": "pipes"}}'
