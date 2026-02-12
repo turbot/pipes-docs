@@ -93,7 +93,7 @@ Owner service accounts **cannot** create, update, or delete other owner-role ser
 ```bash
 # Create a token for another service account (using an owner SA token)
 curl -X POST \
-  https://pipes.turbot.com/api/v0/service_account/{sa_id}/token \
+  https://pipes.turbot.com/api/v0/tenant/{tenant_handle}/service_account/{sa_id}/token \
   -H "Authorization: Bearer tpt.xxxx" \
   -H "Content-Type: application/json" \
   -d '{"title": "CI token", "expiration": 86400}'
