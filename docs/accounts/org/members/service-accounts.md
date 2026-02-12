@@ -17,7 +17,7 @@ Service accounts are managed within Turbot Pipes and, as such, do not require a 
 Service accounts have the following limitations:
 - Cannot log in via the Console (web interface).
 - Cannot create/manage personal resources, i.e., workspaces.
-- Cannot modify themselves or other service accounts.
+- Cannot modify themselves or other service accounts, unless they have the **Owner** role (see [Programmatic Management by Service Accounts](#programmatic-management-by-service-accounts) below).
 - Can only be created and managed from either the organization or tenant level, depending on your plan.
   - **[Team Plan](/pipes/docs/accounts/org#team-plan)**: Service accounts can be [created at the organization](/pipes/docs/accounts/org/members#service-accounts) level.
   - **[Enterprise Plan](/pipes/docs/accounts/tenant#enterprise-plan)**: Service accounts can be [created at the tenant](/pipes/docs/accounts/tenant/members#service-accounts) level.
@@ -67,6 +67,38 @@ Click **New Token** to create a new API token. You will be prompted to enter an 
 The token will be masked, but you can reveal it by clicking the eye icon or hovering over it and clicking the clipboard icon to copy it. Make a secure note of the token, as you will not be able to retrieve it again.
 
 You can `deactivate` or `delete` a token from the list by clicking the options menu button ('three dots' button) and selecting **Deactivate** or **Delete** from the menu.
+
+### Programmatic Management by Service Accounts
+
+Owner-role service accounts can programmatically manage other service accounts and their tokens via the API. This enables automation scenarios such as CI/CD pipelines that need to create or rotate tokens without human intervention.
+
+#### Token Management
+
+Owner-role service accounts can create, update, and delete API tokens for:
+- **Themselves** — manage their own tokens programmatically.
+- **Other non-owner service accounts** — at the same level (organization or tenant).
+
+Owner service accounts **cannot** manage tokens for other owner-role service accounts.
+
+#### Service Account Management
+
+Owner-role service accounts can also:
+- **Create** new service accounts (always assigned the member role).
+- **Update** non-owner service accounts (title, description).
+- **Delete** non-owner service accounts.
+
+Owner service accounts **cannot** create, update, or delete other owner-role service accounts.
+
+#### Example
+
+```bash
+# Create a token for another service account (using an owner SA token)
+curl -X POST \
+  https://pipes.turbot.com/api/v0/org/{org_handle}/service_account/{sa_id}/token \
+  -H "Authorization: Bearer tpt.xxxx" \
+  -H "Content-Type: application/json" \
+  -d '{"title": "CI token", "expiration": 86400}'
+```
 
 ### Audit Log
 
