@@ -6,12 +6,15 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   trigger-vercel-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger suite.turbot.com deployment
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@bf47d102fdb849e755b0b0023ea3e81a44b6f570 # v2
         with:
           token: ${{ secrets.GH_PAT }}
           repository: turbot/suite.turbot.com
