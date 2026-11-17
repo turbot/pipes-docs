@@ -13,10 +13,19 @@ jobs:
   trigger-vercel-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger suite.turbot.com deployment
-        uses: peter-evans/repository-dispatch@bf47d102fdb849e755b0b0023ea3e81a44b6f570 # v2
+      - name: Create a token for the Turbot Web Builds app
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         with:
-          token: ${{ secrets.GH_PAT }}
-          repository: turbot/suite.turbot.com
-          event-type: deploy-docs-production
-          client-payload: '{"docs_update": "pipes"}'
+          client-id: ${{ vars.WEB_BUILDS_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WEB_BUILDS_APP_PRIVATE_KEY }}
+          owner: turbot
+          repositories: turbot.com
+
+      - name: Start the turbot.com docs deployment
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          default_branch="$(gh api repos/turbot/turbot.com --jq .default_branch)"
+          gh workflow run deploy-docs-production.yml -R turbot/turbot.com --ref "$default_branch" \
+            -f docs_update=pipes
