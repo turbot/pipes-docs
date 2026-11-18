@@ -54,9 +54,10 @@ jobs:
           script: |
             // A status, not a comment: a comment from github-actions[bot] counts as
             // an outsider's text to the fleet's public-repo guard and holds the PR.
-            // turbot.com builds the branch docs/pipes/<PR branch> (the first "/" becomes "-", later ones are dropped) through Vercel's Git
-            // integration. Vercel names that preview
-            // turbot-com-git-docs-pipes<branch, lower-cased, only a-z 0-9 and "-">-turbot,
+            // turbot.com builds the branch docs/pipes/<PR branch> through Vercel's Git
+            // integration. Vercel names that preview (the first "/" becomes "-", later
+            // ones are dropped) turbot-com-git-docs-pipes<branch, lower-cased, only
+            // a-z 0-9 and "-">-turbot,
             // and shortens a host over 63 characters with a hash nobody can reproduce.
             // turbot.com's build-pipes-docs-preview-test refuses a name outside ^[A-Za-z0-9._/-]+$ and builds
             // nothing for it, so such a branch gets no preview at all.
